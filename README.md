@@ -8,6 +8,7 @@ This project is for practice purpose and i will test differet packages from [pub
 
 ## Following are the packages that are implemeted in this repository.
 
-[Connectivity Plus](https://pub.dev/packages/connectivity_plus)
-[Device info Plus](https://pub.dev/packages/device_info_plus)
+[Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
+
+[Device info Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Device%20Info%20Plus)
 
