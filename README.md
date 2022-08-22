@@ -2,15 +2,12 @@
 
 
 
-## Getting Started
+## Welcome to this Repository
 
-This project is a starting point for a Flutter application.
+This project is for practice purpose and i will test differet packages from [pub.dev](https://pub.dev) and implement their Examples to get results.
 
-A few resources to get you started if this is your first Flutter project:
+## Following are the packages that are implemeted in this repository.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[Connectivity Plus](https://pub.dev/packages/connectivity_plus)
+[Device info Plus](https://pub.dev/packages/device_info_plus)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

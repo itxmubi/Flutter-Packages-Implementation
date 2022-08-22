@@ -2,8 +2,6 @@
 
 
 
-
-
 ## Getting Started
 
 This package detects the connectivity of the app, whether the Device is connected with internet,

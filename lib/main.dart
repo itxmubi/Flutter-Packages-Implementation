@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Connectivity Plus/connectivity_plus_main.dart';
+import 'Device Info Plus/device_info_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: const ConnectivityPlusClass(title: 'Flutter Demo Home Page'),
+      home: const DeviceInfoMain(),
     );
   }
 }
