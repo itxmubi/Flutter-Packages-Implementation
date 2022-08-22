@@ -23,3 +23,16 @@ Just add the package name to pubspec.yaml and use there's no extra changes for t
  - Model Information
  - Product Information
  - System Features
+
+ #This package contains following information for IOS devices
+ - Name
+ - System Name
+ - System Version
+ - Model
+ - Localized Model
+ - Identifier for Vendor
+ - is Physical Device
+ - utsname
+ - release details
+ - Version details
+ 
