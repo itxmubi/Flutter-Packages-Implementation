@@ -11,10 +11,9 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
-
 class ConnectivityPlusClass extends StatefulWidget {
-  const ConnectivityPlusClass({Key? key, required this.title}) : super(key: key);
+  const ConnectivityPlusClass({Key? key, required this.title})
+      : super(key: key);
 
   final String title;
 
@@ -74,17 +73,28 @@ class _ConnectivityPlusClassState extends State<ConnectivityPlusClass> {
       ),
       body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-           _connectionStatus == ConnectivityResult.wifi ? 
-           const   Icon(Icons.wifi,size: 40,) : _connectionStatus == ConnectivityResult.mobile ? 
-            const  Icon(Icons.perm_data_setting,size: 40,)
-           : const  Icon(Icons.not_interested,size: 40,),
-       const    SizedBox(height: 20,),
-
-              Text('Connection Status: ${_connectionStatus.toString()}'),
-              ],
-          )),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _connectionStatus == ConnectivityResult.wifi
+              ? const Icon(
+                  Icons.wifi,
+                  size: 40,
+                )
+              : _connectionStatus == ConnectivityResult.mobile
+                  ? const Icon(
+                      Icons.perm_data_setting,
+                      size: 40,
+                    )
+                  : const Icon(
+                      Icons.not_interested,
+                      size: 40,
+                    ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text('Connection Status: ${_connectionStatus.toString()}'),
+        ],
+      )),
     );
   }
 }

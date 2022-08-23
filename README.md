@@ -4,11 +4,13 @@
 
 ## Welcome to this Repository
 
-This project is for practice purpose and i will test differet packages from [pub.dev](https://pub.dev) and implement their Examples to get results.
+This project is for practice purpose and i will test different packages from [pub.dev](https://pub.dev) and implement their Examples to get results.
 
 ## Following are the packages that are implemeted in this repository.
 
 [Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
 
 [Device info Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Device%20Info%20Plus)
+
+[Url Launcher](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Url%20Launcher)
 
