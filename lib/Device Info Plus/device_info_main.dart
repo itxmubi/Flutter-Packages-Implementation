@@ -6,7 +6,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class DeviceInfoMain extends StatefulWidget {
   const DeviceInfoMain({Key? key}) : super(key: key);
 
