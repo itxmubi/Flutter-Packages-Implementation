@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_packages_implementation/Url%20Launcher/url_launcher_main.dart';
 
-import 'Flutter Svg/flutter_svg_home.dart';
+import 'Lottie/lottie_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Packages Implementation',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const FlutterSvgHome(
-        // title: "UrlLancher Example",
-      ),
+      home: const LottieExampleHome(
+          // title: "UrlLancher Example",
+          ),
     );
   }
 }
