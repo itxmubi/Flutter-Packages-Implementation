@@ -11,17 +11,17 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class ConnectivityPlusClass extends StatefulWidget {
-  const ConnectivityPlusClass({Key? key, required this.title})
+class ConnectivityPlusExample extends StatefulWidget {
+  const ConnectivityPlusExample({Key? key, required this.title})
       : super(key: key);
 
   final String title;
 
   @override
-  _ConnectivityPlusClassState createState() => _ConnectivityPlusClassState();
+  _ConnectivityPlusExampleState createState() => _ConnectivityPlusExampleState();
 }
 
-class _ConnectivityPlusClassState extends State<ConnectivityPlusClass> {
+class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
   ConnectivityResult _connectionStatus = ConnectivityResult.none;
   final Connectivity _connectivity = Connectivity();
   late StreamSubscription<ConnectivityResult> _connectivitySubscription;

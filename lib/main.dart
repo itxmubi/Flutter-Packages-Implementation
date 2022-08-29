@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Google Fonts/google_fonts_main.dart';
+import 'Google Fonts/google_fonts_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const GoogleFontsMain(
+      home: const GoogleFontsExample(
         title: " Example",
       ),
     );

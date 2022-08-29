@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class GoogleFontsMain extends StatefulWidget {
-  const GoogleFontsMain({Key? key, required this.title}) : super(key: key);
+class GoogleFontsExample extends StatefulWidget {
+  const GoogleFontsExample({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  GoogleFontsMainState createState() => GoogleFontsMainState();
+  GoogleFontsExampleState createState() => GoogleFontsExampleState();
 }
 
-class GoogleFontsMainState extends State<GoogleFontsMain> {
+class GoogleFontsExampleState extends State<GoogleFontsExample> {
   int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      Fluttertoast.showToast(
+          msg: "Counter is incremented to $_counter ",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0);
     });
   }
 

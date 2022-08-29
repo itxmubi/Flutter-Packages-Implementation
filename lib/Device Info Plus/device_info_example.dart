@@ -6,14 +6,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class DeviceInfoMain extends StatefulWidget {
-  const DeviceInfoMain({Key? key}) : super(key: key);
+class DeviceInfoExample extends StatefulWidget {
+  const DeviceInfoExample({Key? key}) : super(key: key);
 
   @override
-  _DeviceInfoMainState createState() => _DeviceInfoMainState();
+  _DeviceInfoExampleState createState() => _DeviceInfoExampleState();
 }
 
-class _DeviceInfoMainState extends State<DeviceInfoMain> {
+class _DeviceInfoExampleState extends State<DeviceInfoExample> {
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   Map<String, dynamic> _deviceData = <String, dynamic>{};
 

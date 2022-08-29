@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class LottieExampleHome extends StatefulWidget {
-  const LottieExampleHome({Key? key}) : super(key: key);
+class LottieExample extends StatefulWidget {
+  const LottieExample({Key? key}) : super(key: key);
 
   @override
-  State<LottieExampleHome> createState() => _LottieExampleHomeState();
+  State<LottieExample> createState() => _LottieExampleState();
 }
 
-class _LottieExampleHomeState extends State<LottieExampleHome> {
+class _LottieExampleState extends State<LottieExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

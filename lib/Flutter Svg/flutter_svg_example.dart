@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class FlutterSvgHome extends StatefulWidget {
-  const FlutterSvgHome({Key? key}) : super(key: key);
+class FlutterSvgExample extends StatefulWidget {
+  const FlutterSvgExample({Key? key}) : super(key: key);
 
   @override
-  State<FlutterSvgHome> createState() => _FlutterSvgHomeState();
+  State<FlutterSvgExample> createState() => _FlutterSvgExampleState();
 }
 
-class _FlutterSvgHomeState extends State<FlutterSvgHome> {
+class _FlutterSvgExampleState extends State<FlutterSvgExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class UrlLancherHome extends StatefulWidget {
-  const UrlLancherHome({Key? key, required this.title}) : super(key: key);
+class UrlLancherExample extends StatefulWidget {
+  const UrlLancherExample({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<UrlLancherHome> createState() => _UrlLancherHomeState();
+  State<UrlLancherExample> createState() => _UrlLancherExampleState();
 }
 
-class _UrlLancherHomeState extends State<UrlLancherHome> {
+class _UrlLancherExampleState extends State<UrlLancherExample> {
   bool _hasCallSupport = false;
   Future<void>? _launched;
   String _phone = '';
