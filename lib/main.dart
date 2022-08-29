@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Lottie/lottie_home.dart';
+import 'Google Fonts/google_fonts_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const LottieExampleHome(
-          // title: "UrlLancher Example",
-          ),
+      home: const GoogleFontsMain(
+        title: " Example",
+      ),
     );
   }
 }
