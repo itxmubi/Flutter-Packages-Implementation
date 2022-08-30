@@ -6,8 +6,7 @@
 
 This project is for practice purpose and i will test different packages from [pub.dev](https://pub.dev) and implement their Examples to get results.
 
-## Following are the packages that
- are implemeted in this repository.
+## Following are the packages that are implemeted in this repository.
 
 - [Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
 
@@ -17,3 +16,8 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Flutter SVG](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Svg)
 
+- [Flutter Toast](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Toast)
+
+- [Google Fonts](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Fonts)
+
+- [Facebook Audience Network](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Facebook%20Audience%20Network) 
