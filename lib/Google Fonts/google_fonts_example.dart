@@ -39,43 +39,63 @@ class GoogleFontsExampleState extends State<GoogleFontsExample> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in Adamina',
               style: GoogleFonts.adamina(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in  abhayaLibre',
               style: GoogleFonts.abhayaLibre(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in lilyScriptOne',
               style: GoogleFonts.lilyScriptOne(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in bizUDGothic',
               style: GoogleFonts.bizUDGothic(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in baskervville',
               style: GoogleFonts.baskervville(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in sourceSansPro',
               style: GoogleFonts.sourceSansPro(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in windSong',
               style: GoogleFonts.windSong(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in gildaDisplay',
               style: GoogleFonts.gildaDisplay(),
             ),
             Text(
-              'Hi, Welcome to google_fonts package example',
+              'This Text is written in merriweatherSans',
               style: GoogleFonts.merriweatherSans(),
             ),
             Text(
-              'You have pushed the button this many times:',
+              'This Text is written in libreBarcode39ExtendedText',
+              style: GoogleFonts.libreBarcode39ExtendedText(),
+            ),
+            Text(
+              'This Text is written in licorice',
+              style: GoogleFonts.licorice(),
+            ),
+            Text(
+              'This Text is written in lifeSavers',
+              style: GoogleFonts.lifeSavers(),
+            ),
+            Text(
+              'This Text is written in lobsterTwo',
+              style: GoogleFonts.lobsterTwo(),
+            ),
+            Text(
+              'This Text is written in lindenHill',
+              style: GoogleFonts.lindenHill(),
+            ),
+            Text(
+              'You have Pushed the Button $_counter times',
               style: GoogleFonts.alike(
                 textStyle: Theme.of(context).textTheme.displayMedium,
               ),

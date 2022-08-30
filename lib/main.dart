@@ -1,13 +1,29 @@
+import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
 
-import 'Google Fonts/google_fonts_example.dart';
+import 'Facebook Audience Network/facebook_ads_example.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    FacebookAudienceNetwork.init(
+      testingId: "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID", //
+    );
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,9 +32,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const GoogleFontsExample(
-        title: " Example",
-      ),
+      home: const FacebookAdsPage(
+          // title: " Example",
+          ),
     );
   }
 }
