@@ -18,6 +18,8 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Flutter Toast](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Toast)
 
+- [Lottie] (https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Lottie)
+
 - [Google Fonts](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Fonts)
 
 - [Facebook Audience Network](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Facebook%20Audience%20Network) 

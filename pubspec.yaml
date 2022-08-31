@@ -42,6 +42,7 @@ dependencies:
   google_fonts: ^3.0.1
   fluttertoast: ^8.0.9
   facebook_audience_network: ^1.0.1
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
   assets:
    - assets/svg/
    - assets/gif/
+   - assets/png/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
