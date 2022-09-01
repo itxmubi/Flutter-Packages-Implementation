@@ -1,7 +1,6 @@
 import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
 
-import 'Carousel Slider/carousel_slider_example.dart';
 import 'Facebook Audience Network/facebook_ads_example.dart';
 
 void main() {
@@ -33,7 +32,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const CarouselSliderExample(
+      home: const FacebookAdsPage(
           // title: " Example",
           ),
     );
