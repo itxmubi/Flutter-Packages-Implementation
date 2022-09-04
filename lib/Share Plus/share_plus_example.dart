@@ -5,27 +5,22 @@ import 'package:share_plus/share_plus.dart';
 
 // import 'image_previews.dart';
 
-void main() {
-  runApp(const DemoApp());
-}
 
-class DemoApp extends StatefulWidget {
-  const DemoApp({Key? key}) : super(key: key);
+class SharePlusExample extends StatefulWidget {
+  const SharePlusExample({Key? key}) : super(key: key);
 
   @override
-  DemoAppState createState() => DemoAppState();
+  SharePlusExampleState createState() => SharePlusExampleState();
 }
 
-class DemoAppState extends State<DemoApp> {
+class SharePlusExampleState extends State<SharePlusExample> {
   String text = '';
   String subject = '';
   List<String> imagePaths = [];
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Share Plus Plugin Demo',
-      home: Scaffold(
+    return  Scaffold(
           appBar: AppBar(
             title: const Text('Share Plus Plugin Demo'),
           ),
@@ -97,8 +92,8 @@ class DemoAppState extends State<DemoApp> {
                 ],
               ),
             ),
-          )),
-    );
+          ));
+    
   }
 
   void _onDeleteImage(int position) {
