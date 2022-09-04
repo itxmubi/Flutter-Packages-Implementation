@@ -44,6 +44,8 @@ dependencies:
   facebook_audience_network: ^1.0.1
   carousel_slider: ^4.1.1
   share_plus: ^4.0.10+1
+  image_picker: ^0.8.5+3
+  video_player: ^2.4.7
 
 dev_dependencies:
   flutter_test:
