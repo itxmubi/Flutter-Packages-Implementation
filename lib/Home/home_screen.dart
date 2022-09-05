@@ -8,11 +8,12 @@ import '../Device Info Plus/device_info_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
+import '../Google Native Ads/native_ads_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Share Plus/share_plus_example.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -20,6 +21,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Native Ad Example",
     "Share Plus Example",
     "Image Picker Example",
     "Flutter Svg Example",
@@ -33,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const NativeAdExample(),
     const SharePlusExample(),
     const ImagePickerExample(),
     const FlutterSvgExample(),
@@ -53,22 +56,24 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Flutter Packages Implementation"),
       ),
-      body: Column(children: [
-        for (int i = 0; i < pages.length; i++)
-          Column(
-            children: [
-              ListTile(
-                title: Text(pagesNamese[i]),
-                onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => pages[i]));
-                },
-                trailing: const Icon(Icons.arrow_forward_ios),
-              ),
-            const  Divider()
-            ],
-          ),
-      ]),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          for (int i = 0; i < pages.length; i++)
+            Column(
+              children: [
+                ListTile(
+                  title: Text(pagesNamese[i]),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => pages[i]));
+                  },
+                  trailing: const Icon(Icons.arrow_forward_ios),
+                ),
+                const Divider()
+              ],
+            ),
+        ]),
+      ),
     );
   }
 }

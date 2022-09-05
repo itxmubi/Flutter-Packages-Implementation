@@ -18,7 +18,8 @@ class ConnectivityPlusExample extends StatefulWidget {
   final String title;
 
   @override
-  _ConnectivityPlusExampleState createState() => _ConnectivityPlusExampleState();
+  _ConnectivityPlusExampleState createState() =>
+      _ConnectivityPlusExampleState();
 }
 
 class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
