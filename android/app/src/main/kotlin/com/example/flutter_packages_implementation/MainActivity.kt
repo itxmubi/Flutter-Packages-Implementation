@@ -1,5 +1,4 @@
 package com.example.flutter_packages_implementation
-
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin
@@ -22,3 +21,4 @@ class MainActivity: FlutterActivity() {
             GoogleMobileAdsPlugin.unregisterNativeAdFactory(flutterEngine, "listTile")
     }
 }
+

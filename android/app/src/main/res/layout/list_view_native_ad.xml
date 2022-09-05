@@ -22,7 +22,8 @@
             android:id="@+id/iv_list_tile_native_ad_icon"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="top"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:scaleType="fitXY"
@@ -30,9 +31,10 @@
 
         <TextView
             android:id="@+id/tv_list_tile_native_ad_attribution_large"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_vertical"
+            android:layout_width="54dp"
+            android:layout_height="350dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:background="#F19938"
@@ -43,8 +45,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            android:layout_height="360dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
             android:layout_marginLeft="80dp"
             android:layout_marginEnd="16dp"
@@ -65,7 +68,7 @@
             <TextView
                 android:id="@+id/tv_list_tile_native_ad_body"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:ellipsize="end"
                 android:lines="1"
                 android:maxLines="1"

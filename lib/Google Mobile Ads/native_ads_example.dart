@@ -27,6 +27,9 @@ class _NativeAdExampleState extends State<NativeAdExample> {
 
   void loadNativeAd() {
     _ad = NativeAd(
+        nativeAdOptions: NativeAdOptions(
+            requestCustomMuteThisAd: true,
+            mediaAspectRatio: MediaAspectRatio.landscape),
         adUnitId: 'ca-app-pub-3940256099942544/2247696110',
         factoryId: 'listTile',
         listener: NativeAdListener(
@@ -48,22 +51,35 @@ class _NativeAdExampleState extends State<NativeAdExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Native Ad Example")),
-      body: ListView.builder(
-          itemCount: 10,
-          itemBuilder: ((context, index) {
-            if (isLoaded == true && index == 2) {
-              return Container(
-                alignment: Alignment.center,
-                height: 170,
-                child: AdWidget(ad: _ad),
-              );
-            } else {
-              return ListTile(
-                title: Text("Line No $index"),
-                leading: const FlutterLogo(),
-              );
-            }
-          })),
+      body: Column(
+        children: [
+          ListView.builder(
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: ((context, index) {
+                // if (isLoaded == true && index == 2) {
+                //   return Container(
+                //     alignment: Alignment.center,
+                //     height: 100,
+                //     child: AdWidget(ad: _ad),
+                //   );
+                // } else {
+                return ListTile(
+                  title: Text("Line No $index"),
+                  leading: const FlutterLogo(),
+                );
+                // }
+              })),
+          isLoaded == true
+              ? Container(
+                  color: Colors.amber,
+                  // alignment: Alignment.center,
+                  height: 200,
+                  child: AdWidget(ad: _ad),
+                )
+              : const CircularProgressIndicator(),
+        ],
+      ),
     );
   }
 }

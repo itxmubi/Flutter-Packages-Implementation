@@ -22,7 +22,6 @@ class _MyAppState extends State<MyApp> {
     FacebookAudienceNetwork.init(
       testingId: "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID", //
     );
-    // TODO: implement initState
     super.initState();
   }
 
