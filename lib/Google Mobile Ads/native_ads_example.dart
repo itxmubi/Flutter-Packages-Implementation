@@ -71,10 +71,10 @@ class _NativeAdExampleState extends State<NativeAdExample> {
                 // }
               })),
           isLoaded == true
-              ? Container(
-                  color: Colors.amber,
+              ? SizedBox(
+                  // color: Colors.amber,
                   // alignment: Alignment.center,
-                  height: 200,
+                  height: 100,
                   child: AdWidget(ad: _ad),
                 )
               : const CircularProgressIndicator(),

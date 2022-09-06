@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_packages_implementation/Shimmer/shimmer_example.dart';
 
 import '../Google Mobile Ads/native_ads_example.dart';
 
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
     "Native Ad Example",
+    "Shimmer Example",
     // "Share Plus Example",
     // "Image Picker Example",
     // "Flutter Svg Example",
@@ -26,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> pages = [
     const NativeAdExample(),
+    ShimmerExample(),
     // const SharePlusExample(),
     // const ImagePickerExample(),
     // const FlutterSvgExample(),

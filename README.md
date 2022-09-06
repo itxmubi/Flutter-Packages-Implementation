@@ -34,3 +34,5 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Image Picker](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%Picker)
 
+- [Shimmer](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Shimmer)
+
