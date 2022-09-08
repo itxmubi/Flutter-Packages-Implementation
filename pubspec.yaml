@@ -46,6 +46,9 @@ dependencies:
   share_plus: ^4.0.10+1
   image_picker: ^0.8.5+3
   video_player: ^2.4.7
+  google_mobile_ads: ^2.0.1
+  shimmer: ^2.0.0
+  # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
   flutter_test:

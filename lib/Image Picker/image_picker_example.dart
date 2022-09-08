@@ -1,9 +1,3 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// ignore_for_file: public_member_api_docs
-
 import 'dart:async';
 import 'dart:io';
 
@@ -12,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
-
 class ImagePickerExample extends StatefulWidget {
-  const ImagePickerExample({Key? key,}) : super(key: key);
-
+  const ImagePickerExample({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<ImagePickerExample> createState() => _ImagePickerExampleState();
@@ -50,11 +44,6 @@ class _ImagePickerExampleState extends State<ImagePickerExample> {
         controller = VideoPlayerController.file(File(file.path));
       }
       _controller = controller;
-      // In web, most browsers won't honor a programmatic call to .play
-      // if the video has a sound track (and is not muted).
-      // Mute the video so it auto-plays in web!
-      // This is not needed if the call to .play is the result of user
-      // interaction (clicking on a "play" button, for example).
       const double volume = kIsWeb ? 0.0 : 1.0;
       await controller.setVolume(volume);
       await controller.initialize();
@@ -167,8 +156,6 @@ class _ImagePickerExampleState extends State<ImagePickerExample> {
         child: ListView.builder(
           key: UniqueKey(),
           itemBuilder: (BuildContext context, int index) {
-            // Why network for web?
-            // See https://pub.dev/packages/image_picker#getting-ready-for-the-web-platform
             return Semantics(
               label: 'image_picker_example_picked_image',
               child: kIsWeb
@@ -228,7 +215,7 @@ class _ImagePickerExampleState extends State<ImagePickerExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Image Picker Example"),
+        title: const Text("Image Picker Example"),
       ),
       body: Center(
         child: !kIsWeb && defaultTargetPlatform == TargetPlatform.android
@@ -416,28 +403,28 @@ class AspectRatioVideo extends StatefulWidget {
 }
 
 class AspectRatioVideoState extends State<AspectRatioVideo> {
-  // VideoPlayerController? get controller => widget.controller;
+  VideoPlayerController? get controller => widget.controller;
   bool initialized = false;
 
-  // void _onVideoControllerUpdate() {
-  //   if (!mounted) {
-  //     return;
-  //   }
-  //   if (initialized != controller!.value.isInitialized) {
-  //     initialized = controller!.value.isInitialized;
-  //     setState(() {});
-  //   }
-  // }
+  void _onVideoControllerUpdate() {
+    if (!mounted) {
+      return;
+    }
+    if (initialized != controller!.value.isInitialized) {
+      initialized = controller!.value.isInitialized;
+      setState(() {});
+    }
+  }
 
   @override
   void initState() {
     super.initState();
-    // controller!.addListener(_onVideoControllerUpdate);
+    controller!.addListener(_onVideoControllerUpdate);
   }
 
   @override
   void dispose() {
-    // controller!.removeListener(_onVideoControllerUpdate);
+    controller!.removeListener(_onVideoControllerUpdate);
     super.dispose();
   }
 
@@ -445,14 +432,10 @@ class AspectRatioVideoState extends State<AspectRatioVideo> {
   Widget build(BuildContext context) {
     if (initialized) {
       return Center(
-        child:
-          CircularProgressIndicator(),
-        //  AspectRatio(
-          // aspectRatio: controller!.value.aspectRatio,
-          // child: 
-          ///TODO: Video Player Package added work 
-          // VideoPlayer(controller!),
-        // ),
+        child: AspectRatio(
+          aspectRatio: controller!.value.aspectRatio,
+          child: VideoPlayer(controller!),
+        ),
       );
     } else {
       return Container();
