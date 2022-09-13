@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_packages_implementation/Shimmer/shimmer_example.dart';
 
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
@@ -12,6 +11,7 @@ import '../Google Fonts/google_fonts_example.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Share Plus/share_plus_example.dart';
+import '../Shimmer/shimmer_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,8 +22,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
-    "Flutter SpinKit Example"
-        // "Native Ad Example",/
+    "Flutter SpinKit Example",
+    // "Native Ad Example",/
         "Shimmer Example",
     "Share Plus Example",
     "Image Picker Example",

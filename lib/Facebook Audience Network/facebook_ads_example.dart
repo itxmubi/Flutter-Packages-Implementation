@@ -44,7 +44,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
       // placementId: "YOUR_PLACEMENT_ID",
       placementId: "IMG_16_9_APP_INSTALL#2312433698835503_2650502525028617",
       listener: (result, value) {
-        print(">> FAN > Interstitial Ad: $result --> $value");
+        log(">> FAN > Interstitial Ad: $result --> $value");
         if (result == InterstitialAdResult.LOADED) {
           _isInterstitialAdLoaded = true;
         }
@@ -64,7 +64,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
     FacebookRewardedVideoAd.loadRewardedVideoAd(
       placementId: "YOUR_PLACEMENT_ID",
       listener: (result, value) {
-        print("Rewarded Ad: $result --> $value");
+        log("Rewarded Ad: $result --> $value");
         if (result == RewardedVideoAdResult.LOADED) _isRewardedAdLoaded = true;
         if (result == RewardedVideoAdResult.VIDEO_COMPLETE)
 
@@ -158,7 +158,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
     if (_isRewardedAdLoaded == true) {
       FacebookRewardedVideoAd.showRewardedVideoAd();
     } else {
-      print("Rewarded Ad not yet loaded!");
+      log("Rewarded Ad not yet loaded!");
     }
   }
 
@@ -197,7 +197,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
       buttonTitleColor: Colors.white,
       buttonBorderColor: Colors.white,
       listener: (result, value) {
-        print("Native Banner Ad: $result --> $value");
+        log("Native Banner Ad: $result --> $value");
       },
     );
   }

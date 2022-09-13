@@ -7,7 +7,7 @@ class WorkSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.blue,
       width: 300.0,
       height: 300.0,
       child: SpinKitFadingCircle(
