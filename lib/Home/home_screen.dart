@@ -11,6 +11,7 @@ import '../Flutter Toast/flutter_toast_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Lottie/lottie_example.dart';
+import '../Percent Indicator/percent_indicator_example.dart';
 import '../Photo View Example/screens/home_screen.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
@@ -24,6 +25,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Percent Indicator Example",
     "Auto Size Text",
     "Photo View Example",
     "Flutter SpinKit Example",
@@ -41,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const PercentInicatorExample(),
     const AutoSizeTextExample(),
     HomeScreenPhotoView(),
     const FlutterSpinkitExample(),

@@ -51,6 +51,7 @@ dependencies:
   flutter_spinkit: ^5.1.0
   photo_view: ^0.14.0
   auto_size_text: ^3.0.0
+  percent_indicator: ^4.2.2
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
