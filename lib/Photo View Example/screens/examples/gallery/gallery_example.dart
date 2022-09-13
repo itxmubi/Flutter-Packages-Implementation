@@ -84,7 +84,7 @@ class _GalleryExampleState extends State<GalleryExample> {
 }
 
 class GalleryPhotoViewWrapper extends StatefulWidget {
-  GalleryPhotoViewWrapper({
+  GalleryPhotoViewWrapper({super.key, 
     this.loadingBuilder,
     this.backgroundDecoration,
     this.minScale,

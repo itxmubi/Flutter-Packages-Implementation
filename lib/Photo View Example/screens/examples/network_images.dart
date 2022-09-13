@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../common/app_bar.dart';
 import '../common/common_example_wrapper.dart';
 import '../common/example_button.dart';
+
 class NetworkExamples extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class NetworkExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const NetworkImage(
+                    imageProvider: NetworkImage(
                       "https://pudim.com.br/sss.jpg",
                     ),
                     backgroundDecoration: BoxDecoration(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
 import '../Device Info Plus/device_info_example.dart';
@@ -23,6 +24,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Auto Size Text",
     "Photo View Example",
     "Flutter SpinKit Example",
     "Shimmer Example",
@@ -39,13 +41,14 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const AutoSizeTextExample(),
     HomeScreenPhotoView(),
-    FlutterSpinkitExample(),
+    const FlutterSpinkitExample(),
     ShimmerExample(),
     const SharePlusExample(),
     const ImagePickerExample(),
     const FlutterSvgExample(),
-    FlutterToastExample(),
+    const FlutterToastExample(),
     const LottieExample(),
     const DeviceInfoExample(),
     const ConnectivityPlusExample(

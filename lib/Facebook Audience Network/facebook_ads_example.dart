@@ -150,7 +150,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
     if (_isInterstitialAdLoaded == true) {
       FacebookInterstitialAd.showInterstitialAd();
     } else {
-      print("Interstial Ad not yet loaded!");
+      log("Interstial Ad not yet loaded!");
     }
   }
 
@@ -221,7 +221,7 @@ class FacebookAdsPageState extends State<FacebookAdsPage> {
       buttonTitleColor: Colors.white,
       buttonBorderColor: Colors.white,
       listener: (result, value) {
-        print("Native Ad: $result --> $value");
+        log("Native Ad: $result --> $value");
       },
       keepExpandedWhileLoading: true,
       expandAnimationDuraion: 1000,

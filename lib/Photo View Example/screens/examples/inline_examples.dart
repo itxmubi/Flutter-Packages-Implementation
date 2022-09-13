@@ -15,7 +15,7 @@ class InlineExample extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: const Text(
               "Example of usage in a contained context",
-              style: const TextStyle(fontSize: 18.0),
+              style: TextStyle(fontSize: 18.0),
             ),
           ),
           Container(

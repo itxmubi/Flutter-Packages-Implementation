@@ -4,6 +4,8 @@ import 'package:photo_view/photo_view.dart';
 import '../common/app_bar.dart';
 
 class DialogExample extends StatefulWidget {
+  const DialogExample({super.key});
+
   @override
   _DialogExampleState createState() => _DialogExampleState();
 }
@@ -47,7 +49,7 @@ class _DialogExampleState extends State<DialogExample> {
         shape: const ContinuousRectangleBorder(),
         builder: (BuildContext context) {
           return SafeArea(
-            child: Container(
+            child: SizedBox(
               height: 250,
               child: PhotoViewGestureDetectorScope(
                 axis: Axis.vertical,

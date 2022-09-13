@@ -4,6 +4,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 GlobalKey globalKey = GlobalKey();
 
 class FlutterToastExample extends StatefulWidget {
+  const FlutterToastExample({super.key});
+
   @override
   _FlutterToastExampleState createState() => _FlutterToastExampleState();
 }

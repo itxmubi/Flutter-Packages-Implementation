@@ -26,6 +26,8 @@ class SlideToUnlockPage extends StatelessWidget {
     'December',
   ];
 
+  SlideToUnlockPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final DateTime time = DateTime.now();

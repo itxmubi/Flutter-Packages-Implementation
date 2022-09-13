@@ -3,6 +3,8 @@ import 'package:flutter_packages_implementation/Flutter%20SpinKit/showcase.dart'
 import 'package:flutter_packages_implementation/Flutter%20SpinKit/workspace.dart';
 
 class FlutterSpinkitExample extends StatelessWidget {
+  const FlutterSpinkitExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

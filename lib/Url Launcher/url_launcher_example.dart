@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
@@ -171,7 +172,7 @@ class _UrlLancherExampleState extends State<UrlLancherExample> {
                 onPressed: () => setState(() {
                   _launched = _launchInWebViewOrVC(toLaunch);
                   Timer(const Duration(seconds: 5), () {
-                    print('Closing WebView after 5 seconds...');
+                    log('Closing WebView after 5 seconds...');
                     closeInAppWebView();
                   });
                 }),
