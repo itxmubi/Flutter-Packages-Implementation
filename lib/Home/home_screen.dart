@@ -10,6 +10,7 @@ import '../Flutter Toast/flutter_toast_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Lottie/lottie_example.dart';
+import '../Photo View Example/screens/home_screen.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 
@@ -22,9 +23,9 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Photo View Example",
     "Flutter SpinKit Example",
-    // "Native Ad Example",/
-        "Shimmer Example",
+    "Shimmer Example",
     "Share Plus Example",
     "Image Picker Example",
     "Flutter Svg Example",
@@ -34,12 +35,12 @@ class _HomeScreenState extends State<HomeScreen> {
     "Connectivity Plus Example",
     "Facebook Audience Network",
     "Carousel Slider",
-    "Google Fonts"
+    "Google Fonts",
   ];
 
   List<Widget> pages = [
+    HomeScreenPhotoView(),
     FlutterSpinkitExample(),
-    // const NativeAdExample(),
     ShimmerExample(),
     const SharePlusExample(),
     const ImagePickerExample(),
