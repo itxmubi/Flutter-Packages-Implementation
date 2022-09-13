@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
 
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
@@ -25,6 +26,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Rating Bar Example",
     "Percent Indicator Example",
     "Auto Size Text",
     "Photo View Example",
@@ -43,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    FlutterRatingBarExample(),
     const PercentInicatorExample(),
     const AutoSizeTextExample(),
     HomeScreenPhotoView(),
@@ -66,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Ntive Ad Implementation"),
+        title: const Text("Flutter Packages Implementation"),
       ),
       body: SingleChildScrollView(
         child: Column(children: [
