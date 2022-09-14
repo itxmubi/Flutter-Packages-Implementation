@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Badges/badges_example.dart';
+import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 
@@ -28,6 +29,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "FL Chart Example",
     "Badges Example",
     "Pin Code Fields Example",
     "Flutter Rating Bar Example",
@@ -49,6 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlChartExample(),
     const BadgesExample(),
     const PinCodeVerificationScreen(),
     FlutterRatingBarExample(),

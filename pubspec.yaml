@@ -55,6 +55,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   pin_code_fields: ^7.4.0
   badges: ^2.0.3
+  fl_chart: ^0.55.1
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
