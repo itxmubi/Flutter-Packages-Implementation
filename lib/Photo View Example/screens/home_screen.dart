@@ -12,6 +12,8 @@ import 'examples/network_images.dart';
 import 'examples/rotation_examples.dart';
 
 class HomeScreenPhotoView extends StatelessWidget {
+  const HomeScreenPhotoView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CommonUseCasesExamples(),
+                        builder: (context) => const CommonUseCasesExamples(),
                       ),
                     );
                   },
@@ -48,7 +50,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => GalleryExample(),
+                        builder: (_) => const GalleryExample(),
                       ),
                     );
                   },
@@ -60,7 +62,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => HeroExample(),
+                        builder: (_) => const HeroExample(),
                       ),
                     );
                   },
@@ -72,7 +74,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NetworkExamples(),
+                        builder: (context) => const NetworkExamples(),
                       ),
                     );
                   },
@@ -84,7 +86,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ControllerExample(),
+                        builder: (context) => const ControllerExample(),
                       ),
                     );
                   },
@@ -108,7 +110,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => CustomChildExample(),
+                        builder: (_) => const CustomChildExample(),
                       ),
                     );
                   },
@@ -120,7 +122,7 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DialogExample(),
+                        builder: (context) => const DialogExample(),
                       ),
                     );
                   },
@@ -144,7 +146,8 @@ class HomeScreenPhotoView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProgrammaticRotationExample(),
+                        builder: (context) =>
+                            const ProgrammaticRotationExample(),
                       ),
                     );
                   },

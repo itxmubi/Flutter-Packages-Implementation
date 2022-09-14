@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class SampleLinearPage extends StatefulWidget {
+  const SampleLinearPage({super.key});
+
   @override
   _SampleLinearPageState createState() => _SampleLinearPageState();
 }

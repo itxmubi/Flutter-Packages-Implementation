@@ -6,6 +6,8 @@ import '../common/common_example_wrapper.dart';
 import '../common/example_button.dart';
 
 class CommonUseCasesExamples extends StatelessWidget {
+  const CommonUseCasesExamples({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ExampleAppBarLayout(
@@ -153,7 +155,7 @@ class CommonUseCasesExamples extends StatelessWidget {
 }
 
 class OneTapWrapper extends StatelessWidget {
-  const OneTapWrapper({
+  const OneTapWrapper({super.key, 
     required this.imageProvider,
   });
 

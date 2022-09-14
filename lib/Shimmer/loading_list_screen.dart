@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class LoadingListPage extends StatefulWidget {
+  const LoadingListPage({super.key});
+
   @override
   _LoadingListPageState createState() => _LoadingListPageState();
 }

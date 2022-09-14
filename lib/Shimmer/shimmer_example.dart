@@ -4,6 +4,8 @@ import 'package:flutter_packages_implementation/Shimmer/slide_to_unlock_screen.d
 import 'loading_list_screen.dart';
 
 class ShimmerExample extends StatefulWidget {
+  const ShimmerExample({super.key});
+
   @override
   _ShimmerExampleState createState() => _ShimmerExampleState();
 }
@@ -20,8 +22,10 @@ class _ShimmerExampleState extends State<ShimmerExample> {
           ListTile(
               title: const Text('Loading List'),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoadingListPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoadingListPage()));
               }),
           ListTile(
             title: const Text('Slide To Unlock'),

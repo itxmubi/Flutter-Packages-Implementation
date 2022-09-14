@@ -17,7 +17,7 @@ class GestureRotationExample extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: const Text(
               "Example using option enableRotation, just pinch an rotate",
-              style: const TextStyle(fontSize: 18.0),
+              style: TextStyle(fontSize: 18.0),
             ),
           ),
           Expanded(
@@ -41,6 +41,8 @@ class GestureRotationExample extends StatelessWidget {
 }
 
 class ProgrammaticRotationExample extends StatefulWidget {
+  const ProgrammaticRotationExample({super.key});
+
   @override
   _ProgrammaticRotationExampleState createState() =>
       _ProgrammaticRotationExampleState();
@@ -74,7 +76,7 @@ class _ProgrammaticRotationExampleState
                   padding: const EdgeInsets.all(20.0),
                   child: const Text(
                     "Example without manual rotation, click the button to rotate",
-                    style: const TextStyle(fontSize: 18.0),
+                    style: TextStyle(fontSize: 18.0),
                   ),
                 ),
                 Expanded(
@@ -99,8 +101,8 @@ class _ProgrammaticRotationExampleState
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.rotate_right),
         onPressed: _rotateRight90Degrees,
+        child: const Icon(Icons.rotate_right),
       ),
     );
   }

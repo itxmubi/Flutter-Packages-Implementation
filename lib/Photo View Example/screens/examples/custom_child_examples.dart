@@ -5,6 +5,8 @@ import 'package:photo_view/photo_view.dart';
 import '../common/app_bar.dart';
 
 class CustomChildExample extends StatelessWidget {
+  const CustomChildExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ExampleAppBarLayout(
@@ -37,7 +39,7 @@ class CustomChildExample extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         "Hello there, this is a text, that is a svg:",
-                        style: const TextStyle(fontSize: 12.0),
+                        style: TextStyle(fontSize: 12.0),
                         textAlign: TextAlign.center,
                       ),
                       SvgPicture.asset(

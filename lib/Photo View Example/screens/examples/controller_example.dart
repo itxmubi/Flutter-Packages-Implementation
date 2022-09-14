@@ -1,11 +1,14 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 
 import '../common/app_bar.dart';
 
 class ControllerExample extends StatefulWidget {
+  const ControllerExample({super.key});
+
   @override
   _ControllerExampleState createState() => _ControllerExampleState();
 }
@@ -40,7 +43,9 @@ class _ControllerExampleState extends State<ControllerExample> {
   }
 
   void onScaleState(PhotoViewScaleState scaleState) {
-    print(scaleState);
+    if (kDebugMode) {
+      print(scaleState);
+    }
   }
 
   @override

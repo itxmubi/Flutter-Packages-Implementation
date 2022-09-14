@@ -7,6 +7,8 @@ import '../../common/app_bar.dart';
 import 'gallery_example_item.dart';
 
 class GalleryExample extends StatefulWidget {
+  const GalleryExample({super.key});
+
   @override
   _GalleryExampleState createState() => _GalleryExampleState();
 }

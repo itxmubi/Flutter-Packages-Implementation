@@ -5,6 +5,8 @@ import '../common/common_example_wrapper.dart';
 import '../common/example_button.dart';
 
 class NetworkExamples extends StatelessWidget {
+  const NetworkExamples({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ExampleAppBarLayout(

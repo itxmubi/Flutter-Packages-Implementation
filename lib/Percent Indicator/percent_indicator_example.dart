@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_packages_implementation/Percent%20Indicator/sample_circular-page.dart';
+import 'package:flutter_packages_implementation/Percent%20Indicator/sample_circular_page.dart';
 import 'package:flutter_packages_implementation/Percent%20Indicator/simple_linear_screen.dart';
 
 class PercentInicatorExample extends StatefulWidget {

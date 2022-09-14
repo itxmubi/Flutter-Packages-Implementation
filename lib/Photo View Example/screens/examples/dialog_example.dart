@@ -15,12 +15,10 @@ class _DialogExampleState extends State<DialogExample> {
         context: context,
         builder: (BuildContext context) {
           return Dialog(
-            child: Container(
-              child: PhotoView(
-                tightMode: true,
-                imageProvider: const AssetImage("assets/large-image.jpg"),
-                heroAttributes: const PhotoViewHeroAttributes(tag: "someTag"),
-              ),
+            child: PhotoView(
+              tightMode: true,
+              imageProvider: const AssetImage("assets/large-image.jpg"),
+              heroAttributes: const PhotoViewHeroAttributes(tag: "someTag"),
             ),
           );
         },

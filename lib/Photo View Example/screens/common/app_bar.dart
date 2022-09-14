@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ExampleAppBar extends StatelessWidget {
-  const ExampleAppBar({required this.title, this.showGoBack = false}) : super();
+  const ExampleAppBar({super.key, required this.title, this.showGoBack = false});
 
   final String title;
   final bool showGoBack;

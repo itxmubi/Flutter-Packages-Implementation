@@ -93,11 +93,11 @@ class SharePlusExampleState extends State<SharePlusExample> {
         ));
   }
 
-  void _onDeleteImage(int position) {
-    setState(() {
-      imagePaths.removeAt(position);
-    });
-  }
+  // void _onDeleteImage(int position) {
+  //   setState(() {
+  //     imagePaths.removeAt(position);
+  //   });
+  // }
 
   void _onShare(BuildContext context) async {
     final box = context.findRenderObject() as RenderBox?;

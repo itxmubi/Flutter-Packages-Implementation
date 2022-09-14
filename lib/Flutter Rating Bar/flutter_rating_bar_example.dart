@@ -303,6 +303,8 @@ class _FlutterRatingBarExampleState extends State<FlutterRatingBarExample> {
 }
 
 class IconAlert extends StatelessWidget {
+  const IconAlert({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
