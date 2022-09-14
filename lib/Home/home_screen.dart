@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
+import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
@@ -13,7 +14,7 @@ import '../Google Fonts/google_fonts_example.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
-import '../Photo View Example/screens/home_screen.dart';
+import '../Photo View Example/home_screen.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 
@@ -26,6 +27,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Pin Code Fields Example",
     "Flutter Rating Bar Example",
     "Percent Indicator Example",
     "Auto Size Text",
@@ -45,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const PinCodeVerificationScreen(),
     FlutterRatingBarExample(),
     const PercentInicatorExample(),
     const AutoSizeTextExample(),
