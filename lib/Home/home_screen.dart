@@ -14,6 +14,7 @@ import '../Flutter SpinKit/flutter_spinkit_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
+import '../Image Cropper/Image_cropper.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
@@ -30,6 +31,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Image Cropper Example",
     "Dotted Border EXAMPLE",
     "FL Chart Example",
     "Badges Example",
@@ -53,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const ImageCropperExample(title: "Ima",),
     const DottedBorderExample(),
     const FlChartExample(),
     const BadgesExample(),

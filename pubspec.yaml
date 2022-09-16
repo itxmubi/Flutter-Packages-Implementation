@@ -57,6 +57,7 @@ dependencies:
   badges: ^2.0.3
   fl_chart: ^0.55.1
   dotted_border: ^2.0.0+2
+  image_cropper: ^3.0.0
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
