@@ -36,3 +36,20 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Shimmer](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Shimmer)
 
+- [Flutter Spin Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Spinkit)
+
+- [AutoSizeText ](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Auto%20Size%20Text)
+
+- [Percent Indicator](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Percent%20Indicator)
+
+- [Flutter Rating Bar](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Rating%20Bar)
+
+- [Pin code Fields](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Pin%20Code%20Fields)
+
+- [Badges](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Badges)
+
+- [Dotted Border](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Dotted%20Border)
+
+- [fl_Chart](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Fl%20Chart)
+
+- [Image Cropper](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%20Cropper)
