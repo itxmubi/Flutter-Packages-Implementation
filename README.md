@@ -54,6 +54,8 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Image Cropper](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%20Cropper)
 
+- [Just Audio](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Just%20Audio)
+
 ### :heart: Found this project useful?
 
 If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.

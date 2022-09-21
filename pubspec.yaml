@@ -58,6 +58,7 @@ dependencies:
   fl_chart: ^0.55.1
   dotted_border: ^2.0.0+2
   image_cropper: ^3.0.0
+  just_audio: ^0.9.29
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
