@@ -3,7 +3,6 @@ import 'package:flutter_packages_implementation/Badges/badges_example.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
-
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';

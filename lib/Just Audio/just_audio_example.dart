@@ -40,7 +40,7 @@ class JustAudioExampleState extends State<JustAudioExample>
     try {
       // AAC example: https://dl.espressif.com/dl/audio/ff-16b-2c-44100hz.aac
       await _player.setAudioSource(AudioSource.uri(Uri.parse(
-          "https://s3.amazonaws.com/scifri-episodes/scifri20181123-episode.mp3")));
+          "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")));
     } catch (e) {
       print("Error loading audio source: $e");
     }
