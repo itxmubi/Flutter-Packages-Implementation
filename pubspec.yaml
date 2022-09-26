@@ -59,6 +59,7 @@ dependencies:
   dotted_border: ^2.0.0+2
   image_cropper: ^3.0.0
   just_audio: ^0.9.29
+  smooth_page_indicator: ^1.0.0+2
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
