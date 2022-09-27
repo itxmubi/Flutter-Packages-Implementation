@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Badges/badges_example.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
+import 'package:flutter_packages_implementation/Local%20Auth%20Package/local_auth_example.dart';
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-page_indicator_example.dart';
 import '../Auto Size Text/auto_size_text_example.dart';
@@ -32,6 +33,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Local Auth Example",
     "Smooth Page Indicator",
     "Just Audio",
     "Image Cropper Example",
@@ -58,6 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const LocalAuthExample(),
     SmoothPageIndicatorExample(),
     const JustAudioExample(),
     const ImageCropperExample(
