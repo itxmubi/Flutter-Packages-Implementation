@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Badges/badges_example.dart';
+import 'package:flutter_packages_implementation/Edge%20Detection/edge_detection_example.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
 import 'package:flutter_packages_implementation/Local%20Auth%20Package/local_auth_example.dart';
@@ -34,6 +35,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Edge Detection Example",
     "Flutter Image Compress",
     "Local Auth Example",
     "Smooth Page Indicator",
@@ -62,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    EdgeDetetionExample(),
     const FlutterImageCompressExample(),
     const LocalAuthExample(),
     SmoothPageIndicatorExample(),
