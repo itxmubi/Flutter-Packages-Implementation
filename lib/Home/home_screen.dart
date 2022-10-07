@@ -11,6 +11,7 @@ import '../Connectivity Plus/connectivity_plus_example.dart';
 import '../Device Info Plus/device_info_example.dart';
 import '../Dotted Border/dotted_border_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
+import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
@@ -33,6 +34,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Image Compress",
     "Local Auth Example",
     "Smooth Page Indicator",
     "Just Audio",
@@ -60,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterImageCompressExample(),
     const LocalAuthExample(),
     SmoothPageIndicatorExample(),
     const JustAudioExample(),

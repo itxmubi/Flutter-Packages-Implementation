@@ -1,10 +1,12 @@
 import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter_packages_implementation/Home/home_screen.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() {
   runApp(const MyApp());
+    FlutterImageCompress.showNativeLog = true;
 }
 
 class MyApp extends StatefulWidget {
@@ -25,7 +27,6 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-  @override
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
