@@ -23,6 +23,7 @@ import '../Just Audio/just_audio_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
 import '../Photo View Example/home_screen.dart';
+import '../Presistent NavBar/presistent_nav_bar.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 
@@ -35,6 +36,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Presistent NaVBar Example",
     "Edge Detection Example",
     "Flutter Image Compress",
     "Local Auth Example",
@@ -64,6 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const PresistentNavBarExample(),
     EdgeDetetionExample(),
     const FlutterImageCompressExample(),
     const LocalAuthExample(),
