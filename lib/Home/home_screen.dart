@@ -6,6 +6,7 @@ import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_r
 import 'package:flutter_packages_implementation/Local%20Auth%20Package/local_auth_example.dart';
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-page_indicator_example.dart';
+
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
@@ -26,6 +27,7 @@ import '../Photo View Example/home_screen.dart';
 import '../Presistent NavBar/presistent_nav_bar.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
+import '../Table Calendar/table_calendar_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -36,6 +38,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Table Calendar Example",
     "Presistent NaVBar Example",
     "Edge Detection Example",
     "Flutter Image Compress",
@@ -66,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    TableCalendarExample(),
     const PresistentNavBarExample(),
     EdgeDetetionExample(),
     const FlutterImageCompressExample(),
