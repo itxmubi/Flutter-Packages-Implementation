@@ -9,7 +9,7 @@ import audio_session
 import connectivity_plus_macos
 import device_info_plus_macos
 import just_audio
-import path_provider_macos
+import path_provider_foundation
 import share_plus_macos
 import url_launcher_macos
 
