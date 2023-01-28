@@ -65,6 +65,7 @@ dependencies:
   edge_detection: ^1.0.9
   persistent_bottom_nav_bar: ^5.0.2
   table_calendar: ^3.0.9
+  flutter_switch: ^0.3.2
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:

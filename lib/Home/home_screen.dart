@@ -16,6 +16,7 @@ import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
+import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Cropper/Image_cropper.dart';
@@ -38,6 +39,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Switch Example",
     "Table Calendar Example",
     "Presistent NaVBar Example",
     "Edge Detection Example",
@@ -69,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    FlutterSwitchExamples(),
     TableCalendarExample(),
     const PresistentNavBarExample(),
     EdgeDetetionExample(),
