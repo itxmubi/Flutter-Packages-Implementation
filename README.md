@@ -83,5 +83,5 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 <!-- <a href="https://twitter.com/Mubashi51232323"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
 <a href="https://linkedin.com/in/itxmubi/"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
-<a href="https://instagram.com/siddharth_chopra"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a> -->
+<a href="https://instagram.com/itzzmubi"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a> -->
 
