@@ -7,6 +7,7 @@ import 'package:flutter_packages_implementation/Local%20Auth%20Package/local_aut
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-page_indicator_example.dart';
 
+import '../Animated Text Kit/animated_text_kit_example.dart';
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
@@ -39,6 +40,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Animated Text Kit Example",
     "Flutter Switch Example",
     "Table Calendar Example",
     "Presistent NaVBar Example",
@@ -71,6 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    AnimatedTextKitExample(),
     FlutterSwitchExamples(),
     TableCalendarExample(),
     const PresistentNavBarExample(),
