@@ -67,6 +67,7 @@ dependencies:
   table_calendar: ^3.0.9
   flutter_switch: ^0.3.2
   animated_text_kit: ^4.2.2
+  nice_ripple: ^0.0.3
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
