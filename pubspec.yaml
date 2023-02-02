@@ -68,6 +68,8 @@ dependencies:
   flutter_switch: ^0.3.2
   animated_text_kit: ^4.2.2
   nice_ripple: ^0.0.3
+  clock: ^1.1.1
+  flutter_slidable: ^2.0.0
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
