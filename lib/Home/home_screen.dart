@@ -9,6 +9,7 @@ import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-
 
 import '../Animated Text Kit/animated_text_kit_example.dart';
 import '../Auto Size Text/auto_size_text_example.dart';
+import '../Card Swiper/card_swipper_example.dart';
 import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
 import '../Device Info Plus/device_info_example.dart';
@@ -42,6 +43,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Card Swipper Example",
     "Flutter Slideable Example",
     "Nice Ripple Example",
     "Animated Text Kit Example",
@@ -77,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const CardSwipperExample(),
     const FlutterSlideAbleExample(),
     const NiceRippleExample(),
     AnimatedTextKitExample(),
