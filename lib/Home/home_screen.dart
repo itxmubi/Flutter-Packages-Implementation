@@ -18,6 +18,7 @@ import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter Slideable/flutter_slideble_example.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
+import '../Flutter Staggered Animation/flutter_stager_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
@@ -43,6 +44,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Staggerd Animation Example",
     "Card Swipper Example",
     "Flutter Slideable Example",
     "Nice Ripple Example",
@@ -79,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterStaggeredAnimationExample(),
     const CardSwipperExample(),
     const FlutterSlideAbleExample(),
     const NiceRippleExample(),
