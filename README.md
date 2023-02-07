@@ -71,7 +71,7 @@ This project is for practice purpose and i will test different packages from [pu
 - [Animated Text Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Animated%20Text%20Kit)
 
 
-- [Animated Text Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Nice%20Ripple)
+- [Nice Ripple](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Nice%20Ripple)
 
 ### :heart: Found this project useful?
 
