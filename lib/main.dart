@@ -1,12 +1,24 @@
+import 'dart:developer';
+
+import 'package:camera/camera.dart';
 import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter_packages_implementation/Home/home_screen.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-void main() {
+List<CameraDescription> cameras = <CameraDescription>[];
+
+void main() async {
+  try {
+    WidgetsFlutterBinding.ensureInitialized();
+    cameras = await availableCameras();
+  } on CameraException catch (e) {
+    _logError(e.code, e.description);
+  }
   runApp(const MyApp());
-    FlutterImageCompress.showNativeLog = true;
+
+  FlutterImageCompress.showNativeLog = true;
 }
 
 class MyApp extends StatefulWidget {
@@ -38,4 +50,9 @@ class _MyAppState extends State<MyApp> {
       home: const HomeScreen(),
     );
   }
+}
+
+void _logError(String code, String? message) {
+  // ignore: avoid_print
+  log('Error: $code${message == null ? '' : '\nError Message: $message'}');
 }

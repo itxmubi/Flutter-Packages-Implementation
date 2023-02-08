@@ -72,6 +72,7 @@ dependencies:
   flutter_slidable: ^2.0.0
   card_swiper: ^2.0.4
   flutter_staggered_animations: ^1.1.1
+  camera: ^0.10.3
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
