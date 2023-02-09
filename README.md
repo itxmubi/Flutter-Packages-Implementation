@@ -56,26 +56,25 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Just Audio](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Just%20Audio)
 
-
 - [Edge Detection](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Edge%20Detection)
 
-
 - [Presistent Nav Bar](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Presistent%20NavBar)
-
 
 - [Table Calendar](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Table%20Calendar)
 
 - [Flutter Switch](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Switch)
 
-
 - [Animated Text Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Animated%20Text%20Kit)
-
 
 - [Nice Ripple](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Nice%20Ripple)
 
 - [Card Swipper](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Card%20Swiper)
 
 - [Flutter Staggered Animation](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Staggered%20Animation)
+
+- [Camera](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Camera)
+
+- [Dropdown Search](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Drop%20down%20Search)
 
 ### :heart: Found this project useful?
 
