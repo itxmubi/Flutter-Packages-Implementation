@@ -15,6 +15,7 @@ import '../Carousel Slider/carousel_slider_example.dart';
 import '../Connectivity Plus/connectivity_plus_example.dart';
 import '../Device Info Plus/device_info_example.dart';
 import '../Dotted Border/dotted_border_example.dart';
+import '../Drop down Search/drop_down_search_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter Slideable/flutter_slideble_example.dart';
@@ -45,6 +46,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Drop Down Search Example",
     "Camera Example",
     "Flutter Staggerd Animation Example",
     "Card Swipper Example",
@@ -83,6 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const DropDownSearchExample(),
     const CameraExampleHome(),
     const FlutterStaggeredAnimationExample(),
     const CardSwipperExample(),

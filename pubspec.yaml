@@ -73,6 +73,9 @@ dependencies:
   card_swiper: ^2.0.4
   flutter_staggered_animations: ^1.1.1
   camera: ^0.10.3
+  dropdown_search: ^5.0.5
+  dio: ^4.0.6
+
   # google_native_mobile_ads: ^1.0.3
 
 dev_dependencies:
