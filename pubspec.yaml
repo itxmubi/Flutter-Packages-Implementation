@@ -68,13 +68,14 @@ dependencies:
   flutter_switch: ^0.3.2
   animated_text_kit: ^4.2.2
   nice_ripple: ^0.0.3
-  clock: ^1.1.1
+  # clock: ^1.1.1
   flutter_slidable: ^2.0.0
   card_swiper: ^2.0.4
   flutter_staggered_animations: ^1.1.1
   camera: ^0.10.3
   dropdown_search: ^5.0.5
   dio: ^4.0.6
+  rflutter_alert: ^2.0.4
 
   # google_native_mobile_ads: ^1.0.3
 

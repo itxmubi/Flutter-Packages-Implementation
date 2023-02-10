@@ -33,6 +33,7 @@ import '../Nice Ripple/nice_ripple.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
 import '../Photo View Example/home_screen.dart';
 import '../Presistent NavBar/presistent_nav_bar.dart';
+import '../RFlutter Alert/rflutter_alert_example.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 import '../Table Calendar/table_calendar_example.dart';
@@ -46,6 +47,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "RFlutter Alert Example",
     "Drop Down Search Example",
     "Camera Example",
     "Flutter Staggerd Animation Example",
@@ -85,6 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const RFlutterAlertExample(),
     const DropDownSearchExample(),
     const CameraExampleHome(),
     const FlutterStaggeredAnimationExample(),
