@@ -76,6 +76,8 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Dropdown Search](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Drop%20down%20Search)
 
+- [Rflutter Alert](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/RFlutter%20Alert)
+
 ### :heart: Found this project useful?
 
 If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
