@@ -32,11 +32,11 @@ This project is for practice purpose and i will test different packages from [pu
 
 <!-- - [Google Mobile Ads](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Native%Ads) -->
 
-<!-- - [Image Picker](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%Picker) -->
+- [Image Picker](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%Picker)
 
-<!-- - [Shimmer](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Shimmer) -->
+- [Shimmer](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Shimmer)
 
-<!-- - [Flutter Spin Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Spinkit) -->
+- [Flutter Spin Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Spinkit)
 
 - [AutoSizeText ](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Auto%20Size%20Text)
 
@@ -77,6 +77,8 @@ This project is for practice purpose and i will test different packages from [pu
 - [Dropdown Search](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Drop%20down%20Search)
 
 - [Rflutter Alert](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/RFlutter%20Alert)
+
+- [Dropdown Button2](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Dropdown%20Button2)
 
 ### :heart: Found this project useful?
 
