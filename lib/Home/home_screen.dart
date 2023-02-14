@@ -8,6 +8,7 @@ import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fie
 import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-page_indicator_example.dart';
 
 import '../Animated Text Kit/animated_text_kit_example.dart';
+import '../App Settings/app_settings_example.dart';
 import '../Auto Size Text/auto_size_text_example.dart';
 import '../Camera/camera_example.dart';
 import '../Card Swiper/card_swipper_example.dart';
@@ -48,6 +49,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "App Settings Example",
     "Dropdown Button 2 Example",
     "RFlutter Alert Example",
     "Drop Down Search Example",
@@ -89,6 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const AppSettingsExample(),
     const DropDownButton2Example(),
     const RFlutterAlertExample(),
     const DropDownSearchExample(),
