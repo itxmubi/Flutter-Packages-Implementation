@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 
-
-
 /// This is the main app stateful widget.
 class AppSettingsExample extends StatefulWidget {
   const AppSettingsExample({super.key});
@@ -34,21 +32,20 @@ class _AppSettingsExampleState extends State<AppSettingsExample> {
   @override
   Widget build(BuildContext context) {
     var actionItems = getListOfActionButtons();
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text('App Settings Example App'),
-            ),
-            body: ListView.separated(
-              separatorBuilder: (context, index) => const Divider(
-                color: Colors.blueGrey,
-              ),
-              itemCount: actionItems.length,
-              itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: actionItems[index],
-              ),
-            )));
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('App Settings Example App'),
+        ),
+        body: ListView.separated(
+          separatorBuilder: (context, index) => const Divider(
+            color: Colors.blueGrey,
+          ),
+          itemCount: actionItems.length,
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: actionItems[index],
+          ),
+        ));
   }
 
   List<Widget> getListOfActionButtons() {
