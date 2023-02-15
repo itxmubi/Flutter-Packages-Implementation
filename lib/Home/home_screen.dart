@@ -19,6 +19,7 @@ import '../Dotted Border/dotted_border_example.dart';
 import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
+import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter Slideable/flutter_slideble_example.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
@@ -49,6 +50,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Color Picker Example",
     "App Settings Example",
     "Dropdown Button 2 Example",
     "RFlutter Alert Example",
@@ -91,6 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterColorPickerExample(),
     const AppSettingsExample(),
     const DropDownButton2Example(),
     const RFlutterAlertExample(),

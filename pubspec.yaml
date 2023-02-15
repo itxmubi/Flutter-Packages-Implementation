@@ -78,6 +78,7 @@ dependencies:
   rflutter_alert: ^2.0.4
   dropdown_button2: ^1.9.2
   app_settings: ^4.2.0
+  flutter_colorpicker: ^1.0.3
 
   # google_native_mobile_ads: ^1.0.3
 
