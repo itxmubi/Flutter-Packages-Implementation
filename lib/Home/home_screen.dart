@@ -32,10 +32,12 @@ import '../Image Cropper/Image_cropper.dart';
 import '../Image Picker/image_picker_example.dart';
 import '../Just Audio/just_audio_example.dart';
 import '../Lottie/lottie_example.dart';
+import '../Mobile Scanner/mobile_scanner_example.dart';
 import '../Nice Ripple/nice_ripple.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
 import '../Photo View Example/home_screen.dart';
 import '../Presistent NavBar/presistent_nav_bar.dart';
+import '../QR Scanner/qr_scan_example.dart';
 import '../RFlutter Alert/rflutter_alert_example.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
@@ -50,6 +52,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Mobile Scanner Example",
+    "QR Scanner Example",
     "Flutter Color Picker Example",
     "App Settings Example",
     "Dropdown Button 2 Example",
@@ -93,6 +97,8 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const MobileScannerExample(),
+    const QRScannerExample(),
     const FlutterColorPickerExample(),
     const AppSettingsExample(),
     const DropDownButton2Example(),

@@ -79,6 +79,10 @@ dependencies:
   dropdown_button2: ^1.9.2
   app_settings: ^4.2.0
   flutter_colorpicker: ^1.0.3
+  qrscan: ^0.3.3
+  image_gallery_saver: ^1.7.1
+  permission_handler: ^10.2.0
+  mobile_scanner: ^3.0.0
 
   # google_native_mobile_ads: ^1.0.3
 
