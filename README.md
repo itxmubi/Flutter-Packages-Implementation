@@ -80,7 +80,9 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Dropdown Button2](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Dropdown%20Button2)
 
-- [Dropdown Button2](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/App%Settings)
+- [App Setiings](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/App%Settings)
+
+- [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%Scanner)
 
 ### :heart: Found this project useful?
 
