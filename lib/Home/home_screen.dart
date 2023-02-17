@@ -27,6 +27,7 @@ import '../Flutter Staggered Animation/flutter_stager_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
+import '../Flutter Typehead/flutter_type_head_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Cropper/Image_cropper.dart';
 import '../Image Picker/image_picker_example.dart';
@@ -52,6 +53,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Typehead Example",
     "Mobile Scanner Example",
     "QR Scanner Example",
     "Flutter Color Picker Example",
@@ -97,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterTypeheadExample(),
     const MobileScannerExample(),
     const QRScannerExample(),
     const FlutterColorPickerExample(),

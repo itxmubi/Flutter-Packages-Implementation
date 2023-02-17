@@ -83,6 +83,7 @@ dependencies:
   image_gallery_saver: ^1.7.1
   permission_handler: ^10.2.0
   mobile_scanner: ^3.0.0
+  flutter_typeahead: ^4.3.3
 
   # google_native_mobile_ads: ^1.0.3
 
