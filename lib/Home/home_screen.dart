@@ -22,6 +22,7 @@ import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter Slideable/flutter_slideble_example.dart';
+import '../Flutter Speed Dial/flutter_speed_dial_example.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
 import '../Flutter Staggered Animation/flutter_stager_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
@@ -53,6 +54,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Speed Dial Example",
     "Flutter Typehead Example",
     "Mobile Scanner Example",
     "QR Scanner Example",
@@ -99,6 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    FlutterSpeedDialExample(),
     const FlutterTypeheadExample(),
     const MobileScannerExample(),
     const QRScannerExample(),
