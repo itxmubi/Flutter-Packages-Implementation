@@ -85,6 +85,7 @@ dependencies:
   mobile_scanner: ^3.0.0
   flutter_typeahead: ^4.3.3
   flutter_speed_dial: ^6.2.0
+  flutter_easyloading: ^3.0.5
 
   # google_native_mobile_ads: ^1.0.3
 

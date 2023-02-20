@@ -14,6 +14,8 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
 
+- [Flutter EasyLoading](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Easy%Loading)
+
 - [Device info Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Device%20Info%20Plus)
 
 - [Url Launcher](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Url%20Launcher)
@@ -80,9 +82,9 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Dropdown Button2](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Dropdown%20Button2)
 
-- [App Setiings](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/App%Settings)
+- [App Setiings](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/App%20Settings)
 
-- [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%Scanner)
+- [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%20Scanner)
 
 ### :heart: Found this project useful?
 
