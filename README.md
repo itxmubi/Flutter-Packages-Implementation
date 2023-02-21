@@ -14,7 +14,9 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
 
-- [Flutter EasyLoading](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Easy%Loading)
+- [Flutter EasyLoading](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Youtube%20Player%20Flutter)
+
+- [Flutter EasyLoading](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Flutter%20Easy%20Loading)
 
 - [Device info Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Device%20Info%20Plus)
 
@@ -34,7 +36,7 @@ This project is for practice purpose and i will test different packages from [pu
 
 <!-- - [Google Mobile Ads](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Native%Ads) -->
 
-- [Image Picker](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%Picker)
+- [Image Picker](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Image%20Picker)
 
 - [Shimmer](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Shimmer)
 
@@ -97,7 +99,7 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 ### Mubashir Nawaz
 
-<!-- <a href="https://twitter.com/Mubashi51232323"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
+<a href="https://twitter.com/Mubashi51232323"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
 <a href="https://linkedin.com/in/itxmubi/"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
-<a href="https://instagram.com/itzzmubi"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a> -->
+<a href="https://instagram.com/itzzmubi"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
 

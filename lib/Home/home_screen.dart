@@ -45,6 +45,7 @@ import '../RFlutter Alert/rflutter_alert_example.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 import '../Table Calendar/table_calendar_example.dart';
+import '../Youtube Player Flutter/youtube_player_flutter_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -55,6 +56,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Youtube Player Flutter Example",
     "Flutter Easy Loading",
     "Flutter Speed Dial Example",
     "Flutter Typehead Example",
@@ -103,6 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterYoutubePlayerExample(),
     const FlutterEasyLoading(),
     const FlutterSpeedDialExample(),
     const FlutterTypeheadExample(),
