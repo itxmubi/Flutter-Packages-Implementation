@@ -89,6 +89,7 @@ dependencies:
   youtube_player_flutter: ^8.1.2
   location: ^4.4.0
   wakelock: ^0.6.2
+  dots_indicator: ^2.1.0
 
   # google_native_mobile_ads: ^1.0.3
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Badges/badges_example.dart';
+import 'package:flutter_packages_implementation/Dots%20Indicator/dots_indicator_example.dart';
 import 'package:flutter_packages_implementation/Edge%20Detection/edge_detection_example.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
@@ -58,6 +59,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Dots Indicator Example",
     "WakeLock Example",
     "Location Example",
     "Youtube Player Flutter Example",
@@ -109,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    DotsIndicatorExample(),
     const WakelockExampleApp(),
     const LocationExample(),
     const FlutterYoutubePlayerExample(),

@@ -41,7 +41,6 @@ class _LocationExampleState extends State<LocationExample> {
   @override
   void initState() {
     checkLocation();
-    // TODO: implement initState
     super.initState();
   }
 
