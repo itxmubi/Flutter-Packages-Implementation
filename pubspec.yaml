@@ -90,6 +90,8 @@ dependencies:
   location: ^4.4.0
   wakelock: ^0.6.2
   dots_indicator: ^2.1.0
+  flutter_sticky_header: ^0.6.5
+  sliver_tools: ^0.2.10
 
   # google_native_mobile_ads: ^1.0.3
 

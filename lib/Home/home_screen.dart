@@ -28,6 +28,7 @@ import '../Flutter Slideable/flutter_slideble_example.dart';
 import '../Flutter Speed Dial/flutter_speed_dial_example.dart';
 import '../Flutter SpinKit/flutter_spinkit_example.dart';
 import '../Flutter Staggered Animation/flutter_stager_example.dart';
+import '../Flutter Sticky Header/flutter_sticky_header_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
@@ -59,6 +60,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Sticky Header",
     "Dots Indicator Example",
     "WakeLock Example",
     "Location Example",
@@ -111,6 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const StickyHeaderExample(),
     DotsIndicatorExample(),
     const WakelockExampleApp(),
     const LocationExample(),

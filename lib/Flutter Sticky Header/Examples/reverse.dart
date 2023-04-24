@@ -3,20 +3,21 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
 import '../common.dart';
 
-class ListExample extends StatelessWidget {
-  const ListExample({
+class ReverseExample extends StatelessWidget {
+  const ReverseExample({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      title: 'List Example',
+      reverse: true,
+      title: 'Reverse Example',
       slivers: [
-        const _StickyHeaderList(index: 0),
-        const _StickyHeaderList(index: 1),
-        const _StickyHeaderList(index: 2),
-        const _StickyHeaderList(index: 3),
+        _StickyHeaderList(index: 0),
+        _StickyHeaderList(index: 1),
+        _StickyHeaderList(index: 2),
+        _StickyHeaderList(index: 3),
       ],
     );
   }
@@ -37,9 +38,6 @@ class _StickyHeaderList extends StatelessWidget {
       sliver: SliverList(
         delegate: SliverChildBuilderDelegate(
           (context, i) => ListTile(
-            onTap: () {
-              print('tile $i');
-            },
             leading: CircleAvatar(
               child: Text('$index'),
             ),
