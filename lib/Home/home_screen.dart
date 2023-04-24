@@ -4,6 +4,7 @@ import 'package:flutter_packages_implementation/Edge%20Detection/edge_detection_
 import 'package:flutter_packages_implementation/Fl%20Chart/fl_chart_exmaple.dart';
 import 'package:flutter_packages_implementation/Flutter%20Rating%20Bar/flutter_rating_bar_example.dart';
 import 'package:flutter_packages_implementation/Local%20Auth%20Package/local_auth_example.dart';
+import 'package:flutter_packages_implementation/Location/location_example.dart';
 import 'package:flutter_packages_implementation/Pin%20Code%20Fields/pin_code_fields_exmple.dart';
 import 'package:flutter_packages_implementation/Smooth%20Page%20Idicator/smooth-page_indicator_example.dart';
 
@@ -56,6 +57,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Location Example",
     "Youtube Player Flutter Example",
     "Flutter Easy Loading",
     "Flutter Speed Dial Example",
@@ -105,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const LocationExample(),
     const FlutterYoutubePlayerExample(),
     const FlutterEasyLoading(),
     const FlutterSpeedDialExample(),

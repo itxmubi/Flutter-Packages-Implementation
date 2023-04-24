@@ -87,6 +87,7 @@ dependencies:
   flutter_speed_dial: ^6.2.0
   flutter_easyloading: ^3.0.5
   youtube_player_flutter: ^8.1.2
+  location: ^4.4.0
 
   # google_native_mobile_ads: ^1.0.3
 
