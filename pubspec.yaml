@@ -92,6 +92,7 @@ dependencies:
   dots_indicator: ^2.1.0
   flutter_sticky_header: ^0.6.5
   sliver_tools: ^0.2.10
+  nfc_manager: ^3.2.0
 
   # google_native_mobile_ads: ^1.0.3
 
