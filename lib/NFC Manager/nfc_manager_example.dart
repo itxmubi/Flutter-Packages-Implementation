@@ -3,9 +3,9 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:nfc_manager/nfc_manager.dart';
 
-
-
 class NFCExample extends StatefulWidget {
+  const NFCExample({super.key});
+
   @override
   State<StatefulWidget> createState() => NFCExampleState();
 }
@@ -15,56 +15,61 @@ class NFCExampleState extends State<NFCExample> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('NfcManager Plugin Example')),
-        body: SafeArea(
-          child: FutureBuilder<bool>(
-            future: NfcManager.instance.isAvailable(),
-            builder: (context, ss) => ss.data != true
-                ? Center(child: Text('NfcManager.isAvailable(): ${ss.data}'))
-                : Flex(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    direction: Axis.vertical,
-                    children: [
-                      Flexible(
-                        flex: 2,
-                        child: Container(
-                          margin: EdgeInsets.all(4),
-                          constraints: BoxConstraints.expand(),
-                          decoration: BoxDecoration(border: Border.all()),
-                          child: SingleChildScrollView(
-                            child: ValueListenableBuilder<dynamic>(
-                              valueListenable: result,
-                              builder: (context, value, _) =>
-                                  Text('${value ?? ''}'),
-                            ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('NfcManager Plugin Example')),
+      body: SafeArea(
+        child: FutureBuilder<bool>(
+          future: NfcManager.instance.isAvailable(),
+          builder: (context, ss) => ss.data != true
+              ? Center(
+                  child: Text(
+                    'NfcManager.isAvailable(): ${ss.data}',
+                  ),
+                )
+              : Flex(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  direction: Axis.vertical,
+                  children: [
+                    Flexible(
+                      flex: 2,
+                      child: Container(
+                        margin: const EdgeInsets.all(4),
+                        constraints: const BoxConstraints.expand(),
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                        ),
+                        child: SingleChildScrollView(
+                          child: ValueListenableBuilder<dynamic>(
+                            valueListenable: result,
+                            builder: (context, value, _) =>
+                                Text('${value ?? ''}'),
                           ),
                         ),
                       ),
-                      Flexible(
-                        flex: 3,
-                        child: GridView.count(
-                          padding: EdgeInsets.all(4),
-                          crossAxisCount: 2,
-                          childAspectRatio: 4,
-                          crossAxisSpacing: 4,
-                          mainAxisSpacing: 4,
-                          children: [
-                            ElevatedButton(
-                                child: Text('Tag Read'), onPressed: _tagRead),
-                            ElevatedButton(
-                                child: Text('Ndef Write'),
-                                onPressed: _ndefWrite),
-                            ElevatedButton(
-                                child: Text('Ndef Write Lock'),
-                                onPressed: _ndefWriteLock),
-                          ],
-                        ),
+                    ),
+                    Flexible(
+                      flex: 3,
+                      child: GridView.count(
+                        padding: const EdgeInsets.all(4),
+                        crossAxisCount: 2,
+                        childAspectRatio: 4,
+                        crossAxisSpacing: 4,
+                        mainAxisSpacing: 4,
+                        children: [
+                          ElevatedButton(
+                              onPressed: _tagRead,
+                              child: const Text('Tag Read')),
+                          ElevatedButton(
+                              onPressed: _ndefWrite,
+                              child: const Text('Ndef Write')),
+                          ElevatedButton(
+                              onPressed: _ndefWriteLock,
+                              child: const Text('Ndef Write Lock')),
+                        ],
                       ),
-                    ],
-                  ),
-          ),
+                    ),
+                  ],
+                ),
         ),
       ),
     );
