@@ -7,8 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
-
-
 class ImageCropperExample extends StatefulWidget {
   final String title;
 
@@ -175,12 +173,12 @@ class _ImageCropperExampleState extends State<ImageCropperExample> {
                             style: kIsWeb
                                 ? Theme.of(context)
                                     .textTheme
-                                    .headline5!
+                                    .headlineSmall!
                                     .copyWith(
                                         color: Theme.of(context).highlightColor)
                                 : Theme.of(context)
                                     .textTheme
-                                    .bodyText2!
+                                    .bodyMedium!
                                     .copyWith(
                                         color:
                                             Theme.of(context).highlightColor),

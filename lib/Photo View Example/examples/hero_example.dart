@@ -44,6 +44,7 @@ class HeroExample extends StatelessWidget {
 
 class HeroPhotoViewRouteWrapper extends StatelessWidget {
   const HeroPhotoViewRouteWrapper({
+    super.key,
     required this.imageProvider,
     this.backgroundDecoration,
     this.minScale,

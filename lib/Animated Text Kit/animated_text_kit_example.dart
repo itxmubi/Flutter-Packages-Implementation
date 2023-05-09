@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-
-
 class AnimatedTextKitExample extends StatefulWidget {
-  AnimatedTextKitExample({Key? key}) : super(key: key);
+  const AnimatedTextKitExample({Key? key}) : super(key: key);
 
   @override
   _AnimatedTextKitExampleState createState() => _AnimatedTextKitExampleState();
@@ -34,7 +32,7 @@ class _AnimatedTextKitExampleState extends State<AnimatedTextKitExample> {
       appBar: AppBar(
         title: Text(
           animatedTextExample.label,
-          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(
@@ -126,7 +124,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
                   height: 100.0,
                 ),
                 DefaultTextStyle(
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 40.0,
                     fontFamily: 'Horizon',
                   ),

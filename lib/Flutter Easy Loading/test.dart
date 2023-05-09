@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class TestPage extends StatefulWidget {
+  const TestPage({super.key});
+
   @override
   _TestPageState createState() => _TestPageState();
 }
@@ -47,11 +49,11 @@ class _TestPageState extends State<TestPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test Page'),
+        title: const Text('Test Page'),
       ),
       body: Center(
         child: TextButton(
-          child: Text('loadData'),
+          child: const Text('loadData'),
           onPressed: () {
             EasyLoading.show(status: '加载中...');
             // loadData();

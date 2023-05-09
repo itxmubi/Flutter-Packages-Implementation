@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/radar_chart/radar_chart_page.dart';
 import 'package:flutter_packages_implementation/Fl%20Chart/scatter_chart/scatter_chart_page.dart';
@@ -13,12 +12,10 @@ import 'line_chart/line_chart_page4.dart';
 import 'pie_chart/pie_chart_page.dart';
 import 'utils/platform_info.dart';
 
-
-
-
 class FlChartExample extends StatefulWidget {
-  const FlChartExample({Key? key, }) : super(key: key);
-
+  const FlChartExample({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _FlChartExampleState createState() => _FlChartExampleState();

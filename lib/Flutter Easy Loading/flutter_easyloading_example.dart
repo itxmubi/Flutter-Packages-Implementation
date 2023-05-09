@@ -161,15 +161,15 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                       child: CupertinoSegmentedControl<EasyLoadingStyle>(
                         selectedColor: Colors.blue,
                         children: const {
-                          EasyLoadingStyle.dark: const Padding(
+                          EasyLoadingStyle.dark: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('dark'),
                           ),
-                          EasyLoadingStyle.light: const Padding(
+                          EasyLoadingStyle.light: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('light'),
                           ),
-                          EasyLoadingStyle.custom: const Padding(
+                          EasyLoadingStyle.custom: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('custom'),
                           ),
@@ -192,19 +192,19 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                       child: CupertinoSegmentedControl<EasyLoadingMaskType>(
                         selectedColor: Colors.blue,
                         children: const {
-                          EasyLoadingMaskType.none: const Padding(
+                          EasyLoadingMaskType.none: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('none'),
                           ),
-                          EasyLoadingMaskType.clear: const Padding(
+                          EasyLoadingMaskType.clear: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('clear'),
                           ),
-                          EasyLoadingMaskType.black: const Padding(
+                          EasyLoadingMaskType.black: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('black'),
                           ),
-                          EasyLoadingMaskType.custom: const Padding(
+                          EasyLoadingMaskType.custom: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('custom'),
                           ),
@@ -228,15 +228,15 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                           CupertinoSegmentedControl<EasyLoadingToastPosition>(
                         selectedColor: Colors.blue,
                         children: const {
-                          EasyLoadingToastPosition.top: const Padding(
+                          EasyLoadingToastPosition.top: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('top'),
                           ),
-                          EasyLoadingToastPosition.center: const Padding(
+                          EasyLoadingToastPosition.center: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('center'),
                           ),
-                          EasyLoadingToastPosition.bottom: const Padding(
+                          EasyLoadingToastPosition.bottom: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('bottom'),
                           ),
@@ -260,19 +260,19 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                           CupertinoSegmentedControl<EasyLoadingAnimationStyle>(
                         selectedColor: Colors.blue,
                         children: const {
-                          EasyLoadingAnimationStyle.opacity: const Padding(
+                          EasyLoadingAnimationStyle.opacity: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('opacity'),
                           ),
-                          EasyLoadingAnimationStyle.offset: const Padding(
+                          EasyLoadingAnimationStyle.offset: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('offset'),
                           ),
-                          EasyLoadingAnimationStyle.scale: const Padding(
+                          EasyLoadingAnimationStyle.scale: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('scale'),
                           ),
-                          EasyLoadingAnimationStyle.custom: const Padding(
+                          EasyLoadingAnimationStyle.custom: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('custom'),
                           ),
@@ -299,27 +299,27 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                           CupertinoSegmentedControl<EasyLoadingIndicatorType>(
                         selectedColor: Colors.blue,
                         children: const {
-                          EasyLoadingIndicatorType.circle: const Padding(
+                          EasyLoadingIndicatorType.circle: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('circle'),
                           ),
-                          EasyLoadingIndicatorType.wave: const Padding(
+                          EasyLoadingIndicatorType.wave: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('wave'),
                           ),
-                          EasyLoadingIndicatorType.ring: const Padding(
+                          EasyLoadingIndicatorType.ring: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('ring'),
                           ),
-                          EasyLoadingIndicatorType.pulse: const Padding(
+                          EasyLoadingIndicatorType.pulse: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('pulse'),
                           ),
-                          EasyLoadingIndicatorType.cubeGrid: const Padding(
+                          EasyLoadingIndicatorType.cubeGrid: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('cubeGrid'),
                           ),
-                          EasyLoadingIndicatorType.threeBounce: const Padding(
+                          EasyLoadingIndicatorType.threeBounce: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: Text('threeBounce'),
                           ),

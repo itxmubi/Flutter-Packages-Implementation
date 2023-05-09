@@ -3,6 +3,8 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 /// Creates list of video players
 class VideoList extends StatefulWidget {
+  const VideoList({super.key});
+
   @override
   _VideoListState createState() => _VideoListState();
 }

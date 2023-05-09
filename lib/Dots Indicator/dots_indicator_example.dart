@@ -3,8 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
-
 class DotsIndicatorExample extends StatefulWidget {
+  const DotsIndicatorExample({super.key});
+
   @override
   _DotsIndicatorExampleState createState() => _DotsIndicatorExampleState();
 }
@@ -41,8 +42,8 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
   Widget build(BuildContext context) {
     final decorator = DotsDecorator(
       activeColor: Colors.red,
-      size: Size.square(15.0),
-      activeSize: Size.square(35.0),
+      size: const Size.square(15.0),
+      activeSize: const Size.square(35.0),
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
       ),
@@ -73,10 +74,11 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                 SizedBox(
                   width: 300.0,
                   child: Slider(
-                  value: _currentPosition,
-                  max: (_totalDots - 1).toDouble(),
-                  onChanged: _updatePosition,
-                ),),
+                    value: _currentPosition,
+                    max: (_totalDots - 1).toDouble(),
+                    onChanged: _updatePosition,
+                  ),
+                ),
               ]),
               _buildRow([
                 FloatingActionButton(
@@ -151,18 +153,18 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                       Colors.cyan,
                     ],
                     sizes: [
-                      Size.square(40.0),
-                      Size.square(35.0),
-                      Size.square(30.0),
-                      Size.square(25.0),
-                      Size.square(20.0),
+                      const Size.square(40.0),
+                      const Size.square(35.0),
+                      const Size.square(30.0),
+                      const Size.square(25.0),
+                      const Size.square(20.0),
                     ],
                     activeSizes: [
-                      Size.square(20.0),
-                      Size.square(25.0),
-                      Size.square(30.0),
-                      Size.square(35.0),
-                      Size.square(40.0),
+                      const Size.square(20.0),
+                      const Size.square(25.0),
+                      const Size.square(30.0),
+                      const Size.square(35.0),
+                      const Size.square(40.0),
                     ],
                     shapes: [
                       RoundedRectangleBorder(

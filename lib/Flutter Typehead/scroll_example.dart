@@ -4,19 +4,21 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 class ScrollExample extends StatelessWidget {
   final List<String> items = List.generate(50, (index) => "Item $index");
 
+  ScrollExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
-      Center(
+      const Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Text("Suggestion box will resize when scrolling"),
         ),
       ),
-      SizedBox(height: 200),
+      const SizedBox(height: 200),
       TypeAheadField<String>(
         getImmediateSuggestions: true,
-        textFieldConfiguration: TextFieldConfiguration(
+        textFieldConfiguration: const TextFieldConfiguration(
           decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: 'What are you looking for?'),
@@ -36,7 +38,7 @@ class ScrollExample extends StatelessWidget {
           print("Suggestion selected");
         },
       ),
-      SizedBox(height: 500),
+      const SizedBox(height: 500),
     ]);
   }
 }

@@ -10,13 +10,13 @@ class ListExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
+    return const AppScaffold(
       title: 'List Example',
       slivers: [
-        const _StickyHeaderList(index: 0),
-        const _StickyHeaderList(index: 1),
-        const _StickyHeaderList(index: 2),
-        const _StickyHeaderList(index: 3),
+        _StickyHeaderList(index: 0),
+        _StickyHeaderList(index: 1),
+        _StickyHeaderList(index: 2),
+        _StickyHeaderList(index: 3),
       ],
     );
   }

@@ -41,7 +41,8 @@ class BlockColorPickerExample extends StatefulWidget {
   final List<Color> colorHistory;
 
   @override
-  State<BlockColorPickerExample> createState() => _BlockColorPickerExampleState();
+  State<BlockColorPickerExample> createState() =>
+      _BlockColorPickerExampleState();
 }
 
 class _BlockColorPickerExampleState extends State<BlockColorPickerExample> {
@@ -51,14 +52,17 @@ class _BlockColorPickerExampleState extends State<BlockColorPickerExample> {
   double _blurRadius = 5;
   double _iconSize = 24;
 
-  Widget pickerLayoutBuilder(BuildContext context, List<Color> colors, PickerItem child) {
+  Widget pickerLayoutBuilder(
+      BuildContext context, List<Color> colors, PickerItem child) {
     Orientation orientation = MediaQuery.of(context).orientation;
 
     return SizedBox(
       width: 300,
       height: orientation == Orientation.portrait ? 360 : 240,
       child: GridView.count(
-        crossAxisCount: orientation == Orientation.portrait ? _portraitCrossAxisCount : _landscapeCrossAxisCount,
+        crossAxisCount: orientation == Orientation.portrait
+            ? _portraitCrossAxisCount
+            : _landscapeCrossAxisCount,
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: [for (Color color in colors) child(color)],
@@ -66,13 +70,19 @@ class _BlockColorPickerExampleState extends State<BlockColorPickerExample> {
     );
   }
 
-  Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() changeColor) {
+  Widget pickerItemBuilder(
+      Color color, bool isCurrentColor, void Function() changeColor) {
     return Container(
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(_borderRadius),
         color: color,
-        boxShadow: [BoxShadow(color: color.withOpacity(0.8), offset: const Offset(1, 2), blurRadius: _blurRadius)],
+        boxShadow: [
+          BoxShadow(
+              color: color.withOpacity(0.8),
+              offset: const Offset(1, 2),
+              blurRadius: _blurRadius)
+        ],
       ),
       child: Material(
         color: Colors.transparent,
@@ -131,12 +141,15 @@ Widget pickerLayoutBuilder(BuildContext context, List<Color> colors, PickerItem 
                 },
               );
             },
-            child: Icon(Icons.code, color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
             style: ElevatedButton.styleFrom(
-              primary: widget.pickerColor,
+              backgroundColor: widget.pickerColor,
               shadowColor: widget.pickerColor.withOpacity(1),
               elevation: 10,
             ),
+            child: Icon(Icons.code,
+                color: useWhiteForeground(widget.pickerColor)
+                    ? Colors.white
+                    : Colors.black),
           ),
         ),
         ListTile(
@@ -150,7 +163,8 @@ Widget pickerLayoutBuilder(BuildContext context, List<Color> colors, PickerItem 
               max: 10,
               divisions: 9,
               label: _portraitCrossAxisCount.toString(),
-              onChanged: (double value) => setState(() => _portraitCrossAxisCount = value.round()),
+              onChanged: (double value) =>
+                  setState(() => _portraitCrossAxisCount = value.round()),
             ),
           ),
         ),
@@ -165,7 +179,8 @@ Widget pickerLayoutBuilder(BuildContext context, List<Color> colors, PickerItem 
               max: 10,
               divisions: 9,
               label: _landscapeCrossAxisCount.toString(),
-              onChanged: (double value) => setState(() => _landscapeCrossAxisCount = value.round()),
+              onChanged: (double value) =>
+                  setState(() => _landscapeCrossAxisCount = value.round()),
             ),
           ),
         ),
@@ -216,12 +231,15 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
                 },
               );
             },
-            child: Icon(Icons.code, color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
             style: ElevatedButton.styleFrom(
-              primary: widget.pickerColor,
+              backgroundColor: widget.pickerColor,
               shadowColor: widget.pickerColor.withOpacity(1),
               elevation: 10,
             ),
+            child: Icon(Icons.code,
+                color: useWhiteForeground(widget.pickerColor)
+                    ? Colors.white
+                    : Colors.black),
           ),
         ),
         ListTile(
@@ -235,7 +253,8 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
               max: 30,
               divisions: 30,
               label: _borderRadius.toString(),
-              onChanged: (double value) => setState(() => _borderRadius = value.round().toDouble()),
+              onChanged: (double value) =>
+                  setState(() => _borderRadius = value.round().toDouble()),
             ),
           ),
         ),
@@ -250,7 +269,8 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
               max: 5,
               divisions: 5,
               label: _blurRadius.toString(),
-              onChanged: (double value) => setState(() => _blurRadius = value.round().toDouble()),
+              onChanged: (double value) =>
+                  setState(() => _blurRadius = value.round().toDouble()),
             ),
           ),
         ),
@@ -265,7 +285,8 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
               max: 50,
               divisions: 49,
               label: _iconSize.toString(),
-              onChanged: (double value) => setState(() => _iconSize = value.round().toDouble()),
+              onChanged: (double value) =>
+                  setState(() => _iconSize = value.round().toDouble()),
             ),
           ),
         ),
@@ -286,7 +307,9 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
                         child: BlockPicker(
                           pickerColor: widget.pickerColor,
                           onColorChanged: widget.onColorChanged,
-                          availableColors: widget.colorHistory.isNotEmpty ? widget.colorHistory : colors,
+                          availableColors: widget.colorHistory.isNotEmpty
+                              ? widget.colorHistory
+                              : colors,
                           layoutBuilder: pickerLayoutBuilder,
                           itemBuilder: pickerItemBuilder,
                         ),
@@ -295,14 +318,17 @@ Widget pickerItemBuilder(Color color, bool isCurrentColor, void Function() chang
                   },
                 );
               },
-              child: Text(
-                'Blocky Color Picker',
-                style: TextStyle(color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
-              ),
               style: ElevatedButton.styleFrom(
-                primary: widget.pickerColor,
+                backgroundColor: widget.pickerColor,
                 shadowColor: widget.pickerColor.withOpacity(1),
                 elevation: 10,
+              ),
+              child: Text(
+                'Blocky Color Picker',
+                style: TextStyle(
+                    color: useWhiteForeground(widget.pickerColor)
+                        ? Colors.white
+                        : Colors.black),
               ),
             ),
             const SizedBox(width: 20),
@@ -331,12 +357,15 @@ BlockPicker(
                   },
                 );
               },
-              child: Icon(Icons.code, color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
               style: ElevatedButton.styleFrom(
-                primary: widget.pickerColor,
+                backgroundColor: widget.pickerColor,
                 shadowColor: widget.pickerColor.withOpacity(1),
                 elevation: 10,
               ),
+              child: Icon(Icons.code,
+                  color: useWhiteForeground(widget.pickerColor)
+                      ? Colors.white
+                      : Colors.black),
             ),
           ],
         ),
@@ -358,7 +387,9 @@ BlockPicker(
                         child: MultipleChoiceBlockPicker(
                           pickerColors: widget.pickerColors,
                           onColorsChanged: widget.onColorsChanged,
-                          availableColors: widget.colorHistory.isNotEmpty ? widget.colorHistory : colors,
+                          availableColors: widget.colorHistory.isNotEmpty
+                              ? widget.colorHistory
+                              : colors,
                           layoutBuilder: pickerLayoutBuilder,
                           itemBuilder: pickerItemBuilder,
                         ),
@@ -367,14 +398,17 @@ BlockPicker(
                   },
                 );
               },
-              child: Text(
-                'Multiple selection Blocky Color Picker',
-                style: TextStyle(color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
-              ),
               style: ElevatedButton.styleFrom(
-                primary: widget.pickerColor,
+                backgroundColor: widget.pickerColor,
                 shadowColor: widget.pickerColor.withOpacity(1),
                 elevation: 10,
+              ),
+              child: Text(
+                'Multiple selection Blocky Color Picker',
+                style: TextStyle(
+                    color: useWhiteForeground(widget.pickerColor)
+                        ? Colors.white
+                        : Colors.black),
               ),
             ),
             const SizedBox(width: 20),
@@ -403,12 +437,15 @@ MultipleChoiceBlockPicker(
                   },
                 );
               },
-              child: Icon(Icons.code, color: useWhiteForeground(widget.pickerColor) ? Colors.white : Colors.black),
               style: ElevatedButton.styleFrom(
-                primary: widget.pickerColor,
+                backgroundColor: widget.pickerColor,
                 shadowColor: widget.pickerColor.withOpacity(1),
                 elevation: 10,
               ),
+              child: Icon(Icons.code,
+                  color: useWhiteForeground(widget.pickerColor)
+                      ? Colors.white
+                      : Colors.black),
             ),
           ],
         ),

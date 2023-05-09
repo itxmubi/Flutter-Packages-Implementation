@@ -69,7 +69,7 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("SpeedDial Location",
-                              style: Theme.of(context).textTheme.bodyText1),
+                              style: Theme.of(context).textTheme.bodyLarge),
                           const SizedBox(height: 10),
                           Container(
                             decoration: BoxDecoration(
@@ -99,10 +99,10 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                               items: items.map((item) {
                                 return DropdownMenuItem<
                                     FloatingActionButtonLocation>(
+                                  value: item,
                                   child: Text(
                                     item.value,
                                   ),
-                                  value: item,
                                 );
                               }).toList(),
                             ),
@@ -118,7 +118,7 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("SpeedDial Direction",
-                              style: Theme.of(context).textTheme.bodyText1),
+                              style: Theme.of(context).textTheme.bodyLarge),
                           const SizedBox(height: 10),
                           Container(
                             decoration: BoxDecoration(
@@ -173,8 +173,8 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                                   .toList()
                                   .map((item) {
                                 return DropdownMenuItem<SpeedDialDirection>(
-                                  child: Text(describeEnum(item).toUpperCase()),
                                   value: item,
+                                  child: Text(describeEnum(item).toUpperCase()),
                                 );
                               }).toList(),
                             ),
@@ -341,14 +341,14 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Navigation",
-                              style: Theme.of(context).textTheme.bodyText1),
+                              style: Theme.of(context).textTheme.bodyLarge),
                           const SizedBox(height: 10),
                           ElevatedButton(
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (_) => FlutterSpeedDialExample(
-                                        ),
+                                    builder: (_) =>
+                                        const FlutterSpeedDialExample(),
                                   ),
                                 );
                               },
@@ -483,7 +483,7 @@ class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>
                   valueListenable: isDialOpen,
                   builder: (ctx, value, _) => IconButton(
                         icon: const Icon(Icons.open_in_browser),
-                        tooltip: (!value ? "Open" : "Close") + " Speed Dial",
+                        tooltip: "${!value ? "Open" : "Close"} Speed Dial",
                         onPressed: () => {isDialOpen.value = !isDialOpen.value},
                       ))
             ],

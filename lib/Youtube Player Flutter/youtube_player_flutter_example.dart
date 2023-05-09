@@ -7,18 +7,17 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'video_list.dart';
 
-
-
-
 /// Homepage
 class FlutterYoutubePlayerExample extends StatefulWidget {
   const FlutterYoutubePlayerExample({super.key});
 
   @override
-  _FlutterYoutubePlayerExampleState createState() => _FlutterYoutubePlayerExampleState();
+  _FlutterYoutubePlayerExampleState createState() =>
+      _FlutterYoutubePlayerExampleState();
 }
 
-class _FlutterYoutubePlayerExampleState extends State<FlutterYoutubePlayerExample> {
+class _FlutterYoutubePlayerExampleState
+    extends State<FlutterYoutubePlayerExample> {
   late YoutubePlayerController _controller;
   late TextEditingController _idController;
   late TextEditingController _seekToController;
@@ -149,7 +148,7 @@ class _FlutterYoutubePlayerExampleState extends State<FlutterYoutubePlayerExampl
               onPressed: () => Navigator.push(
                 context,
                 CupertinoPageRoute(
-                  builder: (context) => VideoList(),
+                  builder: (context) => const VideoList(),
                 ),
               ),
             ),

@@ -1,12 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'data.dart';
 import 'scroll_example.dart';
-
-
 
 class FlutterTypeheadExample extends StatelessWidget {
   const FlutterTypeheadExample({super.key});
@@ -26,8 +22,8 @@ class FlutterTypeheadExample extends StatelessWidget {
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
             child: TabBarView(children: [
-              NavigationExample(),
-              FormExample(),
+              const NavigationExample(),
+              const FormExample(),
               ScrollExample(),
             ]),
           )),
@@ -133,7 +129,7 @@ class _FormExampleState extends State<FormExample> {
                   _formKey.currentState!.save();
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Your Favorite City is ${_selectedCity}'),
+                      content: Text('Your Favorite City is $_selectedCity'),
                     ),
                   );
                 }
@@ -163,7 +159,7 @@ class ProductPage extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Text(
-              product['price']! + ' USD',
+              '${product['price']!} USD',
               style: Theme.of(context).textTheme.titleMedium,
             )
           ],

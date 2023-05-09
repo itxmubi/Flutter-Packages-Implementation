@@ -7,49 +7,47 @@ class RFlutterAlertExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              child: const Text('Basic Alert'),
-              onPressed: () => _onBasicAlertPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Basic Waiting Alert'),
-              onPressed: () => _onBasicWaitingAlertPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Custom Animation Alert'),
-              onPressed: () => _onCustomAnimationAlertPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with Button'),
-              onPressed: () => _onAlertButtonPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with Buttons'),
-              onPressed: () => _onAlertButtonsPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with Style'),
-              onPressed: () => _onAlertWithStylePressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with Custom Image'),
-              onPressed: () => _onAlertWithCustomImagePressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with Custom Content'),
-              onPressed: () => _onAlertWithCustomContentPressed(context),
-            ),
-            ElevatedButton(
-              child: const Text('Alert with/without Root navigator'),
-              onPressed: () => _onAlertWithRootNavigator(context),
-            ),
-          ],
-        ),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ElevatedButton(
+            child: const Text('Basic Alert'),
+            onPressed: () => _onBasicAlertPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Basic Waiting Alert'),
+            onPressed: () => _onBasicWaitingAlertPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Custom Animation Alert'),
+            onPressed: () => _onCustomAnimationAlertPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with Button'),
+            onPressed: () => _onAlertButtonPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with Buttons'),
+            onPressed: () => _onAlertButtonsPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with Style'),
+            onPressed: () => _onAlertWithStylePressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with Custom Image'),
+            onPressed: () => _onAlertWithCustomImagePressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with Custom Content'),
+            onPressed: () => _onAlertWithCustomContentPressed(context),
+          ),
+          ElevatedButton(
+            child: const Text('Alert with/without Root navigator'),
+            onPressed: () => _onAlertWithRootNavigator(context),
+          ),
+        ],
       ),
     );
   }

@@ -39,7 +39,7 @@ class _PercentInicatorExampleState extends State<PercentInicatorExample> {
             MaterialButton(
               color: Colors.blueAccent,
               child: const Text("Linear Library"),
-              onPressed: () => _openPage(SampleLinearPage()),
+              onPressed: () => _openPage(const SampleLinearPage()),
             ),
           ],
         ),

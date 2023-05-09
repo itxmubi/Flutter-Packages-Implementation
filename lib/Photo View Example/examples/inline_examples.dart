@@ -4,6 +4,8 @@ import 'package:photo_view/photo_view.dart';
 import '../common/app_bar.dart';
 
 class InlineExample extends StatelessWidget {
+  const InlineExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ExampleAppBarLayout(

@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
@@ -14,7 +15,7 @@ class SharePlusExample extends StatefulWidget {
 class SharePlusExampleState extends State<SharePlusExample> {
   String text = '';
   String subject = '';
-  List<String> imagePaths = [];
+  List<XFile> imagePaths = [];
 
   @override
   Widget build(BuildContext context) {
@@ -103,10 +104,10 @@ class SharePlusExampleState extends State<SharePlusExample> {
     final box = context.findRenderObject() as RenderBox?;
 
     if (imagePaths.isNotEmpty) {
-      await Share.shareFiles(imagePaths,
-          text: text,
-          subject: subject,
-          sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
+      await Share.shareXFiles(imagePaths);
+      // text: text,
+      // subject: subject,
+      // sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
     } else {
       await Share.share(text,
           subject: subject,
@@ -118,7 +119,7 @@ class SharePlusExampleState extends State<SharePlusExample> {
     final box = context.findRenderObject() as RenderBox?;
     ShareResult result;
     if (imagePaths.isNotEmpty) {
-      result = await Share.shareFilesWithResult(imagePaths,
+      result = await Share.shareXFiles(imagePaths,
           text: text,
           subject: subject,
           sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
