@@ -5,8 +5,7 @@ class SmoothPageIndicatorExample extends StatefulWidget {
   const SmoothPageIndicatorExample({super.key});
 
   @override
-  _SmoothPageIndicatorExampleState createState() =>
-      _SmoothPageIndicatorExampleState();
+  createState() => _SmoothPageIndicatorExampleState();
 }
 
 class _SmoothPageIndicatorExampleState
@@ -73,16 +72,14 @@ class _SmoothPageIndicatorExampleState
                   style: TextStyle(color: Colors.black54),
                 ),
               ),
-              Container(
-                child: SmoothPageIndicator(
-                  controller: controller,
-                  count: pages.length,
-                  effect: const JumpingDotEffect(
-                    dotHeight: 16,
-                    dotWidth: 16,
-                    jumpScale: .7,
-                    verticalOffset: 15,
-                  ),
+              SmoothPageIndicator(
+                controller: controller,
+                count: pages.length,
+                effect: const JumpingDotEffect(
+                  dotHeight: 16,
+                  dotWidth: 16,
+                  jumpScale: .7,
+                  verticalOffset: 15,
                 ),
               ),
               const Padding(

@@ -8,8 +8,7 @@ class BarcodeListScannerWithController extends StatefulWidget {
   const BarcodeListScannerWithController({Key? key}) : super(key: key);
 
   @override
-  _BarcodeListScannerWithControllerState createState() =>
-      _BarcodeListScannerWithControllerState();
+  createState() => _BarcodeListScannerWithControllerState();
 }
 
 class _BarcodeListScannerWithControllerState

@@ -26,7 +26,6 @@ class _NFCFlutterKitExampleState extends State<NFCFlutterKitExample> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     checkavailability();
   }

@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class TimeLogger {
   TimeLogger([this.tag = '']);
 
@@ -10,14 +12,20 @@ class TimeLogger {
 
   void logTime() {
     if (start == null) {
-      print('The start is null, you must start recorder first.');
+      if (kDebugMode) {
+        print('The start is null, you must start recorder first.');
+      }
       return;
     }
     final diff = DateTime.now().millisecondsSinceEpoch - start!;
     if (tag != '') {
-      print('$tag : $diff ms');
+      if (kDebugMode) {
+        print('$tag : $diff ms');
+      }
     } else {
-      print('run time $diff ms');
+      if (kDebugMode) {
+        print('run time $diff ms');
+      }
     }
   }
 }

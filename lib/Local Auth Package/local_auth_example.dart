@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
@@ -39,7 +40,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
       canCheckBiometrics = await auth.canCheckBiometrics;
     } on PlatformException catch (e) {
       canCheckBiometrics = false;
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
     if (!mounted) {
       return;
@@ -56,7 +59,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
       availableBiometrics = await auth.getAvailableBiometrics();
     } on PlatformException catch (e) {
       availableBiometrics = <BiometricType>[];
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
     if (!mounted) {
       return;
@@ -84,7 +89,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
         _isAuthenticating = false;
       });
     } on PlatformException catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
       setState(() {
         _isAuthenticating = false;
         _authorized = 'Error - ${e.message}';
@@ -119,7 +126,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
         _authorized = 'Authenticating';
       });
     } on PlatformException catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
       setState(() {
         _isAuthenticating = false;
         _authorized = 'Error - ${e.message}';

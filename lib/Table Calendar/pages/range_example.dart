@@ -10,7 +10,7 @@ class TableRangeExample extends StatefulWidget {
   const TableRangeExample({super.key});
 
   @override
-  _TableRangeExampleState createState() => _TableRangeExampleState();
+  createState() => _TableRangeExampleState();
 }
 
 class _TableRangeExampleState extends State<TableRangeExample> {

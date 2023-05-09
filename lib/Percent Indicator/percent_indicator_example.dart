@@ -6,7 +6,7 @@ class PercentInicatorExample extends StatefulWidget {
   const PercentInicatorExample({super.key});
 
   @override
-  _PercentInicatorExampleState createState() => _PercentInicatorExampleState();
+  createState() => _PercentInicatorExampleState();
 }
 
 class _PercentInicatorExampleState extends State<PercentInicatorExample> {
@@ -31,7 +31,7 @@ class _PercentInicatorExampleState extends State<PercentInicatorExample> {
             MaterialButton(
               color: Colors.blueAccent,
               child: const Text("Circular Library"),
-              onPressed: () => _openPage(SampleCircularPage()),
+              onPressed: () => _openPage(const SampleCircularPage()),
             ),
             const Padding(
               padding: EdgeInsets.all(20.0),

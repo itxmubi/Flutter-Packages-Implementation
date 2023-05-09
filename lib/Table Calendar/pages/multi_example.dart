@@ -12,7 +12,7 @@ class TableMultiExample extends StatefulWidget {
   const TableMultiExample({super.key});
 
   @override
-  _TableMultiExampleState createState() => _TableMultiExampleState();
+  createState() => _TableMultiExampleState();
 }
 
 class _TableMultiExampleState extends State<TableMultiExample> {

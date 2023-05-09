@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
@@ -30,7 +31,7 @@ class FlutterEasyLoading extends StatefulWidget {
   final String? title;
 
   @override
-  _FlutterEasyLoadingState createState() => _FlutterEasyLoadingState();
+  createState() => _FlutterEasyLoadingState();
 }
 
 class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
@@ -42,7 +43,9 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
     configLoading();
     super.initState();
     EasyLoading.addStatusCallback((status) {
-      print('EasyLoading Status $status');
+      if (kDebugMode) {
+        print('EasyLoading Status $status');
+      }
       if (status == EasyLoadingStatus.dismiss) {
         _timer?.cancel();
       }
@@ -76,7 +79,7 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => TestPage(),
+                          builder: (BuildContext context) => const TestPage(),
                         ),
                       );
                     },
@@ -86,7 +89,9 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                     onPressed: () async {
                       _timer?.cancel();
                       await EasyLoading.dismiss();
-                      print('EasyLoading dismiss');
+                      if (kDebugMode) {
+                        print('EasyLoading dismiss');
+                      }
                     },
                   ),
                   TextButton(
@@ -97,7 +102,9 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                         status: 'loading...',
                         maskType: EasyLoadingMaskType.black,
                       );
-                      print('EasyLoading show');
+                      if (kDebugMode) {
+                        print('EasyLoading show');
+                      }
                     },
                   ),
                   TextButton(
@@ -114,7 +121,9 @@ class _FlutterEasyLoadingState extends State<FlutterEasyLoading> {
                     onPressed: () async {
                       _timer?.cancel();
                       await EasyLoading.showSuccess('Great Success!');
-                      print('EasyLoading showSuccess');
+                      if (kDebugMode) {
+                        print('EasyLoading showSuccess');
+                      }
                     },
                   ),
                   TextButton(

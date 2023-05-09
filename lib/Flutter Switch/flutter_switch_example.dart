@@ -5,7 +5,7 @@ class FlutterSwitchExamples extends StatefulWidget {
   const FlutterSwitchExamples({super.key});
 
   @override
-  _FlutterSwitchExamplesState createState() => _FlutterSwitchExamplesState();
+  createState() => _FlutterSwitchExamplesState();
 }
 
 class _FlutterSwitchExamplesState extends State<FlutterSwitchExamples> {

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class SampleCircularPage extends StatefulWidget {
+  const SampleCircularPage({super.key});
+
   @override
-  _SampleCircularPageState createState() => _SampleCircularPageState();
+  createState() => _SampleCircularPageState();
 }
 
 class _SampleCircularPageState extends State<SampleCircularPage> {

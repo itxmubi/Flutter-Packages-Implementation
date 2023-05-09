@@ -8,7 +8,7 @@ class CardColumnScreen extends StatefulWidget {
   const CardColumnScreen({Key? key}) : super(key: key);
 
   @override
-  _CardColumnScreenState createState() => _CardColumnScreenState();
+  createState() => _CardColumnScreenState();
 }
 
 class _CardColumnScreenState extends State<CardColumnScreen> {

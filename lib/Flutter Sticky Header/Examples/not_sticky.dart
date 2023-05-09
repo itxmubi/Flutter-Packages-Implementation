@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
@@ -39,7 +40,9 @@ class _NotStickyList extends StatelessWidget {
         delegate: SliverChildBuilderDelegate(
           (context, i) => ListTile(
             onTap: () {
-              print('tile $i');
+              if (kDebugMode) {
+                print('tile $i');
+              }
             },
             leading: CircleAvatar(
               child: Text('$index'),

@@ -5,7 +5,7 @@ class LoadingListPage extends StatefulWidget {
   const LoadingListPage({super.key});
 
   @override
-  _LoadingListPageState createState() => _LoadingListPageState();
+  createState() => _LoadingListPageState();
 }
 
 class _LoadingListPageState extends State<LoadingListPage> {

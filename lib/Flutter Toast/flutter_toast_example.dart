@@ -7,7 +7,7 @@ class FlutterToastExample extends StatefulWidget {
   const FlutterToastExample({super.key});
 
   @override
-  _FlutterToastExampleState createState() => _FlutterToastExampleState();
+  createState() => _FlutterToastExampleState();
 }
 
 class _FlutterToastExampleState extends State<FlutterToastExample> {

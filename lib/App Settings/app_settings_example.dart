@@ -8,7 +8,7 @@ class AppSettingsExample extends StatefulWidget {
   const AppSettingsExample({super.key});
 
   @override
-  _AppSettingsExampleState createState() => _AppSettingsExampleState();
+   createState() => _AppSettingsExampleState();
 }
 
 /// This is the app state.

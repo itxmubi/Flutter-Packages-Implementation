@@ -7,7 +7,7 @@ class DotsIndicatorExample extends StatefulWidget {
   const DotsIndicatorExample({super.key});
 
   @override
-  _DotsIndicatorExampleState createState() => _DotsIndicatorExampleState();
+   createState() => _DotsIndicatorExampleState();
 }
 
 class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {

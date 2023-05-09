@@ -9,8 +9,7 @@ class BarcodeScannerReturningImage extends StatefulWidget {
   const BarcodeScannerReturningImage({Key? key}) : super(key: key);
 
   @override
-  _BarcodeScannerReturningImageState createState() =>
-      _BarcodeScannerReturningImageState();
+  createState() => _BarcodeScannerReturningImageState();
 }
 
 class _BarcodeScannerReturningImageState

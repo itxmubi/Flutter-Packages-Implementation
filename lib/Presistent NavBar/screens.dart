@@ -3,7 +3,6 @@ import "package:persistent_bottom_nav_bar/persistent_tab_view.dart";
 
 import 'modal_screens.dart';
 
-
 class MainScreen extends StatelessWidget {
   const MainScreen(
       {final Key? key,
@@ -37,7 +36,7 @@ class MainScreen extends StatelessWidget {
                       PersistentNavBarNavigator.pushNewScreenWithRouteSettings(
                         context,
                         settings: const RouteSettings(name: "/home"),
-                        screen:  MainScreen2(),
+                        screen: const MainScreen2(),
                         pageTransitionAnimation:
                             PageTransitionAnimation.scaleRotate,
                       );

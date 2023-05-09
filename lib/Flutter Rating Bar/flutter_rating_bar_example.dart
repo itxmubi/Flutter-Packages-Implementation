@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class FlutterRatingBarExample extends StatefulWidget {
+  const FlutterRatingBarExample({super.key});
+
   @override
-  _FlutterRatingBarExampleState createState() =>
-      _FlutterRatingBarExampleState();
+  createState() => _FlutterRatingBarExampleState();
 }
 
 class _FlutterRatingBarExampleState extends State<FlutterRatingBarExample> {
@@ -38,7 +39,7 @@ class _FlutterRatingBarExampleState extends State<FlutterRatingBarExample> {
             onPressed: () async {
               _selectedIcon = await showDialog<IconData>(
                 context: context,
-                builder: (context) => IconAlert(),
+                builder: (context) => const IconAlert(),
               );
               _ratingBarMode = 1;
               setState(() {});

@@ -1,4 +1,3 @@
-
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -88,8 +87,8 @@ class BarChartSample6 extends StatelessWidget {
         text = "";
     }
     return SideTitleWidget(
-      child: Text(text, style: style),
       axisSide: meta.axisSide,
+      child: Text(text, style: style),
     );
   }
 

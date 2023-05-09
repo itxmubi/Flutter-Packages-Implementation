@@ -5,7 +5,7 @@ class SampleLinearPage extends StatefulWidget {
   const SampleLinearPage({super.key});
 
   @override
-  _SampleLinearPageState createState() => _SampleLinearPageState();
+   createState() => _SampleLinearPageState();
 }
 
 class _SampleLinearPageState extends State<SampleLinearPage> {

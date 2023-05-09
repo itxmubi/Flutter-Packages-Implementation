@@ -13,7 +13,7 @@ class TableCalendarExample extends StatefulWidget {
   const TableCalendarExample({super.key});
 
   @override
-  _TableCalendarExampleState createState() => _TableCalendarExampleState();
+  createState() => _TableCalendarExampleState();
 }
 
 class _TableCalendarExampleState extends State<TableCalendarExample> {
@@ -32,7 +32,7 @@ class _TableCalendarExampleState extends State<TableCalendarExample> {
               child: const Text('Basics'),
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => TableBasicsExample()),
+                MaterialPageRoute(builder: (_) => const TableBasicsExample()),
               ),
             ),
             const SizedBox(height: 12.0),

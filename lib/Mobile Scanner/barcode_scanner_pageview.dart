@@ -6,7 +6,7 @@ class BarcodeScannerPageView extends StatefulWidget {
   const BarcodeScannerPageView({Key? key}) : super(key: key);
 
   @override
-  _BarcodeScannerPageViewState createState() => _BarcodeScannerPageViewState();
+  createState() => _BarcodeScannerPageViewState();
 }
 
 class _BarcodeScannerPageViewState extends State<BarcodeScannerPageView>

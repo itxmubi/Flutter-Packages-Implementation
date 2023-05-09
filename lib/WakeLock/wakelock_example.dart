@@ -6,7 +6,7 @@ class WakelockExampleApp extends StatefulWidget {
   const WakelockExampleApp({Key? key}) : super(key: key);
 
   @override
-  _WakelockExampleAppState createState() => _WakelockExampleAppState();
+  createState() => _WakelockExampleAppState();
 }
 
 class _WakelockExampleAppState extends State<WakelockExampleApp> {

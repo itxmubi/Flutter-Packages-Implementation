@@ -1,4 +1,5 @@
 import 'package:audio_session/audio_session.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_packages_implementation/Just%20Audio/common.dart';
@@ -34,7 +35,9 @@ class JustAudioExampleState extends State<JustAudioExample>
     // Listen to errors during playback.
     _player.playbackEventStream.listen((event) {},
         onError: (Object e, StackTrace stackTrace) {
-      print('A stream error occurred: $e');
+      if (kDebugMode) {
+        print('A stream error occurred: $e');
+      }
     });
     // Try to load audio from a source and catch any errors.
     try {

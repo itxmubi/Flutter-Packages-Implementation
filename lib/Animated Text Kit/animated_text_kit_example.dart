@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -5,7 +6,7 @@ class AnimatedTextKitExample extends StatefulWidget {
   const AnimatedTextKitExample({Key? key}) : super(key: key);
 
   @override
-  _AnimatedTextKitExampleState createState() => _AnimatedTextKitExampleState();
+  createState() => _AnimatedTextKitExampleState();
 }
 
 class _AnimatedTextKitExampleState extends State<AnimatedTextKitExample> {
@@ -17,7 +18,9 @@ class _AnimatedTextKitExampleState extends State<AnimatedTextKitExample> {
   void initState() {
     super.initState();
     _examples = animatedTextExamples(onTap: () {
-      print('Tap Event');
+      if (kDebugMode) {
+        print('Tap Event');
+      }
       setState(() {
         _tapCount++;
       });

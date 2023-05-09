@@ -7,7 +7,7 @@ class DialogExample extends StatefulWidget {
   const DialogExample({super.key});
 
   @override
-  _DialogExampleState createState() => _DialogExampleState();
+  createState() => _DialogExampleState();
 }
 
 class _DialogExampleState extends State<DialogExample> {

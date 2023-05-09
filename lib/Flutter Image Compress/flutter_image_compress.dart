@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math' as math;
 import 'dart:typed_data' as typed_data;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
@@ -25,16 +26,22 @@ class _FlutterImageCompressExampleState
 
   Future<void> compress(AssetImage image) async {
     // const img = AssetImage('img/img.jpg');
-    print('pre compress');
+    if (kDebugMode) {
+      print('pre compress');
+    }
     const config = ImageConfiguration();
     final AssetBundleImageKey key = await image.obtainKey(config);
     final ByteData data = await key.bundle.load(key.name);
     final beforeCompress = data.lengthInBytes;
-    print('beforeCompress = $beforeCompress');
+    if (kDebugMode) {
+      print('beforeCompress = $beforeCompress');
+    }
     final result = await FlutterImageCompress.compressWithList(
       data.buffer.asUint8List(),
     );
-    print('after = ${result.length}');
+    if (kDebugMode) {
+      print('after = ${result.length}');
+    }
   }
 
   Future<Directory> getTemporaryDirectory() async {
@@ -43,7 +50,9 @@ class _FlutterImageCompressExampleState
 
   void _testCompressFile() async {
     const img = AssetImage('img/img.jpg');
-    print('pre compress');
+    if (kDebugMode) {
+      print('pre compress');
+    }
     const config = ImageConfiguration();
     final AssetBundleImageKey key = await img.obtainKey(config);
     final ByteData data = await key.bundle.load(key.name);
@@ -69,7 +78,9 @@ class _FlutterImageCompressExampleState
 
   Future<String> getExampleFilePath() async {
     const img = AssetImage('img/img.jpg');
-    print('pre compress');
+    if (kDebugMode) {
+      print('pre compress');
+    }
     const config = ImageConfiguration();
     final AssetBundleImageKey key = await img.obtainKey(config);
     final ByteData data = await key.bundle.load(key.name);
@@ -82,7 +93,7 @@ class _FlutterImageCompressExampleState
 
   void getFileImage() async {
     const img = AssetImage('img/img.jpg');
-    print('pre compress');
+    debugPrint('pre compress');
     const config = ImageConfiguration();
     final AssetBundleImageKey key = await img.obtainKey(config);
     final ByteData data = await key.bundle.load(key.name);
@@ -100,7 +111,9 @@ class _FlutterImageCompressExampleState
   }
 
   Future<typed_data.Uint8List?> testCompressFile(File file) async {
-    print('testCompressFile');
+    if (kDebugMode) {
+      print('testCompressFile');
+    }
     final result = await FlutterImageCompress.compressWithFile(
       file.absolute.path,
       minWidth: 2300,
@@ -108,13 +121,17 @@ class _FlutterImageCompressExampleState
       quality: 94,
       rotate: 180,
     );
-    print(file.lengthSync());
-    print(result?.length);
+    if (kDebugMode) {
+      print(file.lengthSync());
+      print(result?.length);
+    }
     return result;
   }
 
   Future<File?> testCompressAndGetFile(File file, String targetPath) async {
-    print('testCompressAndGetFile');
+    if (kDebugMode) {
+      print('testCompressAndGetFile');
+    }
     final result = await FlutterImageCompress.compressAndGetFile(
       file.absolute.path,
       targetPath,
@@ -123,13 +140,17 @@ class _FlutterImageCompressExampleState
       minHeight: 1024,
       rotate: 90,
     );
-    print(file.lengthSync());
-    print(result?.lengthSync());
+    if (kDebugMode) {
+      print(file.lengthSync());
+      print(result?.lengthSync());
+    }
     return result;
   }
 
   Future testCompressAsset(String assetName) async {
-    print('testCompressAsset');
+    if (kDebugMode) {
+      print('testCompressAsset');
+    }
     final list = await FlutterImageCompress.compressAssetImage(
       assetName,
       minHeight: 1920,
@@ -161,8 +182,10 @@ class _FlutterImageCompressExampleState
       rotate: 270,
       format: CompressFormat.webp,
     );
-    print(list.length);
-    print(result.length);
+    if (kDebugMode) {
+      print(list.length);
+      print(result.length);
+    }
     return result;
   }
 
@@ -232,7 +255,9 @@ class _FlutterImageCompressExampleState
   }
 
   void _compressHeicExample() async {
-    print('start compress');
+    if (kDebugMode) {
+      print('start compress');
+    }
     final logger = TimeLogger();
     logger.startRecorder();
     final tmpDir = (await getTemporaryDirectory()).path;
@@ -245,20 +270,24 @@ class _FlutterImageCompressExampleState
       quality: 90,
     );
     if (result == null) return;
-    print('Compress heic success.');
+    if (kDebugMode) {
+      print('Compress heic success.');
+      print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
+      print(
+        'Compress heic result path: ${result.absolute.path}, '
+        'size: ${result.lengthSync()}',
+      );
+    }
     logger.logTime();
-    print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
-    print(
-      'Compress heic result path: ${result.absolute.path}, '
-      'size: ${result.lengthSync()}',
-    );
   }
 
   void _compressAndroidWebpExample() async {
     // Android compress very nice, but the iOS encode UIImage to webp is slow.
     final logger = TimeLogger();
     logger.startRecorder();
-    print('start compress webp');
+    if (kDebugMode) {
+      print('start compress webp');
+    }
     const quality = 90;
     final tmpDir = (await getTemporaryDirectory()).path;
     final target =
@@ -273,13 +302,15 @@ class _FlutterImageCompressExampleState
       quality: quality,
     );
     if (result == null) return;
-    print('Compress webp success.');
     logger.logTime();
-    print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
-    print(
-      'Compress webp result path: ${result.absolute.path}, '
-      'size: ${result.lengthSync()}',
-    );
+    if (kDebugMode) {
+      print('Compress webp success.');
+      print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
+      print(
+        'Compress webp result path: ${result.absolute.path}, '
+        'size: ${result.lengthSync()}',
+      );
+    }
     safeSetState(() {
       provider = FileImage(result);
     });

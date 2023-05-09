@@ -10,13 +10,13 @@ class SideHeaderExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
+    return const AppScaffold(
       title: 'Side Header Example',
       slivers: [
-        const _StickyHeaderGrid(index: 0),
-        const _StickyHeaderGrid(index: 1),
-        const _StickyHeaderGrid(index: 2),
-        const _StickyHeaderGrid(index: 3),
+        _StickyHeaderGrid(index: 0),
+        _StickyHeaderGrid(index: 1),
+        _StickyHeaderGrid(index: 2),
+        _StickyHeaderGrid(index: 3),
       ],
     );
   }

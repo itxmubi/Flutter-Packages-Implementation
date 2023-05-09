@@ -7,8 +7,7 @@ class BarcodeScannerWithScanWindow extends StatefulWidget {
   const BarcodeScannerWithScanWindow({Key? key}) : super(key: key);
 
   @override
-  _BarcodeScannerWithScanWindowState createState() =>
-      _BarcodeScannerWithScanWindowState();
+  createState() => _BarcodeScannerWithScanWindowState();
 }
 
 class _BarcodeScannerWithScanWindowState

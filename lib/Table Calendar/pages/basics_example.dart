@@ -7,8 +7,10 @@ import 'package:table_calendar/table_calendar.dart';
 import '../calendar_utils.dart';
 
 class TableBasicsExample extends StatefulWidget {
+  const TableBasicsExample({super.key});
+
   @override
-  _TableBasicsExampleState createState() => _TableBasicsExampleState();
+  createState() => _TableBasicsExampleState();
 }
 
 class _TableBasicsExampleState extends State<TableBasicsExample> {

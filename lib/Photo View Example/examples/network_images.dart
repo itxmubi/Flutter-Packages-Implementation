@@ -74,13 +74,11 @@ class NetworkExamples extends StatelessWidget {
                       "https://pudim.com.br/sss.jpg",
                     ),
                     errorBuilder: (_, __, ___) {
-                      return Container(
-                        child: Column(
-                          children: [
-                            Image.asset("assets/neat.gif"),
-                            const Text("well, that went badly"),
-                          ],
-                        ),
+                      return Column(
+                        children: [
+                          Image.asset("assets/neat.gif"),
+                          const Text("well, that went badly"),
+                        ],
                       );
                     },
                   ),

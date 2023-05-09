@@ -10,7 +10,7 @@ class ControllerExample extends StatefulWidget {
   const ControllerExample({super.key});
 
   @override
-  _ControllerExampleState createState() => _ControllerExampleState();
+  createState() => _ControllerExampleState();
 }
 
 const double min = pi * -2;

@@ -8,7 +8,7 @@ class EdgeDetetionExample extends StatefulWidget {
   const EdgeDetetionExample({super.key});
 
   @override
-  _EdgeDetetionExampleState createState() => _EdgeDetetionExampleState();
+   createState() => _EdgeDetetionExampleState();
 }
 
 class _EdgeDetetionExampleState extends State<EdgeDetetionExample> {

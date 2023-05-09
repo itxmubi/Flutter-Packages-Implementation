@@ -30,7 +30,7 @@ class MainMenu extends StatefulWidget {
   const MainMenu({final Key? key}) : super(key: key);
 
   @override
-  _MainMenuState createState() => _MainMenuState();
+  createState() => _MainMenuState();
 }
 
 class _MainMenuState extends State<MainMenu> {
@@ -79,7 +79,7 @@ class ProvidedStylesExample extends StatefulWidget {
   final BuildContext? menuScreenContext;
 
   @override
-  _ProvidedStylesExampleState createState() => _ProvidedStylesExampleState();
+  createState() => _ProvidedStylesExampleState();
 }
 
 class _ProvidedStylesExampleState extends State<ProvidedStylesExample> {

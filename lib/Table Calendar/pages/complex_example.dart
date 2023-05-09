@@ -13,7 +13,7 @@ class TableComplexExample extends StatefulWidget {
   const TableComplexExample({super.key});
 
   @override
-  _TableComplexExampleState createState() => _TableComplexExampleState();
+  createState() => _TableComplexExampleState();
 }
 
 class _TableComplexExampleState extends State<TableComplexExample> {

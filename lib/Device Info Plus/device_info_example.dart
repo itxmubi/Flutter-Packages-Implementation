@@ -10,7 +10,7 @@ class DeviceInfoExample extends StatefulWidget {
   const DeviceInfoExample({Key? key}) : super(key: key);
 
   @override
-  _DeviceInfoExampleState createState() => _DeviceInfoExampleState();
+   createState() => _DeviceInfoExampleState();
 }
 
 class _DeviceInfoExampleState extends State<DeviceInfoExample> {

@@ -1,19 +1,18 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:typed_data';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 
-
 class QRScannerExample extends StatefulWidget {
   const QRScannerExample({super.key});
 
   @override
-  _QRScannerExampleState createState() => _QRScannerExampleState();
+  createState() => _QRScannerExampleState();
 }
 
 class _QRScannerExampleState extends State<QRScannerExample> {
@@ -273,7 +272,9 @@ class _QRScannerExampleState extends State<QRScannerExample> {
     await Permission.camera.request();
     String? barcode = await scanner.scan();
     if (barcode == null) {
-      print('nothing return.');
+      if (kDebugMode) {
+        print('nothing return.');
+      }
     } else {
       _outputController!.text = barcode;
     }

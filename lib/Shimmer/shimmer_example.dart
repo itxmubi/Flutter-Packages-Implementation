@@ -7,7 +7,7 @@ class ShimmerExample extends StatefulWidget {
   const ShimmerExample({super.key});
 
   @override
-  _ShimmerExampleState createState() => _ShimmerExampleState();
+  createState() => _ShimmerExampleState();
 }
 
 class _ShimmerExampleState extends State<ShimmerExample> {

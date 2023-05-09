@@ -5,7 +5,7 @@ class BadgesExample extends StatefulWidget {
   const BadgesExample({super.key});
 
   @override
-  _BadgesExampleState createState() => _BadgesExampleState();
+   createState() => _BadgesExampleState();
 }
 
 class _BadgesExampleState extends State<BadgesExample> {

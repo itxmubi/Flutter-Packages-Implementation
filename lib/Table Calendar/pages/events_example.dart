@@ -10,7 +10,7 @@ class TableEventsExample extends StatefulWidget {
   const TableEventsExample({super.key});
 
   @override
-  _TableEventsExampleState createState() => _TableEventsExampleState();
+  createState() => _TableEventsExampleState();
 }
 
 class _TableEventsExampleState extends State<TableEventsExample> {

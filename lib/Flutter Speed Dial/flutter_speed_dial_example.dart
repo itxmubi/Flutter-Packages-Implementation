@@ -8,7 +8,7 @@ class FlutterSpeedDialExample extends StatefulWidget {
     Key? key,
   }) : super(key: key);
   @override
-  _FlutterSpeedDialExampleState createState() =>
+   createState() =>
       _FlutterSpeedDialExampleState();
 }
 

@@ -6,7 +6,7 @@ class BarcodeScannerWithZoom extends StatefulWidget {
   const BarcodeScannerWithZoom({Key? key}) : super(key: key);
 
   @override
-  _BarcodeScannerWithZoomState createState() => _BarcodeScannerWithZoomState();
+  createState() => _BarcodeScannerWithZoomState();
 }
 
 class _BarcodeScannerWithZoomState extends State<BarcodeScannerWithZoom>

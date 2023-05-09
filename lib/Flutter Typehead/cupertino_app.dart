@@ -23,7 +23,7 @@ class FavoriteCitiesPage extends StatefulWidget {
   const FavoriteCitiesPage({super.key});
 
   @override
-  _FavoriteCitiesPage createState() => _FavoriteCitiesPage();
+  createState() => _FavoriteCitiesPage();
 }
 
 class _FavoriteCitiesPage extends State<FavoriteCitiesPage> {

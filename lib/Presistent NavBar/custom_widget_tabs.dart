@@ -9,7 +9,7 @@ class CustomWidgetExample extends StatefulWidget {
   final BuildContext menuScreenContext;
 
   @override
-  _CustomWidgetExampleState createState() => _CustomWidgetExampleState();
+   createState() => _CustomWidgetExampleState();
 }
 
 class _CustomWidgetExampleState extends State<CustomWidgetExample> {

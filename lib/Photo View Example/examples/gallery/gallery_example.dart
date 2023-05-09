@@ -10,7 +10,7 @@ class GalleryExample extends StatefulWidget {
   const GalleryExample({super.key});
 
   @override
-  _GalleryExampleState createState() => _GalleryExampleState();
+  createState() => _GalleryExampleState();
 }
 
 class _GalleryExampleState extends State<GalleryExample> {
@@ -86,7 +86,8 @@ class _GalleryExampleState extends State<GalleryExample> {
 }
 
 class GalleryPhotoViewWrapper extends StatefulWidget {
-  GalleryPhotoViewWrapper({super.key, 
+  GalleryPhotoViewWrapper({
+    super.key,
     this.loadingBuilder,
     this.backgroundDecoration,
     this.minScale,

@@ -16,7 +16,7 @@ class ImageCropperExample extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ImageCropperExampleState createState() => _ImageCropperExampleState();
+  createState() => _ImageCropperExampleState();
 }
 
 class _ImageCropperExampleState extends State<ImageCropperExample> {

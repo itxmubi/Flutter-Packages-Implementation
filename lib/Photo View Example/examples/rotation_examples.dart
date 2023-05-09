@@ -6,6 +6,8 @@ import 'package:photo_view/photo_view.dart';
 import '../common/app_bar.dart';
 
 class GestureRotationExample extends StatelessWidget {
+  const GestureRotationExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ExampleAppBarLayout(
@@ -44,8 +46,7 @@ class ProgrammaticRotationExample extends StatefulWidget {
   const ProgrammaticRotationExample({super.key});
 
   @override
-  _ProgrammaticRotationExampleState createState() =>
-      _ProgrammaticRotationExampleState();
+  createState() => _ProgrammaticRotationExampleState();
 }
 
 class _ProgrammaticRotationExampleState

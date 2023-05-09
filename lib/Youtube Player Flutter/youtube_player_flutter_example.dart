@@ -12,8 +12,7 @@ class FlutterYoutubePlayerExample extends StatefulWidget {
   const FlutterYoutubePlayerExample({super.key});
 
   @override
-  _FlutterYoutubePlayerExampleState createState() =>
-      _FlutterYoutubePlayerExampleState();
+  createState() => _FlutterYoutubePlayerExampleState();
 }
 
 class _FlutterYoutubePlayerExampleState

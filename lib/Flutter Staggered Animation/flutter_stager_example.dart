@@ -4,15 +4,13 @@ import 'screens/card_column_screen.dart';
 import 'screens/card_grid_screen.dart';
 import 'screens/card_list_screen.dart';
 
-
-
 class FlutterStaggeredAnimationExample extends StatelessWidget {
   const FlutterStaggeredAnimationExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Column(
@@ -23,7 +21,8 @@ class FlutterStaggeredAnimationExample extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CardListScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const CardListScreen()),
                 );
               },
             ),
@@ -32,7 +31,8 @@ class FlutterStaggeredAnimationExample extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CardGridScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const CardGridScreen()),
                 );
               },
             ),
@@ -41,7 +41,8 @@ class FlutterStaggeredAnimationExample extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CardColumnScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const CardColumnScreen()),
                 );
               },
             ),
