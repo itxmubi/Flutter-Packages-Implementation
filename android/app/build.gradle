@@ -37,6 +37,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // viewBinding {
+    //     enabled = true
+    // }
+    // buildFeatures {
+    //     viewBinding = true
+    // }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -60,6 +66,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.example.flutter_packages_implementation'
 }
 
 flutter {

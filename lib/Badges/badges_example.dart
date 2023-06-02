@@ -5,7 +5,7 @@ class BadgesExample extends StatefulWidget {
   const BadgesExample({super.key});
 
   @override
-   createState() => _BadgesExampleState();
+  createState() => _BadgesExampleState();
 }
 
 class _BadgesExampleState extends State<BadgesExample> {
@@ -53,11 +53,11 @@ class _BadgesExampleState extends State<BadgesExample> {
   }
 
   Widget expandedBadge() {
-    return Expanded(
+    return const Expanded(
       child: Center(
         child: badge.Badge(
-          badgeContent: const Text('10'),
-          child: const Icon(Icons.person, size: 30),
+          badgeContent: Text('10'),
+          child: Icon(Icons.person, size: 30),
         ),
       ),
     );
@@ -66,8 +66,9 @@ class _BadgesExampleState extends State<BadgesExample> {
   Widget _shoppingCartBadge() {
     return badge.Badge(
       position: badge.BadgePosition.topEnd(top: 0, end: 3),
-      animationDuration: const Duration(milliseconds: 300),
-      animationType: badge.BadgeAnimationType.slide,
+
+      // animationDuration: const Duration(milliseconds: 300),
+      // animationType: badge.BadgeAnimationType.slide,
       badgeContent: Text(
         _counter.toString(),
         style: const TextStyle(color: Colors.white),
@@ -79,22 +80,26 @@ class _BadgesExampleState extends State<BadgesExample> {
 
   PreferredSizeWidget _tabBar() {
     return TabBar(tabs: [
-      Tab(
+      const Tab(
         icon: badge.Badge(
-          badgeColor: Colors.blue,
-          badgeContent: const Text(
+          badgeStyle: badge.BadgeStyle(
+            badgeColor: Colors.blue,
+          ),
+          badgeContent: Text(
             '3',
             style: TextStyle(color: Colors.white),
           ),
-          child: const Icon(Icons.account_balance_wallet, color: Colors.grey),
+          child: Icon(Icons.account_balance_wallet, color: Colors.grey),
         ),
       ),
       Tab(
         icon: badge.Badge(
-          shape: badge.BadgeShape.square,
-          borderRadius: BorderRadius.circular(5),
+          badgeStyle: badge.BadgeStyle(
+            shape: badge.BadgeShape.square,
+            padding: const EdgeInsets.all(2),
+            borderRadius: BorderRadius.circular(5),
+          ),
           position: badge.BadgePosition.topEnd(top: -12, end: -20),
-          padding: const EdgeInsets.all(2),
           badgeContent: const Text(
             'NEW',
             style: TextStyle(
@@ -123,9 +128,11 @@ class _BadgesExampleState extends State<BadgesExample> {
         BottomNavigationBarItem(
           label: 'Settings',
           icon: badge.Badge(
-            shape: badge.BadgeShape.circle,
+            badgeStyle: badge.BadgeStyle(
+              shape: badge.BadgeShape.circle,
+              borderRadius: BorderRadius.circular(100),
+            ),
             position: badge.BadgePosition.center(),
-            borderRadius: BorderRadius.circular(100),
             badgeContent: Container(
               height: 5,
               width: 5,
@@ -172,11 +179,12 @@ class _BadgesExampleState extends State<BadgesExample> {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: badge.Badge(
-        padding: const EdgeInsets.all(6),
-        gradient: const LinearGradient(colors: [
-          Colors.black,
-          Colors.red,
-        ]),
+        badgeStyle: const badge.BadgeStyle(
+            padding: EdgeInsets.all(6),
+            badgeGradient: badge.BadgeGradient.linear(colors: [
+              Colors.black,
+              Colors.red,
+            ])),
         badgeContent: const Text(
           '!',
           style: TextStyle(
@@ -193,8 +201,10 @@ class _BadgesExampleState extends State<BadgesExample> {
   Widget _elevatedButtonBadge() {
     return badge.Badge(
       showBadge: showElevatedButtonBadge,
-      padding: const EdgeInsets.all(8),
-      badgeColor: Colors.deepPurple,
+      badgeStyle: const badge.BadgeStyle(
+        padding: EdgeInsets.all(8),
+        badgeColor: Colors.deepPurple,
+      ),
       badgeContent: const Text(
         '!',
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -211,9 +221,9 @@ class _BadgesExampleState extends State<BadgesExample> {
   }
 
   Widget _chipWithZeroPadding() {
-    return Row(
+    return const Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
+        children: <Widget>[
           Text('Chip with zero padding:'),
           Chip(
             label: Text('Hello'),
@@ -237,10 +247,12 @@ class _BadgesExampleState extends State<BadgesExample> {
     return Padding(
       padding: const EdgeInsets.all(4),
       child: badge.Badge(
-        badgeColor: Colors.lightBlueAccent,
-        borderRadius: BorderRadius.circular(20),
-        padding: EdgeInsets.all(padding ?? 4),
-        shape: badge.BadgeShape.square,
+        badgeStyle: badge.BadgeStyle(
+          badgeColor: Colors.lightBlueAccent,
+          borderRadius: BorderRadius.circular(20),
+          padding: EdgeInsets.all(padding ?? 4),
+          shape: badge.BadgeShape.square,
+        ),
         badgeContent: const Text(
           'Hello',
           style: TextStyle(color: Colors.white),
@@ -258,10 +270,12 @@ class _BadgesExampleState extends State<BadgesExample> {
           const Text('Badges with borders:'),
           badge.Badge(
             position: badge.BadgePosition.topEnd(top: 0, end: 2),
-            elevation: 0,
-            shape: badge.BadgeShape.circle,
-            badgeColor: Colors.red,
-            borderSide: const BorderSide(color: Colors.black),
+            badgeStyle: const badge.BadgeStyle(
+              elevation: 0,
+              shape: badge.BadgeShape.circle,
+              badgeColor: Colors.red,
+              borderSide: BorderSide(color: Colors.black),
+            ),
             child: const Icon(
               Icons.person,
               size: 30,
@@ -269,16 +283,18 @@ class _BadgesExampleState extends State<BadgesExample> {
           ),
           badge.Badge(
             position: badge.BadgePosition.topEnd(top: -5, end: -5),
-            shape: badge.BadgeShape.square,
-            badgeColor: Colors.blue,
+            badgeStyle: const badge.BadgeStyle(
+              shape: badge.BadgeShape.square,
+              badgeColor: Colors.blue,
+              elevation: 0,
+              borderSide: BorderSide(
+                color: Colors.black,
+                width: 3,
+              ),
+            ),
             badgeContent: const SizedBox(
               height: 5,
               width: 5,
-            ),
-            elevation: 0,
-            borderSide: const BorderSide(
-              color: Colors.black,
-              width: 3,
             ),
             child: const Icon(
               Icons.games_outlined,
@@ -301,9 +317,11 @@ class _BadgesExampleState extends State<BadgesExample> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               badge.Badge(
-                elevation: 0,
-                shape: badge.BadgeShape.circle,
-                padding: const EdgeInsets.all(7),
+                badgeStyle: const badge.BadgeStyle(
+                  elevation: 0,
+                  shape: badge.BadgeShape.circle,
+                  padding: EdgeInsets.all(7),
+                ),
                 badgeContent: Text(
                   value,
                   style: const TextStyle(color: Colors.white),
@@ -345,10 +363,12 @@ class _BadgesExampleState extends State<BadgesExample> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12.0),
       child: badge.Badge(
-        elevation: 0,
+        badgeStyle: const badge.BadgeStyle(
+          elevation: 0,
+          padding: EdgeInsetsDirectional.only(end: 4),
+          badgeColor: Colors.transparent,
+        ),
         position: badge.BadgePosition.topEnd(),
-        padding: const EdgeInsetsDirectional.only(end: 4),
-        badgeColor: Colors.transparent,
         badgeContent: const Icon(Icons.error, size: 16.0, color: Colors.red),
         child: const Text('This is RTL'),
       ),

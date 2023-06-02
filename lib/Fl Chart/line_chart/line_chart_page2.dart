@@ -34,7 +34,7 @@ class LineChartPage2 extends StatelessWidget {
                 SizedBox(height: 10),
                 LineChartSample5(),
                 SizedBox(height: 18),
-                LineChartSample8(),
+                // LineChartSample8(),
               ],
             ),
           ),

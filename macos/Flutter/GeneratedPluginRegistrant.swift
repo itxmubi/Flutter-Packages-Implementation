@@ -6,13 +6,13 @@ import FlutterMacOS
 import Foundation
 
 import audio_session
-import connectivity_plus_macos
-import device_info_plus_macos
+import connectivity_plus
+import device_info_plus
 import just_audio
 import location
 import mobile_scanner
 import path_provider_foundation
-import share_plus_macos
+import share_plus
 import url_launcher_macos
 import wakelock_macos
 
