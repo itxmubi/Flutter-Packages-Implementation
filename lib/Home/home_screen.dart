@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_packages_implementation/Another%20FLushBar/another_flushbar_example.dart';
 
 import '../Animated Text Kit/animated_text_kit_example.dart';
 import '../App Settings/app_settings_example.dart';
@@ -62,6 +63,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Another FlushBar Example",
     "NFC Flutter Kit",
     "NFC Example",
     "Flutter Sticky Header",
@@ -117,6 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    AnotherFLushbarExample(),
     const NFCFlutterKitExample(),
     const NFCExample(),
     const StickyHeaderExample(),

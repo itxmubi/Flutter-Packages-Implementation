@@ -94,6 +94,7 @@ dependencies:
   sliver_tools: ^0.2.10
   nfc_manager: ^3.2.0
   flutter_nfc_kit: ^3.3.1
+  another_flushbar: ^1.12.30
 
   # google_native_mobile_ads: ^1.0.3
 
