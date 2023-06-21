@@ -19,6 +19,7 @@ import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Fl Chart/fl_chart_exmaple.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
+import '../Flutter HTML/flutter_html_example.dart';
 import '../Flutter Image Compress/flutter_image_compress.dart';
 import '../Flutter Rating Bar/flutter_rating_bar_example.dart';
 import '../Flutter Slideable/flutter_slideble_example.dart';
@@ -63,6 +64,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter HTML Example",
     "Another FlushBar Example",
     "NFC Flutter Kit",
     "NFC Example",
@@ -119,6 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterHTMLExample(),
     AnotherFLushbarExample(),
     const NFCFlutterKitExample(),
     const NFCExample(),
