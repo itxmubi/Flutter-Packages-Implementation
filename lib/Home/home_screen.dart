@@ -17,6 +17,7 @@ import '../Dropdown Button2/drop_down_button2_example.dart';
 import '../Edge Detection/edge_detection_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Fl Chart/fl_chart_exmaple.dart';
+import '../Flutter Blue Plus/self_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
 import '../Flutter HTML/flutter_html_example.dart';
@@ -64,6 +65,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Blue Plus Example",
     "Flutter HTML Example",
     "Another FlushBar Example",
     "NFC Flutter Kit",
@@ -121,6 +123,8 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const BluetoothSelfExample(),
+    // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
     AnotherFLushbarExample(),
     const NFCFlutterKitExample(),
