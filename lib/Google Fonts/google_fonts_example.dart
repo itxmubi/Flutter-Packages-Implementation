@@ -59,10 +59,6 @@ class GoogleFontsExampleState extends State<GoogleFontsExample> {
               style: GoogleFonts.baskervville(),
             ),
             Text(
-              'This Text is written in sourceSansPro',
-              style: GoogleFonts.sourceSansPro(),
-            ),
-            Text(
               'This Text is written in windSong',
               style: GoogleFonts.windSong(),
             ),

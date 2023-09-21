@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Another%20FLushBar/another_flushbar_example.dart';
+import 'package:flutter_packages_implementation/Flutter%20Blue%20Plus/flutter_blue_plus_example.dart';
 
 import '../Animated Text Kit/animated_text_kit_example.dart';
 import '../App Settings/app_settings_example.dart';
@@ -14,10 +15,8 @@ import '../Dots Indicator/dots_indicator_example.dart';
 import '../Dotted Border/dotted_border_example.dart';
 import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
-import '../Edge Detection/edge_detection_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Fl Chart/fl_chart_exmaple.dart';
-import '../Flutter Blue Plus/self_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
 import '../Flutter HTML/flutter_html_example.dart';
@@ -94,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Flutter Switch Example",
     "Table Calendar Example",
     "Presistent NaVBar Example",
-    "Edge Detection Example",
+    // "Edge Detection Example",
     "Flutter Image Compress",
     "Local Auth Example",
     "Smooth Page Indicator",
@@ -123,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
-    const BluetoothSelfExample(),
+    const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
     AnotherFLushbarExample(),
@@ -140,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const MobileScannerExample(),
     const QRScannerExample(),
     const FlutterColorPickerExample(),
-    const AppSettingsExample(),
+    const AppSettingExample(),
     const DropDownButton2Example(),
     const RFlutterAlertExample(),
     const DropDownSearchExample(),
@@ -153,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const FlutterSwitchExamples(),
     const TableCalendarExample(),
     const PresistentNavBarExample(),
-    const EdgeDetetionExample(),
+    // const EdgeDetetionExample(),
     const FlutterImageCompressExample(),
     const LocalAuthExample(),
     const SmoothPageIndicatorExample(),

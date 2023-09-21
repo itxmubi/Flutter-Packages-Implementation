@@ -1,208 +1,170 @@
-import 'dart:async';
-
-import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:app_settings/app_settings.dart';
 
-/// This is the main app stateful widget.
-class AppSettingsExample extends StatefulWidget {
-  const AppSettingsExample({super.key});
+
+class AppSettingExample extends StatefulWidget {
+  const AppSettingExample({super.key});
 
   @override
-   createState() => _AppSettingsExampleState();
+  State<AppSettingExample> createState() => _AppSettingExampleState();
 }
 
-/// This is the app state.
-class _AppSettingsExampleState extends State<AppSettingsExample> {
-  @override
-  void initState() {
-    /// Call out to intialize platform state.
-    initPlatformState();
-    super.initState();
-  }
-
-  /// Initialize platform state.
-  Future<void> initPlatformState() async {
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-  }
-
-  /// Widget build method to return MaterailApp.
-  @override
-  Widget build(BuildContext context) {
-    var actionItems = getListOfActionButtons();
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('App Settings Example App'),
-        ),
-        body: ListView.separated(
-          separatorBuilder: (context, index) => const Divider(
-            color: Colors.blueGrey,
-          ),
-          itemCount: actionItems.length,
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: actionItems[index],
-          ),
-        ));
-  }
-
-  List<Widget> getListOfActionButtons() {
-    var actionItems = <Widget>[];
-
-    actionItems.addAll([
+class _AppSettingExampleState extends State<AppSettingExample> {
+  List<Widget> getOpenAppSettingsActions() {
+    return [
       ListTile(
-          title: const Text('Example Call With Callback'),
-          minVerticalPadding: 5.0,
-          onTap: (() {
-            AppSettings.openWIFISettings(callback: () {
-              print("sample callback function called");
-            });
-          })),
-      ListTile(
-          title: const Text('WIFI'),
-          minVerticalPadding: 5.0,
-          onTap: (() {
-            AppSettings.openWIFISettings();
-          })),
+        title: const Text('Wifi'),
+        minVerticalPadding: 5.0,
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.wifi),
+      ),
       ListTile(
         title: const Text("Location"),
-        onTap: () {
-          AppSettings.openLocationSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.location),
       ),
       ListTile(
         title: const Text("Security"),
-        onTap: () {
-          AppSettings.openSecuritySettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.security),
       ),
       ListTile(
         title: const Text("Lock & Password"),
-        onTap: () {
-          AppSettings.openLockAndPasswordSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.lockAndPassword),
       ),
       ListTile(
         title: const Text("App Settings"),
-        onTap: () {
-          AppSettings.openAppSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.settings),
       ),
       ListTile(
         title: const Text("Bluetooth"),
-        onTap: () {
-          AppSettings.openBluetoothSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.bluetooth),
       ),
       ListTile(
         title: const Text("Data Roaming"),
-        onTap: () {
-          AppSettings.openDataRoamingSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.dataRoaming),
       ),
       ListTile(
         title: const Text("Date"),
-        onTap: () {
-          AppSettings.openDateSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.date),
       ),
       ListTile(
         title: const Text("Display"),
-        onTap: () {
-          AppSettings.openDisplaySettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.display),
       ),
       ListTile(
         title: const Text("Notification"),
-        onTap: () {
-          AppSettings.openNotificationSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.notification),
       ),
       ListTile(
         title: const Text("Sound"),
-        onTap: () {
-          AppSettings.openSoundSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.sound),
       ),
       ListTile(
         title: const Text("Internal Storage"),
-        onTap: () {
-          AppSettings.openInternalStorageSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.internalStorage),
       ),
       ListTile(
         title: const Text("Battery optimization"),
-        onTap: () {
-          AppSettings.openBatteryOptimizationSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.batteryOptimization),
       ),
       ListTile(
         title: const Text("NFC"),
-        onTap: () {
-          AppSettings.openNFCSettings();
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.nfc),
       ),
       ListTile(
         title: const Text("VPN"),
-        onTap: () {
-          AppSettings.openVPNSettings(
-            asAnotherTask: true,
-          );
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.vpn, asAnotherTask: true),
       ),
       ListTile(
         title: const Text("Device Settings"),
-        onTap: () {
-          AppSettings.openDeviceSettings(
-            asAnotherTask: true,
-          );
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.device, asAnotherTask: true),
       ),
       ListTile(
         title: const Text("Accessibility"),
-        onTap: () {
-          AppSettings.openAccessibilitySettings(
-            asAnotherTask: true,
-          );
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.accessibility, asAnotherTask: true),
       ),
       ListTile(
         title: const Text("Developer"),
-        onTap: () {
-          AppSettings.openDevelopmentSettings(
-            asAnotherTask: true,
-          );
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.developer, asAnotherTask: true),
       ),
       ListTile(
         title: const Text("Hotspot"),
-        onTap: () {
-          AppSettings.openHotspotSettings(
-            asAnotherTask: true,
-          );
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.hotspot, asAnotherTask: true),
       ),
       ListTile(
         title: const Text("APN"),
-        onTap: () {
-          AppSettings.openAPNSettings(asAnotherTask: true);
-        },
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.apn, asAnotherTask: true),
       ),
       ListTile(
-        title: const Text("Alarm & Reminders"),
-        onTap: () {
-          AppSettings.openAlarmSettings(asAnotherTask: true);
-        },
+        title: const Text("Alarms"),
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.alarm, asAnotherTask: true),
       ),
-    ]);
-    return actionItems;
+      ListTile(
+        title: const Text("Subscriptions"),
+        onTap: () => AppSettings.openAppSettings(type: AppSettingsType.subscriptions, asAnotherTask: true),
+      ),
+    ];
   }
 
-  /// Dispose method to close out and cleanup objects.
+  List<Widget> getOpenAppSettingsPanelActions() {
+    return [
+      ListTile(
+        title: const Text('Wifi'),
+        minVerticalPadding: 5.0,
+        onTap: () => AppSettings.openAppSettingsPanel(AppSettingsPanelType.wifi),
+      ),
+      ListTile(
+        title: const Text('NFC'),
+        onTap: () => AppSettings.openAppSettingsPanel(AppSettingsPanelType.nfc),
+      ),
+      ListTile(
+        title: const Text('Internet connectivity'),
+        onTap: () => AppSettings.openAppSettingsPanel(AppSettingsPanelType.internetConnectivity),
+      ),
+      ListTile(
+        title: const Text('Volume'),
+        onTap: () => AppSettings.openAppSettingsPanel(AppSettingsPanelType.volume),
+      ),
+    ];
+  }
+
   @override
-  void dispose() {
-    super.dispose();
+  Widget build(BuildContext context) {
+    final appSettingsActions = getOpenAppSettingsActions();
+    final appSettingsPanelActions = getOpenAppSettingsPanelActions();
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('App Settings Example App'),
+        ),
+        body: CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'openAppSettings() options',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildListDelegate.fixed(appSettingsActions),
+            ),
+            const SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'openAppSettingsPanel() options',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildListDelegate.fixed(appSettingsPanelActions),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -142,9 +142,8 @@ class _FlutterImageCompressExampleState
     );
     if (kDebugMode) {
       print(file.lengthSync());
-      print(result?.lengthSync());
     }
-    return result;
+    return File(result!.path);
   }
 
   Future testCompressAsset(String assetName) async {
@@ -274,8 +273,8 @@ class _FlutterImageCompressExampleState
       print('Compress heic success.');
       print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
       print(
-        'Compress heic result path: ${result.absolute.path}, '
-        'size: ${result.lengthSync()}',
+        'Compress heic result path: ${result.path}, '
+        'size: ${result.length()}',
       );
     }
     logger.logTime();
@@ -307,12 +306,12 @@ class _FlutterImageCompressExampleState
       print('Compress webp success.');
       print('src, path = $srcPath length = ${File(srcPath).lengthSync()}');
       print(
-        'Compress webp result path: ${result.absolute.path}, '
-        'size: ${result.lengthSync()}',
+        'Compress webp result path: ${result.path}, '
+        'size: ${result.length()}',
       );
     }
     safeSetState(() {
-      provider = FileImage(result);
+      provider = FileImage(File(result.path));
     });
   }
 

@@ -23,7 +23,7 @@ class AppScaffold extends StatelessWidget {
         ),
         body: CustomScrollView(
           slivers: slivers,
-          reverse: reverse,
+          // reverse: reverse,
         ),
         floatingActionButton: const _FloatingActionButton(),
       ),
