@@ -97,6 +97,7 @@ dependencies:
   another_flushbar: ^1.12.30
   flutter_html: ^3.0.0-beta.2
   flutter_blue_plus: ^1.5.2
+  flutter_alarm_clock: ^0.1.1
 
   # google_native_mobile_ads: ^1.0.3
 

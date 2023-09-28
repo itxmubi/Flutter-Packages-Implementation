@@ -17,6 +17,7 @@ import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
 import '../Fl Chart/fl_chart_exmaple.dart';
+import '../Flutter Alarm Clock/flutter_alarm_clock_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
 import '../Flutter HTML/flutter_html_example.dart';
@@ -64,6 +65,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Flutter Alarm Clock Example",
     "Flutter Blue Plus Example",
     "Flutter HTML Example",
     "Another FlushBar Example",
@@ -122,6 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const FlutterAlarmClockExample(),
     const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
