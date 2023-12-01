@@ -49,6 +49,7 @@ import '../Pin Code Fields/pin_code_fields_exmple.dart';
 import '../Presistent NavBar/presistent_nav_bar.dart';
 import '../QR Scanner/qr_scan_example.dart';
 import '../RFlutter Alert/rflutter_alert_example.dart';
+import '../Sensors Pus/sensor_plus_example.dart';
 import '../Share Plus/share_plus_example.dart';
 import '../Shimmer/shimmer_example.dart';
 import '../Smooth Page Idicator/smooth-page_indicator_example.dart';
@@ -65,6 +66,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+    "Sensors Plus Example",
     "Flutter Alarm Clock Example",
     "Flutter Blue Plus Example",
     "Flutter HTML Example",
@@ -124,6 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    const SensorsPlusExample(),
     const FlutterAlarmClockExample(),
     const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
