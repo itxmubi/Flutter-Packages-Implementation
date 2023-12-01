@@ -80,7 +80,8 @@ dependencies:
   app_settings: ^5.0.0
   flutter_colorpicker: ^1.0.3
   qrscan: ^0.3.3
-  image_gallery_saver: ^2.0.3
+  image_gallery_saver: any
+  syncfusion_flutter_charts: ^23.2.6
   permission_handler: ^11.0.0
   mobile_scanner: ^3.0.0
   flutter_typeahead: ^4.3.3
