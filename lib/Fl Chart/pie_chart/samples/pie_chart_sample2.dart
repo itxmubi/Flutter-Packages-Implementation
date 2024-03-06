@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+
 import 'indicator.dart';
 
 class PieChartSample2 extends StatefulWidget {
@@ -50,11 +51,11 @@ class PieChart2State extends State {
                 ),
               ),
             ),
-            Column(
+            const Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
+              children: <Widget>[
                 Indicator(
                   color: Color(0xff0293ee),
                   text: 'First',

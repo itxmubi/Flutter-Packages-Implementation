@@ -1,6 +1,7 @@
+import 'dart:math' as math;
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
 class BarChartSample7 extends StatefulWidget {
   const BarChartSample7({Key? key}) : super(key: key);
@@ -103,14 +104,14 @@ class _BarChartSample7State extends State<BarChartSample7> {
                         },
                       ),
                     ),
-                    rightTitles: AxisTitles(),
-                    topTitles: AxisTitles(),
+                    rightTitles: const AxisTitles(),
+                    topTitles: const AxisTitles(),
                   ),
                   gridData: FlGridData(
                     show: true,
                     drawVerticalLine: false,
-                    getDrawingHorizontalLine: (value) => FlLine(
-                      color: const Color(0xFFececec),
+                    getDrawingHorizontalLine: (value) => const FlLine(
+                      color: Color(0xFFececec),
                       dashArray: null,
                       strokeWidth: 1,
                     ),

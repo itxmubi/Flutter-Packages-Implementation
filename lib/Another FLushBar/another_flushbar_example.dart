@@ -1,11 +1,10 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-
 class AnotherFLushbarExample extends StatefulWidget {
-  AnotherFLushbarExample({Key? key,}) : super(key: key);
-
-
+  const AnotherFLushbarExample({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _AnotherFLushbarExampleState createState() => _AnotherFLushbarExampleState();
@@ -14,16 +13,12 @@ class AnotherFLushbarExample extends StatefulWidget {
 class _AnotherFLushbarExampleState extends State<AnotherFLushbarExample> {
   @override
   Widget build(BuildContext context) {
- 
     return Scaffold(
       appBar: AppBar(
-        
-        title: Text("Another Flush Bar"),
+        title: const Text("Another Flush Bar"),
       ),
-      body: Center(
-      
+      body: const Center(
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -38,11 +33,11 @@ class _AnotherFLushbarExampleState extends State<AnotherFLushbarExample> {
             title: 'Hey Ninja',
             message:
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
           ).show(context);
         },
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

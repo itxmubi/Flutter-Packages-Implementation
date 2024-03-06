@@ -104,9 +104,9 @@ class _QRScannerExampleState extends State<QRScannerExample> {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(4), topRight: Radius.circular(4)),
               ),
-              child: Row(
+              child: const Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
-                children: const <Widget>[
+                children: <Widget>[
                   Icon(Icons.verified_user, size: 18, color: Colors.green),
                   Text('  Generate Qrcode', style: TextStyle(fontSize: 15)),
                   Spacer(),
@@ -182,8 +182,8 @@ class _QRScannerExampleState extends State<QRScannerExample> {
             const Divider(height: 2, color: Colors.black26),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 9),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Icon(Icons.history, size: 16, color: Colors.black38),
                   Text('  Generate History',
                       style: TextStyle(fontSize: 14, color: Colors.black38)),
@@ -300,7 +300,6 @@ class _QRScannerExampleState extends State<QRScannerExample> {
       if (picked == null) {}
       return File(picked!.path);
     });
-    if (file == null) return;
     Uint8List bytes = file.readAsBytesSync();
     String barcode = await scanner.scanBytes(bytes);
     _outputController!.text = barcode;

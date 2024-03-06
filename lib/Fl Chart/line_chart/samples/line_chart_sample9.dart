@@ -1,6 +1,7 @@
+import 'dart:math';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 // ignore: must_be_immutable
 class LineChartSample9 extends StatelessWidget {
@@ -75,7 +76,7 @@ class LineChartSample9 extends StatelessWidget {
                 belowBarData: BarAreaData(
                   show: false,
                 ),
-                dotData: FlDotData(show: false),
+                dotData: const FlDotData(show: false),
               ),
             ],
             minY: -1.5,
@@ -88,7 +89,7 @@ class LineChartSample9 extends StatelessWidget {
                   reservedSize: 56,
                 ),
               ),
-              rightTitles: AxisTitles(
+              rightTitles: const AxisTitles(
                 sideTitles: SideTitles(showTitles: false),
               ),
               bottomTitles: AxisTitles(
@@ -98,7 +99,7 @@ class LineChartSample9 extends StatelessWidget {
                   reservedSize: 36,
                 ),
               ),
-              topTitles: AxisTitles(
+              topTitles: const AxisTitles(
                 sideTitles: SideTitles(showTitles: false),
               ),
             ),

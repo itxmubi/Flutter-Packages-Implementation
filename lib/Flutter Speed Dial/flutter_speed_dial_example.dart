@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class FlutterSpeedDialExample extends StatefulWidget {
@@ -8,8 +8,7 @@ class FlutterSpeedDialExample extends StatefulWidget {
     Key? key,
   }) : super(key: key);
   @override
-   createState() =>
-      _FlutterSpeedDialExampleState();
+  createState() => _FlutterSpeedDialExampleState();
 }
 
 class _FlutterSpeedDialExampleState extends State<FlutterSpeedDialExample>

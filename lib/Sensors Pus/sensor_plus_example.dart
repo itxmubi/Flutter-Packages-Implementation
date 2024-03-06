@@ -7,7 +7,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
 import 'snake.dart';

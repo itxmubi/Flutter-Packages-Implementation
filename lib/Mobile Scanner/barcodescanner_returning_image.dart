@@ -103,13 +103,7 @@ class _BarcodeScannerReturningImageState
                               icon: ValueListenableBuilder(
                                 valueListenable: controller.torchState,
                                 builder: (context, state, child) {
-                                  if (state == null) {
-                                    return const Icon(
-                                      Icons.flash_off,
-                                      color: Colors.grey,
-                                    );
-                                  }
-                                  switch (state as TorchState) {
+                                  switch (state) {
                                     case TorchState.off:
                                       return const Icon(
                                         Icons.flash_off,
@@ -156,10 +150,7 @@ class _BarcodeScannerReturningImageState
                               icon: ValueListenableBuilder(
                                 valueListenable: controller.cameraFacingState,
                                 builder: (context, state, child) {
-                                  if (state == null) {
-                                    return const Icon(Icons.camera_front);
-                                  }
-                                  switch (state as CameraFacing) {
+                                  switch (state) {
                                     case CameraFacing.front:
                                       return const Icon(Icons.camera_front);
                                     case CameraFacing.back:

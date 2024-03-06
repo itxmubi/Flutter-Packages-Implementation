@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
-    AnotherFLushbarExample(),
+    const AnotherFLushbarExample(),
     const NFCFlutterKitExample(),
     const NFCExample(),
     const StickyHeaderExample(),

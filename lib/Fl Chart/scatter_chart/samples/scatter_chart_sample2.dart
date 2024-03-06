@@ -94,7 +94,7 @@ class _ScatterChartSample2State extends State {
               getDrawingVerticalLine: (value) =>
                   FlLine(color: Colors.white.withOpacity(0.1)),
             ),
-            titlesData: FlTitlesData(
+            titlesData: const FlTitlesData(
               show: false,
             ),
             showingTooltipIndicators: selectedSpots,

@@ -205,11 +205,11 @@ class _ProvidedStylesExampleState extends State<ProvidedStylesExample> {
   @override
   Widget build(final BuildContext context) => Scaffold(
         appBar: AppBar(title: const Text("Navigation Bar Demo")),
-        drawer: Drawer(
+        drawer: const Drawer(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Text("This is the Drawer"),
               ],
             ),

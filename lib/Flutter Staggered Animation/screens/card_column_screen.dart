@@ -33,27 +33,27 @@ class _CardColumnScreenState extends State<CardColumnScreen> {
                       width: MediaQuery.of(context).size.width,
                       height: 166.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        children: [
                           EmptyCard(height: 50.0, width: 50.0),
                           EmptyCard(height: 50.0, width: 50.0),
                           EmptyCard(height: 50.0, width: 50.0),
                         ],
                       ),
                     ),
-                    Row(
-                      children: const [
+                    const Row(
+                      children: [
                         Flexible(child: EmptyCard(height: 150.0)),
                         Flexible(child: EmptyCard(height: 150.0)),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
                       child: Row(
-                        children: const [
+                        children: [
                           Flexible(child: EmptyCard(height: 50.0)),
                           Flexible(child: EmptyCard(height: 50.0)),
                           Flexible(child: EmptyCard(height: 50.0)),

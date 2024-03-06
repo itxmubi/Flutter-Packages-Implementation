@@ -122,7 +122,7 @@ class LineChartSample6 extends StatelessWidget {
             height: 200,
             child: LineChart(
               LineChartData(
-                lineTouchData: LineTouchData(enabled: false),
+                lineTouchData: const LineTouchData(enabled: false),
                 lineBarsData: [
                   LineChartBarData(
                     gradient: const LinearGradient(
@@ -188,7 +188,7 @@ class LineChartSample6 extends StatelessWidget {
                         getTitlesWidget: rightTitleWidgets,
                         reservedSize: 30),
                   ),
-                  bottomTitles: AxisTitles(
+                  bottomTitles: const AxisTitles(
                     sideTitles: SideTitles(showTitles: false),
                   ),
                   topTitles: AxisTitles(

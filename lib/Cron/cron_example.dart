@@ -12,7 +12,7 @@ class _CronExampleState extends State<CronExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Cron Example")),
-      body: Column(children: const []),
+      body: const Column(children: []),
     );
   }
 }

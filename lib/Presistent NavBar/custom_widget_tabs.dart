@@ -9,7 +9,7 @@ class CustomWidgetExample extends StatefulWidget {
   final BuildContext menuScreenContext;
 
   @override
-   createState() => _CustomWidgetExampleState();
+  createState() => _CustomWidgetExampleState();
 }
 
 class _CustomWidgetExampleState extends State<CustomWidgetExample> {
@@ -107,11 +107,11 @@ class _CustomWidgetExampleState extends State<CustomWidgetExample> {
   @override
   Widget build(final BuildContext context) => Scaffold(
         appBar: AppBar(title: const Text("Navigation Bar Demo")),
-        drawer: Drawer(
+        drawer: const Drawer(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Text("This is the Drawer"),
               ],
             ),

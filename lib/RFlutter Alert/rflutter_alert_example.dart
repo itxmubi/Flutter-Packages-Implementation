@@ -208,8 +208,8 @@ class RFlutterAlertExample extends StatelessWidget {
     Alert(
         context: context,
         title: "LOGIN",
-        content: Column(
-          children: const <Widget>[
+        content: const Column(
+          children: <Widget>[
             TextField(
               decoration: InputDecoration(
                 icon: Icon(Icons.account_circle),

@@ -126,9 +126,9 @@ class BarChartSample6 extends StatelessWidget {
                 BarChartData(
                   alignment: BarChartAlignment.spaceBetween,
                   titlesData: FlTitlesData(
-                    leftTitles: AxisTitles(),
-                    rightTitles: AxisTitles(),
-                    topTitles: AxisTitles(),
+                    leftTitles: const AxisTitles(),
+                    rightTitles: const AxisTitles(),
+                    topTitles: const AxisTitles(),
                     bottomTitles: AxisTitles(
                       sideTitles: SideTitles(
                         showTitles: true,
@@ -139,7 +139,7 @@ class BarChartSample6 extends StatelessWidget {
                   ),
                   barTouchData: BarTouchData(enabled: false),
                   borderData: FlBorderData(show: false),
-                  gridData: FlGridData(show: false),
+                  gridData: const FlGridData(show: false),
                   barGroups: [
                     generateGroupData(0, 2, 3, 2),
                     generateGroupData(1, 2, 5, 1.7),

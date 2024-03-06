@@ -68,9 +68,9 @@ class _LineChartSample3State extends State<LineChartSample3> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Row(
+        const Row(
           mainAxisSize: MainAxisSize.min,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               'Average Line',
               style: TextStyle(
@@ -111,7 +111,7 @@ class _LineChartSample3State extends State<LineChartSample3> {
                         return null;
                       }
                       return TouchedSpotIndicatorData(
-                        FlLine(color: Colors.blue, strokeWidth: 4),
+                        const FlLine(color: Colors.blue, strokeWidth: 4),
                         FlDotData(
                           getDotPainter: (spot, percent, barData, index) {
                             if (index % 2 == 0) {
@@ -239,7 +239,7 @@ class _LineChartSample3State extends State<LineChartSample3> {
                     ),
                     spotsLine: BarAreaSpotsLine(
                       show: true,
-                      flLineStyle: FlLine(
+                      flLineStyle: const FlLine(
                         color: Colors.blue,
                         strokeWidth: 2,
                       ),
@@ -282,12 +282,12 @@ class _LineChartSample3State extends State<LineChartSample3> {
                 drawVerticalLine: true,
                 getDrawingHorizontalLine: (value) {
                   if (value == 0) {
-                    return FlLine(
+                    return const FlLine(
                       color: Colors.deepOrange,
                       strokeWidth: 2,
                     );
                   } else {
-                    return FlLine(
+                    return const FlLine(
                       color: Colors.grey,
                       strokeWidth: 0.5,
                     );
@@ -295,12 +295,12 @@ class _LineChartSample3State extends State<LineChartSample3> {
                 },
                 getDrawingVerticalLine: (value) {
                   if (value == 0) {
-                    return FlLine(
+                    return const FlLine(
                       color: Colors.black,
                       strokeWidth: 2,
                     );
                   } else {
-                    return FlLine(
+                    return const FlLine(
                       color: Colors.grey,
                       strokeWidth: 0.5,
                     );
@@ -309,10 +309,10 @@ class _LineChartSample3State extends State<LineChartSample3> {
               ),
               titlesData: FlTitlesData(
                 show: true,
-                topTitles: AxisTitles(
+                topTitles: const AxisTitles(
                   sideTitles: SideTitles(showTitles: false),
                 ),
-                rightTitles: AxisTitles(
+                rightTitles: const AxisTitles(
                   sideTitles: SideTitles(showTitles: false),
                 ),
                 leftTitles: AxisTitles(

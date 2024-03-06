@@ -1,14 +1,14 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
 class LineChartSample10 extends StatefulWidget {
   const LineChartSample10({Key? key}) : super(key: key);
 
   @override
-   createState() => _LineChartSample10State();
+  createState() => _LineChartSample10State();
 }
 
 class _LineChartSample10State extends State<LineChartSample10> {
@@ -82,9 +82,9 @@ class _LineChartSample10State extends State<LineChartSample10> {
                     maxY: 1,
                     minX: sinPoints.first.x,
                     maxX: sinPoints.last.x,
-                    lineTouchData: LineTouchData(enabled: false),
-                    clipData: FlClipData.all(),
-                    gridData: FlGridData(
+                    lineTouchData: const LineTouchData(enabled: false),
+                    clipData: const FlClipData.all(),
+                    gridData: const FlGridData(
                       show: true,
                       drawVerticalLine: false,
                     ),
@@ -92,7 +92,7 @@ class _LineChartSample10State extends State<LineChartSample10> {
                       sinLine(sinPoints),
                       cosLine(cosPoints),
                     ],
-                    titlesData: FlTitlesData(
+                    titlesData: const FlTitlesData(
                       show: false,
                     ),
                   ),
@@ -106,7 +106,7 @@ class _LineChartSample10State extends State<LineChartSample10> {
   LineChartBarData sinLine(List<FlSpot> points) {
     return LineChartBarData(
       spots: points,
-      dotData: FlDotData(
+      dotData: const FlDotData(
         show: false,
       ),
       gradient: LinearGradient(
@@ -122,7 +122,7 @@ class _LineChartSample10State extends State<LineChartSample10> {
   LineChartBarData cosLine(List<FlSpot> points) {
     return LineChartBarData(
       spots: points,
-      dotData: FlDotData(
+      dotData: const FlDotData(
         show: false,
       ),
       gradient: LinearGradient(

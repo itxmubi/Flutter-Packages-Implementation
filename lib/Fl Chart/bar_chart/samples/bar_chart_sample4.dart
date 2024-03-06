@@ -93,18 +93,18 @@ class BarChartSample4State extends State<BarChartSample4> {
                     getTitlesWidget: leftTitles,
                   ),
                 ),
-                topTitles: AxisTitles(
+                topTitles: const AxisTitles(
                   sideTitles: SideTitles(showTitles: false),
                 ),
-                rightTitles: AxisTitles(
+                rightTitles: const AxisTitles(
                   sideTitles: SideTitles(showTitles: false),
                 ),
               ),
               gridData: FlGridData(
                 show: true,
                 checkToShowHorizontalLine: (value) => value % 10 == 0,
-                getDrawingHorizontalLine: (value) => FlLine(
-                  color: const Color(0xffe7e8ec),
+                getDrawingHorizontalLine: (value) => const FlLine(
+                  color: Color(0xffe7e8ec),
                   strokeWidth: 1,
                 ),
                 drawVerticalLine: false,

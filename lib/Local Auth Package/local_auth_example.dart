@@ -1,13 +1,9 @@
-
-
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
-
-
 
 class LocalAuthExample extends StatefulWidget {
   const LocalAuthExample({Key? key}) : super(key: key);
@@ -186,9 +182,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
                 if (_isAuthenticating)
                   ElevatedButton(
                     onPressed: _cancelAuthentication,
-                    child: Row(
+                    child: const Row(
                       mainAxisSize: MainAxisSize.min,
-                      children: const <Widget>[
+                      children: <Widget>[
                         Text('Cancel Authentication'),
                         Icon(Icons.cancel),
                       ],
@@ -199,9 +195,9 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
                     children: <Widget>[
                       ElevatedButton(
                         onPressed: _authenticate,
-                        child: Row(
+                        child: const Row(
                           mainAxisSize: MainAxisSize.min,
-                          children: const <Widget>[
+                          children: <Widget>[
                             Text('Authenticate'),
                             Icon(Icons.perm_device_information),
                           ],

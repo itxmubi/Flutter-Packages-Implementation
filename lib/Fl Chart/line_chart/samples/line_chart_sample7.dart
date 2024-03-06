@@ -79,7 +79,7 @@ class LineChartSample7 extends StatelessWidget {
         padding: const EdgeInsets.only(left: 28, right: 18),
         child: LineChart(
           LineChartData(
-            lineTouchData: LineTouchData(enabled: false),
+            lineTouchData: const LineTouchData(enabled: false),
             lineBarsData: [
               LineChartBarData(
                 spots: const [
@@ -99,7 +99,7 @@ class LineChartSample7 extends StatelessWidget {
                 isCurved: true,
                 barWidth: 2,
                 color: Colors.green,
-                dotData: FlDotData(
+                dotData: const FlDotData(
                   show: false,
                 ),
               ),
@@ -121,7 +121,7 @@ class LineChartSample7 extends StatelessWidget {
                 isCurved: true,
                 barWidth: 2,
                 color: Colors.black,
-                dotData: FlDotData(
+                dotData: const FlDotData(
                   show: false,
                 ),
               ),
@@ -143,7 +143,7 @@ class LineChartSample7 extends StatelessWidget {
                 isCurved: false,
                 barWidth: 2,
                 color: Colors.red,
-                dotData: FlDotData(
+                dotData: const FlDotData(
                   show: false,
                 ),
               ),
@@ -172,10 +172,10 @@ class LineChartSample7 extends StatelessWidget {
                   reservedSize: 36,
                 ),
               ),
-              topTitles: AxisTitles(
+              topTitles: const AxisTitles(
                 sideTitles: SideTitles(showTitles: false),
               ),
-              rightTitles: AxisTitles(
+              rightTitles: const AxisTitles(
                 sideTitles: SideTitles(showTitles: false),
               ),
             ),
