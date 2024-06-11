@@ -12,14 +12,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class ConnectivityPlusExample extends StatefulWidget {
-  const ConnectivityPlusExample({Key? key, required this.title})
-      : super(key: key);
+  const ConnectivityPlusExample({super.key, required this.title});
 
   final String title;
 
   @override
-   createState() =>
-      _ConnectivityPlusExampleState();
+  createState() => _ConnectivityPlusExampleState();
 }
 
 class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
@@ -32,8 +30,8 @@ class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
     super.initState();
     initConnectivity();
 
-    _connectivitySubscription =
-        _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
+    // _connectivitySubscription =
+    //     _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
   }
 
   @override
@@ -47,7 +45,7 @@ class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
     late ConnectivityResult result;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      result = await _connectivity.checkConnectivity();
+      // result = await _connectivity.checkConnectivity();
     } on PlatformException catch (e) {
       developer.log('Couldn\'t check connectivity status', error: e);
       return;
@@ -57,7 +55,7 @@ class _ConnectivityPlusExampleState extends State<ConnectivityPlusExample> {
       return Future.value(null);
     }
 
-    return _updateConnectionStatus(result);
+    // return _updateConnectionStatus(result);
   }
 
   Future<void> _updateConnectionStatus(ConnectivityResult result) async {

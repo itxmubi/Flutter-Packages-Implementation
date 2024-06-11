@@ -3,23 +3,94 @@ import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ImageCropperExample extends StatefulWidget {
-  final String title;
-
-  const ImageCropperExample({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  @override
-  createState() => _ImageCropperExampleState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _ImageCropperExampleState extends State<ImageCropperExample> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        highlightColor: const Color(0xFFD0996F),
+        canvasColor: const Color(0xFFFDF5EC),
+        textTheme: TextTheme(
+          headlineSmall: ThemeData.light()
+              .textTheme
+              .headlineSmall!
+              .copyWith(color: const Color(0xFFBC764A)),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.grey[600],
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFBC764A),
+          centerTitle: false,
+          foregroundColor: Colors.white,
+          actionsIconTheme: IconThemeData(color: Colors.white),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateColor.resolveWith(
+                (states) => const Color(0xFFBC764A)),
+            foregroundColor: MaterialStateColor.resolveWith(
+              (states) => Colors.white,
+            ),
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStateColor.resolveWith(
+              (states) => const Color(0xFFBC764A),
+            ),
+            side: MaterialStateBorderSide.resolveWith(
+                (states) => const BorderSide(color: Color(0xFFBC764A))),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStateColor.resolveWith(
+              (states) => const Color(0xFFBC764A),
+            ),
+          ),
+        ),
+        iconButtonTheme: IconButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStateColor.resolveWith(
+              (states) => const Color(0xFFBC764A),
+            ),
+          ),
+        ),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          background: const Color(0xFFFDF5EC),
+          primary: const Color(0xFFD0996F),
+        ),
+      ),
+      home: const HomePage(title: 'Image Cropper Demo'),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  final String title;
+
+  const HomePage({
+    super.key,
+    required this.title,
+  });
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   XFile? _pickedFile;
   CroppedFile? _croppedFile;
 
@@ -195,6 +266,8 @@ class _ImageCropperExampleState extends State<ImageCropperExample> {
                   onPressed: () {
                     _uploadImage();
                   },
+                  style:
+                      ElevatedButton.styleFrom(foregroundColor: Colors.white),
                   child: const Text('Upload'),
                 ),
               ),
@@ -213,26 +286,34 @@ class _ImageCropperExampleState extends State<ImageCropperExample> {
         compressQuality: 100,
         uiSettings: [
           AndroidUiSettings(
-              toolbarTitle: 'Cropper',
-              toolbarColor: Colors.deepOrange,
-              toolbarWidgetColor: Colors.white,
-              initAspectRatio: CropAspectRatioPreset.original,
-              lockAspectRatio: false),
+            toolbarTitle: 'Cropper',
+            toolbarColor: Colors.deepOrange,
+            toolbarWidgetColor: Colors.white,
+            initAspectRatio: CropAspectRatioPreset.square,
+            lockAspectRatio: false,
+            aspectRatioPresets: [
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.square,
+              CropAspectRatioPreset.ratio4x3,
+              CropAspectRatioPresetCustom(),
+            ],
+          ),
           IOSUiSettings(
             title: 'Cropper',
+            aspectRatioPresets: [
+              CropAspectRatioPreset.original,
+              CropAspectRatioPreset.square,
+              CropAspectRatioPreset.ratio4x3,
+              CropAspectRatioPresetCustom(),
+            ],
           ),
           WebUiSettings(
             context: context,
-            presentStyle: CropperPresentStyle.dialog,
-            boundary: const CroppieBoundary(
+            presentStyle: WebPresentStyle.dialog,
+            size: const CropperSize(
               width: 520,
               height: 520,
             ),
-            viewPort:
-                const CroppieViewPort(width: 480, height: 480, type: 'circle'),
-            enableExif: true,
-            enableZoom: true,
-            showZoomer: true,
           ),
         ],
       );
@@ -260,4 +341,12 @@ class _ImageCropperExampleState extends State<ImageCropperExample> {
       _croppedFile = null;
     });
   }
+}
+
+class CropAspectRatioPresetCustom implements CropAspectRatioPresetData {
+  @override
+  (int, int)? get data => (2, 3);
+
+  @override
+  String get name => '2x3 (customized)';
 }
