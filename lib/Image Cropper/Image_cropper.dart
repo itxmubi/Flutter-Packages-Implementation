@@ -6,12 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ImageCropperExample extends StatelessWidget {
+  const ImageCropperExample({super.key});
 
   // This widget is the root of your application.
   @override

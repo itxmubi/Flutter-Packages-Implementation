@@ -31,6 +31,7 @@ import '../Flutter Sticky Header/flutter_sticky_header_example.dart';
 import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
+import '../Flutter Typehead/f_typehead_main.dart';
 import '../Flutter Typehead/flutter_type_head_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Cropper/Image_cropper.dart';
@@ -58,7 +59,7 @@ import '../WakeLock/wakelock_example.dart';
 import '../Youtube Player Flutter/youtube_player_flutter_example.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -141,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const FlutterYoutubePlayerExample(),
     const FlutterEasyLoading(),
     const FlutterSpeedDialExample(),
-    const FlutterTypeheadExample(),
+    const FlutterTypeHeadExample(),
     const MobileScannerExample(),
     const QRScannerExample(),
     const FlutterColorPickerExample(),
@@ -163,9 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const LocalAuthExample(),
     const SmoothPageIndicatorExample(),
     const JustAudioExample(),
-    const ImageCropperExample(
-      title: "Image Ceopper",
-    ),
+    const ImageCropperExample(),
     const DottedBorderExample(),
     const FlChartExample(),
     const BadgesExample(),
