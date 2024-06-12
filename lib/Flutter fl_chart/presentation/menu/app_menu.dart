@@ -83,9 +83,9 @@ class _AppVersionRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(builder: (context, state) {
-      if (state.appVersion.isNullOrBlank) {
-        return Container();
-      }
+      // if (state.appVersion.isNullOrBlank) {
+      //   return Container();
+      // }
       return Container(
         margin: const EdgeInsets.all(12),
         child: Row(
@@ -100,7 +100,7 @@ class _AppVersionRow extends StatelessWidget {
                     children: <TextSpan>[
                       const TextSpan(text: 'App version: '),
                       TextSpan(
-                        text: 'v${state.appVersion!}',
+                        text: 'v1.1 test}',
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),

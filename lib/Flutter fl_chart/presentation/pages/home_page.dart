@@ -1,19 +1,19 @@
 import 'package:dartx/dartx.dart';
-import 'package:fl_chart_app/presentation/menu/app_menu.dart';
-import 'package:fl_chart_app/presentation/resources/app_resources.dart';
-import 'package:fl_chart_app/urls.dart';
-import 'package:fl_chart_app/util/app_helper.dart';
-import 'package:fl_chart_app/util/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../urls.dart';
+import '../../util/app_helper.dart';
+import '../../util/app_utils.dart';
+import '../menu/app_menu.dart';
+import '../resources/app_dimens.dart';
 import 'chart_samples_page.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({
-    Key? key,
+class FlChartExample extends StatelessWidget {
+  FlChartExample({
+    super.key,
     required this.showingChartType,
-  }) : super(key: key) {
+  }) {
     _initMenuItems();
   }
 

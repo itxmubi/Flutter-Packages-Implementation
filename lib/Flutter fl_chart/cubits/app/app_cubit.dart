@@ -1,7 +1,9 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../urls.dart';
+import '../../util/app_utils.dart';
 
 part 'app_state.dart';
 
@@ -11,9 +13,9 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void initialize() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    // PackageInfo packageInfo = await PackageInfo.fromPlatform();
     emit(state.copyWith(
-      currentPackageInfo: packageInfo,
+      // currentPackageInfo: packageInfo,
       availableVersionToUpdate: '',
       usingFlChartVersion: BuildConstants.usingFlChartVersion,
     ));

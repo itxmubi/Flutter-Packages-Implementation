@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Another%20FLushBar/another_flushbar_example.dart';
 import 'package:flutter_packages_implementation/Flutter%20Blue%20Plus/flutter_blue_plus_example.dart';
+import 'package:flutter_packages_implementation/Flutter%20fl_chart/util/app_helper.dart';
 
 import '../Animated Text Kit/animated_text_kit_example.dart';
 import '../App Settings/app_settings_example.dart';
@@ -16,7 +17,6 @@ import '../Dotted Border/dotted_border_example.dart';
 import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
 import '../Facebook Audience Network/facebook_ads_example.dart';
-import '../Fl Chart/fl_chart_exmaple.dart';
 import '../Flutter Alarm Clock/flutter_alarm_clock_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
@@ -32,7 +32,8 @@ import '../Flutter Svg/flutter_svg_example.dart';
 import '../Flutter Switch/flutter_switch_example.dart';
 import '../Flutter Toast/flutter_toast_example.dart';
 import '../Flutter Typehead/f_typehead_main.dart';
-import '../Flutter Typehead/flutter_type_head_example.dart';
+import '../Flutter fl_chart/presentation/pages/home_page.dart';
+import '../Flutter reflective Visual/reflective_visual_example.dart';
 import '../Google Fonts/google_fonts_example.dart';
 import '../Image Cropper/Image_cropper.dart';
 import '../Image Picker/image_picker_example.dart';
@@ -124,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Facebook Audience Network",
     "Carousel Slider",
     "Google Fonts",
+    "Reflective Visual Example"
   ];
 
   List<Widget> pages = [
@@ -166,7 +168,9 @@ class _HomeScreenState extends State<HomeScreen> {
     const JustAudioExample(),
     const ImageCropperExample(),
     const DottedBorderExample(),
-    const FlChartExample(),
+    FlChartExample(
+      showingChartType: ChartType.bar,
+    ),
     const BadgesExample(),
     const PinCodeVerificationScreen(),
     const FlutterRatingBarExample(),
@@ -186,7 +190,8 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
     const FacebookAdsPage(),
     const CarouselSliderExample(),
-    const GoogleFontsExample(title: "Google Fonts Example")
+    const GoogleFontsExample(title: "Google Fonts Example"),
+    const ReflectiveVisualExample()
   ];
 
   @override

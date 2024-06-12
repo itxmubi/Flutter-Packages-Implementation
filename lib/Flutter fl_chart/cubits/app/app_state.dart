@@ -1,25 +1,25 @@
 part of 'app_cubit.dart';
 
 class AppState extends Equatable {
-  final PackageInfo? currentPackageInfo;
+  // final PackageInfo? currentPackageInfo;
   final String availableVersionToUpdate;
   final String usingFlChartVersion;
 
-  String? get appVersion => currentPackageInfo?.version;
+  // String? get appVersion => currentPackageInfo?.version;
 
   const AppState([
-    this.currentPackageInfo,
+    // this.currentPackageInfo,
     this.availableVersionToUpdate = '',
     this.usingFlChartVersion = '',
   ]);
 
   AppState copyWith({
-    PackageInfo? currentPackageInfo,
+    // PackageInfo? currentPackageInfo,
     String? availableVersionToUpdate,
     String? usingFlChartVersion,
   }) {
     return AppState(
-      currentPackageInfo ?? this.currentPackageInfo,
+      // currentPackageInfo ?? this.currentPackageInfo,
       availableVersionToUpdate ?? this.availableVersionToUpdate,
       usingFlChartVersion ?? this.usingFlChartVersion,
     );
@@ -27,7 +27,7 @@ class AppState extends Equatable {
 
   @override
   List<Object?> get props => [
-        currentPackageInfo,
+        // currentPackageInfo,
         availableVersionToUpdate,
         usingFlChartVersion,
       ];
