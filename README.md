@@ -88,6 +88,11 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%20Scanner)
 
+- [Google Fonts](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Fonts)
+ 
+- [One Clock](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/One%20Clock)
+
+
 ### :heart: Found this project useful?
 
 If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
