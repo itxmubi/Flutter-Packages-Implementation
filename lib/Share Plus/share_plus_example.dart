@@ -5,7 +5,7 @@ import 'package:share_plus/share_plus.dart';
 // import 'image_previews.dart';
 
 class SharePlusExample extends StatefulWidget {
-  const SharePlusExample({Key? key}) : super(key: key);
+  const SharePlusExample({super.key});
 
   @override
   SharePlusExampleState createState() => SharePlusExampleState();
@@ -123,7 +123,7 @@ class SharePlusExampleState extends State<SharePlusExample> {
           subject: subject,
           sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
     } else {
-      result = await Share.shareWithResult(text,
+      result = await Share.share(text,
           subject: subject,
           sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
     }

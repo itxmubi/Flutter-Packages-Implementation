@@ -16,7 +16,7 @@ class SampleModalScreen extends ModalRoute<void> {
   Color get barrierColor => Colors.black.withOpacity(0.5);
 
   @override
-  String get barrierLabel => "";
+  String get barrierLabel => "Test";
 
   @override
   bool get maintainState => true;

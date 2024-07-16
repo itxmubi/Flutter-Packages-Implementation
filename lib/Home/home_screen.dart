@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const NFCExample(),
     const StickyHeaderExample(),
     const DotsIndicatorExample(),
-    const WakelockExampleApp(),
+    const WakelockPlusExampleApp(),
     const LocationExample(),
     const FlutterYoutubePlayerExample(),
     const FlutterEasyLoading(),

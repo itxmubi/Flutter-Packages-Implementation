@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:wakelock/wakelock.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 
-class WakelockExampleApp extends StatefulWidget {
-  /// Creates the [WakelockExampleApp] widget.
-  const WakelockExampleApp({Key? key}) : super(key: key);
+
+/// Example app widget demonstrating how to use the wakelock plugin.
+///
+/// The example implementation is located inside [OutlinedButton.onPressed]
+/// callback functions and a [FutureBuilder].
+class WakelockPlusExampleApp extends StatefulWidget {
+  const WakelockPlusExampleApp({super.key});
+
+  /// Creates the [WakelockPlusExampleApp] widget.
 
   @override
-  createState() => _WakelockExampleAppState();
+  State<WakelockPlusExampleApp> createState() => _WakelockPlusExampleAppState();
 }
 
-class _WakelockExampleAppState extends State<WakelockExampleApp> {
+class _WakelockPlusExampleAppState extends State<WakelockPlusExampleApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +35,7 @@ class _WakelockExampleAppState extends State<WakelockExampleApp> {
                   // The following code will enable the wakelock on the device
                   // using the wakelock plugin.
                   setState(() {
-                    Wakelock.enable();
+                    WakelockPlus.enable();
                     // You could also use Wakelock.toggle(on: true);
                   });
                 },
@@ -41,7 +47,7 @@ class _WakelockExampleAppState extends State<WakelockExampleApp> {
                   // The following code will disable the wakelock on the device
                   // using the wakelock plugin.
                   setState(() {
-                    Wakelock.disable();
+                    WakelockPlus.disable();
                     // You could also use Wakelock.toggle(on: false);
                   });
                 },
@@ -51,7 +57,7 @@ class _WakelockExampleAppState extends State<WakelockExampleApp> {
                 flex: 2,
               ),
               FutureBuilder(
-                future: Wakelock.enabled,
+                future: WakelockPlus.enabled,
                 builder: (context, AsyncSnapshot<bool> snapshot) {
                   final data = snapshot.data;
                   // The use of FutureBuilder is necessary here to await the

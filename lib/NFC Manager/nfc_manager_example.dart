@@ -103,7 +103,7 @@ class NFCExampleState extends State<NFCExample> {
       try {
         await ndef.write(message);
         result.value = 'Success to "Ndef Write"';
-        
+
         NfcManager.instance.stopSession();
       } catch (e) {
         result.value = e;
