@@ -58,6 +58,7 @@ import '../Smooth Page Idicator/smooth-page_indicator_example.dart';
 import '../Table Calendar/table_calendar_example.dart';
 import '../WakeLock/wakelock_example.dart';
 import '../Youtube Player Flutter/youtube_player_flutter_example.dart';
+import '../one_clock_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -125,7 +126,8 @@ class _HomeScreenState extends State<HomeScreen> {
     "Facebook Audience Network",
     "Carousel Slider",
     "Google Fonts",
-    "Reflective Visual Example"
+    "Reflective Visual Example",
+    "One CLock Example"
   ];
 
   List<Widget> pages = [
@@ -191,7 +193,10 @@ class _HomeScreenState extends State<HomeScreen> {
     const FacebookAdsPage(),
     const CarouselSliderExample(),
     const GoogleFontsExample(title: "Google Fonts Example"),
-    const ReflectiveVisualExample()
+    const ReflectiveVisualExample(),
+    const OneClockExample(
+      title: "One Clock Example",
+    )
   ];
 
   @override
