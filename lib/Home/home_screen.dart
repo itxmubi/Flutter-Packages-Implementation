@@ -58,7 +58,7 @@ import '../Smooth Page Idicator/smooth-page_indicator_example.dart';
 import '../Table Calendar/table_calendar_example.dart';
 import '../WakeLock/wakelock_example.dart';
 import '../Youtube Player Flutter/youtube_player_flutter_example.dart';
-import '../one_clock_example.dart';
+import '../One Clock/one_clock_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
