@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
 class ScanResultTile extends StatelessWidget {
-  const ScanResultTile({Key? key, required this.result, this.onTap})
-      : super(key: key);
+  const ScanResultTile({super.key, required this.result, this.onTap});
 
   final ScanResult result;
   final VoidCallback? onTap;
@@ -123,8 +122,7 @@ class ServiceTile extends StatelessWidget {
   final List<CharacteristicTile> characteristicTiles;
 
   const ServiceTile(
-      {Key? key, required this.service, required this.characteristicTiles})
-      : super(key: key);
+      {super.key, required this.service, required this.characteristicTiles});
 
   @override
   Widget build(BuildContext context) {
@@ -159,13 +157,12 @@ class CharacteristicTile extends StatefulWidget {
   final Future<void> Function()? onNotificationPressed;
 
   const CharacteristicTile(
-      {Key? key,
+      {super.key,
       required this.characteristic,
       required this.descriptorTiles,
       this.onReadPressed,
       this.onWritePressed,
-      this.onNotificationPressed})
-      : super(key: key);
+      this.onNotificationPressed});
 
   @override
   State<CharacteristicTile> createState() => _CharacteristicTileState();
@@ -240,11 +237,10 @@ class DescriptorTile extends StatelessWidget {
   final VoidCallback? onWritePressed;
 
   const DescriptorTile(
-      {Key? key,
+      {super.key,
       required this.descriptor,
       this.onReadPressed,
-      this.onWritePressed})
-      : super(key: key);
+      this.onWritePressed});
 
   @override
   Widget build(BuildContext context) {
@@ -288,8 +284,7 @@ class DescriptorTile extends StatelessWidget {
 }
 
 class AdapterStateTile extends StatelessWidget {
-  const AdapterStateTile({Key? key, required this.adapterState})
-      : super(key: key);
+  const AdapterStateTile({super.key, required this.adapterState});
 
   final BluetoothAdapterState adapterState;
 

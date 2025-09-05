@@ -26,13 +26,13 @@ const List<Color> colors = [
 
 class BlockColorPickerExample extends StatefulWidget {
   const BlockColorPickerExample({
-    Key? key,
+    super.key,
     required this.pickerColor,
     required this.onColorChanged,
     required this.pickerColors,
     required this.onColorsChanged,
     required this.colorHistory,
-  }) : super(key: key);
+  });
 
   final Color pickerColor;
   final ValueChanged<Color> onColorChanged;

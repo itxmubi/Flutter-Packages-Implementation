@@ -40,7 +40,7 @@ class BarChartSample4State extends State<BarChartSample4> {
         break;
     }
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: Text(text, style: style),
     );
   }
@@ -53,7 +53,7 @@ class BarChartSample4State extends State<BarChartSample4> {
       fontSize: 10,
     );
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: Text(
         meta.formattedValue,
         style: style,
@@ -74,7 +74,7 @@ class BarChartSample4State extends State<BarChartSample4> {
             return BarChart(
               BarChartData(
                 alignment: BarChartAlignment.center,
-                barTouchData: BarTouchData(
+                barTouchData: const BarTouchData(
                   enabled: false,
                 ),
                 titlesData: FlTitlesData(
@@ -104,7 +104,7 @@ class BarChartSample4State extends State<BarChartSample4> {
                   show: true,
                   checkToShowHorizontalLine: (value) => value % 10 == 0,
                   getDrawingHorizontalLine: (value) => FlLine(
-                    color: AppColors.borderColor.withOpacity(0.1),
+                    color: AppColors.borderColor.withValues(alpha: 0.1),
                     strokeWidth: 1,
                   ),
                   drawVerticalLine: false,

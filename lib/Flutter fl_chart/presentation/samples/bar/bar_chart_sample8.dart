@@ -10,7 +10,7 @@ class BarChartSample8 extends StatefulWidget {
   BarChartSample8({super.key});
 
   final Color barBackgroundColor =
-      AppColors.contentColorWhite.darken().withOpacity(0.3);
+      AppColors.contentColorWhite.darken().withValues(alpha: 0.3);
   final Color barColor = AppColors.contentColorWhite;
 
   @override
@@ -62,12 +62,14 @@ class BarChartSample1State extends State<BarChartSample8> {
   BarChartGroupData makeGroupData(
     int x,
     double y,
+    FlErrorRange errorRange,
   ) {
     return BarChartGroupData(
       x: x,
       barRods: [
         BarChartRodData(
           toY: y,
+          toYErrorRange: errorRange,
           color: x >= 4 ? Colors.transparent : widget.barColor,
           borderRadius: BorderRadius.zero,
           borderDashArray: x >= 4 ? [4, 4] : null,
@@ -92,7 +94,7 @@ class BarChartSample1State extends State<BarChartSample8> {
     );
 
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       space: 16,
       child: text,
     );
@@ -101,7 +103,7 @@ class BarChartSample1State extends State<BarChartSample8> {
   BarChartData randomData() {
     return BarChartData(
       maxY: 300.0,
-      barTouchData: BarTouchData(
+      barTouchData: const BarTouchData(
         enabled: false,
       ),
       titlesData: FlTitlesData(
@@ -135,12 +137,39 @@ class BarChartSample1State extends State<BarChartSample8> {
       ),
       barGroups: List.generate(
         7,
-        (i) => makeGroupData(
-          i,
-          Random().nextInt(290).toDouble() + 10,
-        ),
+        (i) {
+          final y = Random().nextInt(290).toDouble() + 10;
+          final lowerBy = y < 50
+              ? Random().nextDouble() * 10
+              : Random().nextDouble() * 30 + 5;
+          final upperBy = y > 290
+              ? Random().nextDouble() * 10
+              : Random().nextDouble() * 30 + 5;
+          return makeGroupData(
+            i,
+            y,
+            FlErrorRange(
+              lowerBy: lowerBy,
+              upperBy: upperBy,
+            ),
+          );
+        },
       ),
       gridData: const FlGridData(show: false),
+      errorIndicatorData: FlErrorIndicatorData(
+        painter: _errorPainter,
+      ),
     );
   }
+
+  FlSpotErrorRangePainter _errorPainter(
+    BarChartSpotErrorRangeCallbackInput input,
+  ) =>
+      FlSimpleErrorPainter(
+        lineWidth: 2.0,
+        capLength: 14,
+        lineColor: input.groupIndex < 4
+            ? AppColors.contentColorOrange
+            : AppColors.primary.withValues(alpha: 0.5),
+      );
 }

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import 'scanner_button_widgets.dart';
-import 'scanner_error_widget.dart';
 
 class BarcodeScannerWithController extends StatefulWidget {
   const BarcodeScannerWithController({super.key});
@@ -19,7 +18,6 @@ class _BarcodeScannerWithControllerState
   final MobileScannerController controller = MobileScannerController(
     autoStart: false,
     torchEnabled: true,
-    useNewCameraSelector: true,
   );
 
   Barcode? _barcode;
@@ -90,9 +88,9 @@ class _BarcodeScannerWithControllerState
         children: [
           MobileScanner(
             controller: controller,
-            errorBuilder: (context, error, child) {
-              return ScannerErrorWidget(error: error);
-            },
+            // errorBuilder: (context, error, child) {
+            //   return ScannerErrorWidget(error: error);
+            // },
             fit: BoxFit.contain,
           ),
           Align(

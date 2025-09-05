@@ -1,26 +1,26 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter/material.dart';
 
 class DotsIndicatorExample extends StatefulWidget {
   const DotsIndicatorExample({super.key});
 
   @override
-  _DotsIndicatorExampleState createState() => _DotsIndicatorExampleState();
+  DotsIndicatorExampleState createState() => DotsIndicatorExampleState();
 }
 
-class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
+class DotsIndicatorExampleState extends State<DotsIndicatorExample> {
   final _totalDots = 5;
-  int _currentPosition = 0;
+  double _currentPosition = 0.0;
 
-  int _validPosition(int position) {
-    if (position >= _totalDots) return 0;
-    if (position < 0) return _totalDots - 1;
+  double _validPosition(double position) {
+    if (position >= _totalDots) return 0.0;
+    if (position < 0.0) return _totalDots - 1;
     return position;
   }
 
-  void _updatePosition(int position) {
+  void _updatePosition(double position) {
     setState(() => _currentPosition = _validPosition(position));
   }
 
@@ -35,15 +35,15 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
   }
 
   String getPrettyCurrPosition() {
-    return (_currentPosition + 1.0).toStringAsPrecision(3);
+    return (_currentPosition + 1).toStringAsFixed(2);
   }
 
   @override
   Widget build(BuildContext context) {
     final decorator = DotsDecorator(
       activeColor: Colors.red,
-      size: const Size.square(15.0),
-      activeSize: const Size.square(35.0),
+      size: Size.square(15.0),
+      activeSize: Size.square(35.0),
       activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
       ),
@@ -74,11 +74,9 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                 SizedBox(
                   width: 300.0,
                   child: Slider(
-                    value: _currentPosition.toDouble(),
+                    value: _currentPosition,
                     max: (_totalDots - 1).toDouble(),
-                    onChanged: (val) {
-                      _updatePosition(val.round());
-                    },
+                    onChanged: _updatePosition,
                   ),
                 ),
               ]),
@@ -86,15 +84,17 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                 FloatingActionButton(
                   child: const Icon(Icons.remove),
                   onPressed: () {
-                    _updatePosition(max(--_currentPosition, 0));
+                    _currentPosition = _currentPosition.ceilToDouble();
+                    _updatePosition(max(--_currentPosition, 0.0));
                   },
                 ),
                 FloatingActionButton(
                   child: const Icon(Icons.add),
                   onPressed: () {
+                    _currentPosition = _currentPosition.floorToDouble();
                     _updatePosition(min(
                       ++_currentPosition,
-                      _totalDots,
+                      _totalDots.toDouble(),
                     ));
                   },
                 )
@@ -110,7 +110,7 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                       axis: Axis.vertical,
                       decorator: decorator,
                       onTap: (pos) {
-                        setState(() => _currentPosition = pos);
+                        setState(() => _currentPosition = pos.toDouble());
                       },
                     ),
                   ],
@@ -153,18 +153,18 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                       Colors.cyan,
                     ],
                     sizes: [
-                      const Size.square(40.0),
-                      const Size.square(35.0),
-                      const Size.square(30.0),
-                      const Size.square(25.0),
-                      const Size.square(20.0),
+                      Size.square(40.0),
+                      Size.square(35.0),
+                      Size.square(30.0),
+                      Size.square(25.0),
+                      Size.square(20.0),
                     ],
                     activeSizes: [
-                      const Size.square(20.0),
-                      const Size.square(25.0),
-                      const Size.square(30.0),
-                      const Size.square(35.0),
-                      const Size.square(40.0),
+                      Size.square(20.0),
+                      Size.square(25.0),
+                      Size.square(30.0),
+                      Size.square(35.0),
+                      Size.square(40.0),
                     ],
                     shapes: [
                       RoundedRectangleBorder(
@@ -200,6 +200,17 @@ class _DotsIndicatorExampleState extends State<DotsIndicatorExample> {
                   position: _currentPosition,
                   reversed: true,
                   decorator: decorator,
+                ),
+              ]),
+              _buildRow([
+                const Text('Indefinite Pager Indicator'),
+                DotsIndicator(
+                  dotsCount: _totalDots,
+                  position: _currentPosition,
+                  decorator: decorator,
+                  fadeOutLastDot: true,
+                  fadeOutDistance: 2,
+                  animate: true,
                 ),
               ]),
             ],

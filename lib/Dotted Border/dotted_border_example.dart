@@ -1,131 +1,235 @@
-import 'package:flutter/material.dart';
-
 import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter/material.dart';
 
 class DottedBorderExample extends StatelessWidget {
   const DottedBorderExample({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dotted Border'),
-      ),
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              spacing: 8,
-              children: <Widget>[
-                rectBorderWidget,
-                roundedRectBorderWidget,
-                customBorder,
-                roundStrokeCap,
-                solidBorder,
-                fullWidthPath,
-              ],
+  Widget build(BuildContext context) => MaterialApp(
+        theme: ThemeData(useMaterial3: true),
+        home: Scaffold(
+          appBar: AppBar(title: const Text('Dotted Border')),
+          body: SafeArea(
+            child: ListView(
+              children: const <Widget>[
+                _RectDottedBorder(key: Key('rect_dotted_border')),
+                _RoundedRectDottedBorder(
+                  key: Key('rounded_rect_dotted_border'),
+                ),
+                _OvalDottedBorder(key: Key('oval_dotted_border')),
+                _CircleDottedBorder(key: Key('circle_dotted_border')),
+                _CustomPathBorder(key: Key('custom_path_dotted_border')),
+                _GradientBorder(key: Key('gradient_dotted_border')),
+                _AnimatedDottedBorder(key: Key('animated_dotted_border')),
+              ]
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: e,
+                    ),
+                  )
+                  .toList(),
             ),
           ),
         ),
-      ),
-    );
-  }
+      );
+}
 
-  /// Draw a border with rectangular border
-  Widget get rectBorderWidget {
-    return DottedBorder(
-      dashPattern: const [8, 4],
-      strokeWidth: 2,
-      child: Container(
-        height: 200,
-        width: 120,
-        color: Colors.red,
-      ),
-    );
-  }
+class _RectDottedBorder extends StatelessWidget {
+  const _RectDottedBorder({super.key});
 
-  /// Draw a border with a rounded rectangular border
-  Widget get roundedRectBorderWidget {
-    return DottedBorder(
-      borderType: BorderType.RRect,
-      radius: const Radius.circular(12),
-      padding: const EdgeInsets.all(6),
-      child: ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(12)),
-        child: Container(
-          height: 200,
-          width: 120,
-          color: Colors.amber,
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: DottedBorder(
+          options: RectDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 2,
+            padding: EdgeInsets.all(16),
+          ),
+          child: Text(
+            'Rectangular Border',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
-      ),
-    );
+      );
+}
+
+class _RoundedRectDottedBorder extends StatelessWidget {
+  const _RoundedRectDottedBorder({super.key});
+
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: DottedBorder(
+          options: RoundedRectDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 2,
+            radius: Radius.circular(16),
+            color: Colors.indigo,
+            padding: EdgeInsets.all(16),
+          ),
+          child: Text(
+            'Rounded Rect Border',
+            style: TextStyle(
+              color: Colors.indigo,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+}
+
+class _OvalDottedBorder extends StatelessWidget {
+  const _OvalDottedBorder({super.key});
+
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: DottedBorder(
+          options: OvalDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 2,
+            color: Colors.green,
+            padding: EdgeInsets.all(16),
+          ),
+          child: Text(
+            'Oval Border',
+            style: TextStyle(
+              color: Colors.green,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+}
+
+class _CircleDottedBorder extends StatelessWidget {
+  const _CircleDottedBorder({super.key});
+
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: DottedBorder(
+          options: CircularDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 4,
+            color: Colors.red,
+            padding: EdgeInsets.all(4),
+          ),
+          child: Icon(
+            Icons.person,
+            size: 64,
+            color: Colors.red,
+          ),
+        ),
+      );
+}
+
+class _CustomPathBorder extends StatelessWidget {
+  const _CustomPathBorder({super.key});
+
+  @override
+  Widget build(BuildContext context) => Center(
+        child: DottedBorder(
+          options: CustomPathDottedBorderOptions(
+            padding: const EdgeInsets.all(8),
+            color: Colors.purple,
+            strokeWidth: 2,
+            dashPattern: [10, 5],
+            customPath: (size) => Path()
+              ..moveTo(0, size.height)
+              ..relativeLineTo(size.width, 0),
+          ),
+          child: const Text(
+            'Custom Path Border',
+            style: TextStyle(
+              color: Colors.purple,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+}
+
+class _GradientBorder extends StatelessWidget {
+  const _GradientBorder({super.key});
+
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: DottedBorder(
+          options: RoundedRectDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 4,
+            radius: Radius.circular(16),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.red,
+                Colors.orange,
+                Colors.yellow,
+                Colors.green,
+                Colors.blue,
+                Colors.indigo,
+                Colors.purple,
+              ],
+            ),
+            padding: EdgeInsets.all(16),
+          ),
+          child: Text(
+            'Rainbow Border',
+            style: TextStyle(
+              color: Colors.indigo,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+}
+
+class _AnimatedDottedBorder extends StatefulWidget {
+  const _AnimatedDottedBorder({super.key});
+
+  @override
+  State<_AnimatedDottedBorder> createState() => _AnimatedDottedBorderState();
+}
+
+class _AnimatedDottedBorderState extends State<_AnimatedDottedBorder>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    )..repeat();
   }
 
-  /// Draw a border with custom path border
-  Widget get customBorder {
-    Path customPath = Path()
-      ..moveTo(20, 20)
-      ..lineTo(50, 100)
-      ..lineTo(20, 200)
-      ..lineTo(100, 100)
-      ..lineTo(20, 20);
-
-    return DottedBorder(
-      customPath: (_) => customPath,
-      color: Colors.indigo,
-      dashPattern: const [8, 4],
-      strokeWidth: 2,
-      child: Container(
-        height: 220,
-        width: 120,
-        color: Colors.green.withAlpha(20),
-      ),
-    );
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
-  /// Set border stroke cap
-  Widget get roundStrokeCap {
-    return DottedBorder(
-      dashPattern: const [8, 4],
-      strokeWidth: 2,
-      strokeCap: StrokeCap.round,
-      borderType: BorderType.RRect,
-      radius: const Radius.circular(5),
-      child: Container(
-        height: 200,
-        width: 120,
-        color: Colors.red,
-      ),
-    );
-  }
-
-  Widget get solidBorder {
-    return DottedBorder(
-      dashPattern: const [4, 3],
-      strokeWidth: 2,
-      strokeCap: StrokeCap.round,
-      child: Container(
-        color: Colors.green,
-        height: 200,
-        width: 120,
-      ),
-    );
-  }
-
-  Widget get fullWidthPath {
-    return DottedBorder(
-      customPath: (size) {
-        return Path()
-          ..moveTo(0, 20)
-          ..lineTo(size.width, 20);
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Container(),
-      ),
-    );
-  }
+  @override
+  Widget build(BuildContext context) => Center(
+        child: DottedBorder(
+          animation: controller,
+          options: const RoundedRectDottedBorderOptions(
+            dashPattern: [10, 5],
+            strokeWidth: 2,
+            radius: Radius.circular(16),
+            color: Colors.green,
+            padding: EdgeInsets.all(16),
+          ),
+          child: const Text(
+            'Animated Border',
+            style: TextStyle(
+              color: Colors.green,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
 }

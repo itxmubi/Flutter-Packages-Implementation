@@ -6,7 +6,7 @@ import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLancherExample extends StatefulWidget {
-  const UrlLancherExample({Key? key, required this.title}) : super(key: key);
+  const UrlLancherExample({super.key, required this.title});
   final String title;
 
   @override

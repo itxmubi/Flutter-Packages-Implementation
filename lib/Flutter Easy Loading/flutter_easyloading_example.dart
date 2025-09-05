@@ -26,7 +26,7 @@ void configLoading() {
 }
 
 class FlutterEasyLoading extends StatefulWidget {
-  const FlutterEasyLoading({Key? key, this.title}) : super(key: key);
+  const FlutterEasyLoading({super.key, this.title});
 
   final String? title;
 

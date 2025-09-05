@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+// import 'package:qrscan/qrscan.dart' as scanner;
 
 class QRScannerExample extends StatefulWidget {
   const QRScannerExample({super.key});
@@ -154,7 +154,8 @@ class _QRScannerExampleState extends State<QRScannerExample> {
                           child: GestureDetector(
                             onTap: () async {
                               final success =
-                                  await ImageGallerySaver.saveImage(this.bytes);
+                                  await ImageGallerySaverPlus.saveImage(
+                                      this.bytes);
                               SnackBar snackBar;
                               if (success) {
                                 snackBar = const SnackBar(
@@ -270,26 +271,26 @@ class _QRScannerExampleState extends State<QRScannerExample> {
 
   Future _scan() async {
     await Permission.camera.request();
-    String? barcode = await scanner.scan();
-    if (barcode == null) {
-      if (kDebugMode) {
-        print('nothing return.');
-      }
-    } else {
-      _outputController!.text = barcode;
-    }
+    // String? barcode = await scanner.scan();
+    // if (barcode == null) {
+    //   if (kDebugMode) {
+    //     print('nothing return.');
+    //   }
+    // } else {
+    //   _outputController!.text = barcode;
+    // }
   }
 
   Future _scanPhoto() async {
     await Permission.storage.request();
-    String barcode = await scanner.scanPhoto();
-    _outputController!.text = barcode;
+    // String barcode = await scanner.scanPhoto();
+    // _outputController!.text = barcode;
   }
 
   Future _scanPath(String path) async {
     await Permission.storage.request();
-    String barcode = await scanner.scanPath(path);
-    _outputController!.text = barcode;
+    // String barcode = await scanner.scanPath(path);
+    // _outputController!.text = barcode;
   }
 
   Future _scanBytes() async {
@@ -301,12 +302,12 @@ class _QRScannerExampleState extends State<QRScannerExample> {
       return File(picked!.path);
     });
     Uint8List bytes = file.readAsBytesSync();
-    String barcode = await scanner.scanBytes(bytes);
-    _outputController!.text = barcode;
+    // String barcode = await scanner.scanBytes(bytes);
+    // _outputController!.text = barcode;
   }
 
   Future _generateBarCode(String inputCode) async {
-    Uint8List result = await scanner.generateBarCode(inputCode);
-    setState(() => bytes = result);
+    // Uint8List result = await scanner.generateBarCode(inputCode);
+    // setState(() => bytes = result);
   }
 }

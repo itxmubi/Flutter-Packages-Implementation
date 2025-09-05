@@ -2,7 +2,6 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
-import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter_packages_implementation/Home/home_screen.dart';
@@ -35,7 +34,7 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -46,9 +45,9 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     MobileAds.instance.initialize();
 
-    FacebookAudienceNetwork.init(
-      testingId: "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID", //
-    );
+    // FacebookAudienceNetwork.init(
+    //   testingId: "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID", //
+    // );
     super.initState();
   }
 

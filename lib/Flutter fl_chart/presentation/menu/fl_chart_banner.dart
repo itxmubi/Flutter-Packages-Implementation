@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../resources/app_assets.dart';
 
 class FlChartBanner extends StatelessWidget {
-  const FlChartBanner({Key? key}) : super(key: key);
+  const FlChartBanner({super.key});
 
   @override
   Widget build(BuildContext context) {

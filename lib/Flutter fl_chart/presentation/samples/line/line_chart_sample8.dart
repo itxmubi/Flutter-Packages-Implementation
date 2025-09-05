@@ -78,7 +78,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
       color: AppColors.mainTextColor1,
     );
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: Text(meta.formattedValue, style: style),
     );
   }
@@ -107,7 +107,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
         throw StateError('Invalid');
     }
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: Icon(
         icon,
         color: color,
@@ -123,19 +123,19 @@ class _LineChartSample8State extends State<LineChartSample8> {
           VerticalRangeAnnotation(
             x1: 2,
             x2: 5,
-            color: AppColors.contentColorBlue.withOpacity(0.2),
+            color: AppColors.contentColorBlue.withValues(alpha: 0.2),
           ),
           VerticalRangeAnnotation(
             x1: 8,
             x2: 9,
-            color: AppColors.contentColorBlue.withOpacity(0.2),
+            color: AppColors.contentColorBlue.withValues(alpha: 0.2),
           ),
         ],
         horizontalRangeAnnotations: [
           HorizontalRangeAnnotation(
             y1: 2,
             y2: 3,
-            color: AppColors.contentColorGreen.withOpacity(0.3),
+            color: AppColors.contentColorGreen.withValues(alpha: 0.3),
           ),
         ],
       ),
@@ -240,7 +240,17 @@ class _LineChartSample8State extends State<LineChartSample8> {
           }).toList();
         },
         touchTooltipData: LineTouchTooltipData(
-          getTooltipColor: (touchedSpot) => AppColors.contentColorBlue,
+          getTooltipColor: (touchedSpot) => AppColors.contentColorRed,
+          getTooltipItems: (List<LineBarSpot> touchedSpots) => touchedSpots
+              .map((LineBarSpot touchedSpot) => LineTooltipItem(
+                    touchedSpot.y.toString(),
+                    const TextStyle(
+                      color: AppColors.contentColorWhite,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ))
+              .toList(),
         ),
       ),
       borderData: FlBorderData(

@@ -16,8 +16,6 @@ import '../Dots Indicator/dots_indicator_example.dart';
 import '../Dotted Border/dotted_border_example.dart';
 import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
-import '../Facebook Audience Network/facebook_ads_example.dart';
-import '../Flutter Alarm Clock/flutter_alarm_clock_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
 import '../Flutter HTML/flutter_html_example.dart';
@@ -43,7 +41,6 @@ import '../Location/location_example.dart';
 import '../Lottie/lottie_example.dart';
 import '../Mobile Scanner/mobile_scanner_example.dart';
 import '../NFC FLUTTER Kit/nfc_flutter_kit_example.dart';
-import '../NFC Manager/nfc_manager_example.dart';
 import '../Nice Ripple/nice_ripple.dart';
 import '../Percent Indicator/percent_indicator_example.dart';
 import '../Photo View Example/home_screen.dart';
@@ -75,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Flutter HTML Example",
     "Another FlushBar Example",
     "NFC Flutter Kit",
-    "NFC Example",
+    // "NFC Example" ,
     "Flutter Sticky Header",
     "Dots Indicator Example",
     "WakeLock Example",
@@ -132,13 +129,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> pages = [
     const SensorsPlusExample(),
-    const FlutterAlarmClockExample(),
+    const SensorsPlusExample(),
+    // const FlutterAlarmClockExample(),
     const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
     const AnotherFLushbarExample(),
     const NFCFlutterKitExample(),
-    const NFCExample(),
+    // const NFCExample(),
     const StickyHeaderExample(),
     const DotsIndicatorExample(),
     const WakelockPlusExampleApp(),
@@ -153,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const AppSettingExample(),
     const DropDownButton2Example(),
     const RFlutterAlertExample(),
-    const DropDownSearchExample(),
+    DropDownSearchExample(),
     const CameraExampleHome(),
     const FlutterStaggeredAnimationExample(),
     const CardSwipperExample(),
@@ -190,7 +188,8 @@ class _HomeScreenState extends State<HomeScreen> {
     const ConnectivityPlusExample(
       title: "Connectivity Plus Example",
     ),
-    const FacebookAdsPage(),
+    // const FacebookAdsPage(),
+    const CarouselSliderExample(),
     const CarouselSliderExample(),
     const GoogleFontsExample(title: "Google Fonts Example"),
     const ReflectiveVisualExample(),

@@ -2,7 +2,8 @@ import 'dart:math';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_packages_implementation/Flutter%20fl_chart/presentation/resources/app_colors.dart';
+
+import '../../resources/app_colors.dart';
 
 // ignore: must_be_immutable
 class LineChartSample9 extends StatelessWidget {
@@ -22,7 +23,7 @@ class LineChartSample9 extends StatelessWidget {
       fontSize: min(18, 18 * chartWidth / 300),
     );
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       space: 16,
       child: Text(meta.formattedValue, style: style),
     );
@@ -35,7 +36,7 @@ class LineChartSample9 extends StatelessWidget {
       fontSize: min(18, 18 * chartWidth / 300),
     );
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       space: 16,
       child: Text(meta.formattedValue, style: style),
     );
@@ -130,12 +131,12 @@ class LineChartSample9 extends StatelessWidget {
                     return value.toInt() == 0;
                   },
                   getDrawingHorizontalLine: (_) => FlLine(
-                    color: AppColors.contentColorBlue.withOpacity(1),
+                    color: AppColors.contentColorBlue.withValues(alpha: 1),
                     dashArray: [8, 2],
                     strokeWidth: 0.8,
                   ),
                   getDrawingVerticalLine: (_) => FlLine(
-                    color: AppColors.contentColorYellow.withOpacity(1),
+                    color: AppColors.contentColorYellow.withValues(alpha: 1),
                     dashArray: [8, 2],
                     strokeWidth: 0.8,
                   ),

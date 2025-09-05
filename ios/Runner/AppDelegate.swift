@@ -2,7 +2,7 @@ import UIKit
 import Flutter
 import google_mobile_ads
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
   override func application(
     _ application: UIApplication,

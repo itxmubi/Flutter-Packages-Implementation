@@ -220,10 +220,10 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: DottedBorder(
-                    radius: const Radius.circular(12.0),
-                    borderType: BorderType.RRect,
-                    dashPattern: const [8, 4],
-                    color: Theme.of(context).highlightColor.withOpacity(0.4),
+                    // radius: const Radius.circular(12.0),
+                    // borderType: BorderType.RRect,
+                    // dashPattern: const [8, 4],
+                    // color: Theme.of(context).highlightColor.withOpacity(0.4),
                     child: Center(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,

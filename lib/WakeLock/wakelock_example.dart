@@ -40,7 +40,7 @@ class _WakelockPlusExampleAppState extends State<WakelockPlusExampleApp> {
                   });
                 },
                 child: const Text('enable wakelock'),
-              ),
+              ), 
               const Spacer(),
               OutlinedButton(
                 onPressed: () {

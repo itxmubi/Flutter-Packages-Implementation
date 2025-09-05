@@ -62,7 +62,7 @@ class BluetoothAdapterStateObserver extends NavigatorObserver {
 }
 
 class FlutterBlueApp extends StatelessWidget {
-  const FlutterBlueApp({Key? key}) : super(key: key);
+  const FlutterBlueApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class FlutterBlueApp extends StatelessWidget {
 }
 
 class BluetoothOffScreen extends StatelessWidget {
-  const BluetoothOffScreen({Key? key, this.adapterState}) : super(key: key);
+  const BluetoothOffScreen({super.key, this.adapterState});
 
   final BluetoothAdapterState? adapterState;
 
@@ -137,7 +137,7 @@ class BluetoothOffScreen extends StatelessWidget {
 }
 
 class FindDevicesScreen extends StatefulWidget {
-  const FindDevicesScreen({Key? key}) : super(key: key);
+  const FindDevicesScreen({super.key});
 
   @override
   State<FindDevicesScreen> createState() => _FindDevicesScreenState();
@@ -342,7 +342,7 @@ class _FindDevicesScreenState extends State<FindDevicesScreen> {
 class DeviceScreen extends StatelessWidget {
   final BluetoothDevice device;
 
-  const DeviceScreen({Key? key, required this.device}) : super(key: key);
+  const DeviceScreen({super.key, required this.device});
 
   List<int> _getRandomBytes() {
     final math = Random();

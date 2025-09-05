@@ -14,12 +14,12 @@ void copyToClipboard(String input) {
 
 class HSVColorPickerExample extends StatefulWidget {
   const HSVColorPickerExample({
-    Key? key,
+    super.key,
     required this.pickerColor,
     required this.onColorChanged,
     this.colorHistory,
     this.onHistoryChanged,
-  }) : super(key: key);
+  });
 
   final Color pickerColor;
   final ValueChanged<Color> onColorChanged;

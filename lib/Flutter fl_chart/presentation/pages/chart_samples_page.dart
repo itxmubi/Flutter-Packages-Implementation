@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -13,9 +12,9 @@ class ChartSamplesPage extends StatelessWidget {
   final samples = ChartSamples.samples;
 
   ChartSamplesPage({
-    Key? key,
+    super.key,
     required this.chartType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

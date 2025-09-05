@@ -70,9 +70,7 @@ class _BarcodeScannerPage extends StatelessWidget {
         MobileScanner(
           controller: controller,
           fit: BoxFit.contain,
-          errorBuilder: (context, error, child) {
-            return ScannerErrorWidget(error: error);
-          },
+        
         ),
         Align(
           alignment: Alignment.bottomCenter,

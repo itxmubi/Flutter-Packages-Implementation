@@ -96,7 +96,7 @@ class _BarcodeScannerWithScanWindowState
             fit: BoxFit.contain,
             scanWindow: scanWindow,
             controller: controller,
-            errorBuilder: (context, error, child) {
+            errorBuilder: (context, error) {
               return ScannerErrorWidget(error: error);
             },
           ),

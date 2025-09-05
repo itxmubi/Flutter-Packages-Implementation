@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
 class LocalAuthExample extends StatefulWidget {
-  const LocalAuthExample({Key? key}) : super(key: key);
+  const LocalAuthExample({super.key});
 
   @override
   State<LocalAuthExample> createState() => _LocalAuthExampleState();
@@ -41,6 +41,7 @@ class _LocalAuthExampleState extends State<LocalAuthExample> {
       }
     }
     if (!mounted) {
+      // int.parse("43");
       return;
     }
 

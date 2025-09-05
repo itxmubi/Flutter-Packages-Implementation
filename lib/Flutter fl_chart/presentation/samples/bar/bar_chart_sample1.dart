@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Flutter%20fl_chart/util/extensions/color_extensions.dart';
@@ -20,7 +21,7 @@ class BarChartSample1 extends StatefulWidget {
       ];
 
   final Color barBackgroundColor =
-      AppColors.contentColorWhite.darken().withOpacity(0.3);
+      AppColors.contentColorWhite.darken().withValues(alpha: 0.3);
   final Color barColor = AppColors.contentColorWhite;
   final Color touchedBarColor = AppColors.contentColorGreen;
 
@@ -73,7 +74,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: BarChart(
                       isPlaying ? randomData() : mainBarData(),
-                      swapAnimationDuration: animDuration,
+                      duration: animDuration,
                     ),
                   ),
                 ),
@@ -288,7 +289,7 @@ class BarChartSample1State extends State<BarChartSample1> {
         break;
     }
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       space: 16,
       child: text,
     );
@@ -296,7 +297,7 @@ class BarChartSample1State extends State<BarChartSample1> {
 
   BarChartData randomData() {
     return BarChartData(
-      barTouchData: BarTouchData(
+      barTouchData: const BarTouchData(
         enabled: false,
       ),
       titlesData: FlTitlesData(

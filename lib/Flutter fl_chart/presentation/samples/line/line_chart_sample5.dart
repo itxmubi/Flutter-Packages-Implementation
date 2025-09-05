@@ -72,7 +72,7 @@ class _LineChartSample5State extends State<LineChartSample5> {
     }
 
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: Text(text, style: style),
     );
   }
@@ -92,9 +92,9 @@ class _LineChartSample5State extends State<LineChartSample5> {
           show: true,
           gradient: LinearGradient(
             colors: [
-              widget.gradientColor1.withOpacity(0.4),
-              widget.gradientColor2.withOpacity(0.4),
-              widget.gradientColor3.withOpacity(0.4),
+              widget.gradientColor1.withValues(alpha: 0.4),
+              widget.gradientColor2.withValues(alpha: 0.4),
+              widget.gradientColor3.withValues(alpha: 0.4),
             ],
           ),
         ),
@@ -183,7 +183,7 @@ class _LineChartSample5State extends State<LineChartSample5> {
                 },
                 touchTooltipData: LineTouchTooltipData(
                   getTooltipColor: (touchedSpot) => Colors.pink,
-                  tooltipRoundedRadius: 8,
+                  tooltipBorderRadius: BorderRadius.circular(8),
                   getTooltipItems: (List<LineBarSpot> lineBarsSpot) {
                     return lineBarsSpot.map((lineBarSpot) {
                       return LineTooltipItem(

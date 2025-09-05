@@ -17,7 +17,7 @@ import '../main.dart';
 /// Camera example home widget.
 class CameraExampleHome extends StatefulWidget {
   /// Default Constructor
-  const CameraExampleHome({Key? key}) : super(key: key);
+  const CameraExampleHome({super.key});
 
   @override
   State<CameraExampleHome> createState() {
