@@ -17,6 +17,7 @@ import '../Dots Indicator/dots_indicator_example.dart';
 import '../Dotted Border/dotted_border_example.dart';
 import '../Drop down Search/drop_down_search_example.dart';
 import '../Dropdown Button2/drop_down_button2_example.dart';
+import '../Flutter Alarm Clock/flutter_alarm_clock_example.dart';
 import '../Flutter ColorPicker/flutter_colorpicker_example.dart';
 import '../Flutter Easy Loading/flutter_easyloading_example.dart';
 import '../Flutter HTML/flutter_html_example.dart';
@@ -68,7 +69,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
-
     "Trimmer View Example",
     "Sensors Plus Example",
     "Flutter Alarm Clock Example",
@@ -135,8 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
     TrimmerViewExample(),
     const SensorsPlusExample(),
-    const SensorsPlusExample(),
-    // const FlutterAlarmClockExample(),
+    const FlutterAlarmClockExample(),
     const FlutterBlueApp(),
     // const FlutterBlueAppExample(),
     const FlutterHTMLExample(),
@@ -227,7 +226,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Divider()
               ],
             ),
-          SizedBox(height: 50,),
+          SizedBox(
+            height: 50,
+          ),
         ]),
       ),
     );

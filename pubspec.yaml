@@ -111,7 +111,7 @@ dependencies:
   # facebook_audience_network: ^1.0.1
   # edge_detection: ^1.1.2
   # clock: ^1.1.1
-  # flutter_alarm_clock: ^0.1.1
+  flutter_alarm_clock: ^0.1.2
   # package_info_plus: ^8.0.0
   # google_native_mobile_ads: ^1.0.3
 
