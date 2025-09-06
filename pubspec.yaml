@@ -106,6 +106,8 @@ dependencies:
   image_gallery_saver_plus: ^4.0.1
   qr_code_scanner_plus: ^2.0.10+1
   ffmpeg_kit_flutter_new: ^3.2.0
+  video_trimmer: ^5.0.0
+  file_picker: ^10.3.2
   # facebook_audience_network: ^1.0.1
   # edge_detection: ^1.1.2
   # clock: ^1.1.1

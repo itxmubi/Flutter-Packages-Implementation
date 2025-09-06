@@ -57,6 +57,7 @@ import '../Table Calendar/table_calendar_example.dart';
 import '../WakeLock/wakelock_example.dart';
 import '../Youtube Player Flutter/youtube_player_flutter_example.dart';
 import '../one_clock_example.dart';
+import '../video Trimmer/home_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -67,6 +68,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List pagesNamese = [
+
+    "Trimmer View Example",
     "Sensors Plus Example",
     "Flutter Alarm Clock Example",
     "Flutter Blue Plus Example",
@@ -130,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<Widget> pages = [
+    TrimmerViewExample(),
     const SensorsPlusExample(),
     const SensorsPlusExample(),
     // const FlutterAlarmClockExample(),
