@@ -105,6 +105,7 @@ dependencies:
   openai_dart: ^0.5.5
   image_gallery_saver_plus: ^4.0.1
   qr_code_scanner_plus: ^2.0.10+1
+  ffmpeg_kit_flutter_new: ^3.2.0
   # facebook_audience_network: ^1.0.1
   # edge_detection: ^1.1.2
   # clock: ^1.1.1
@@ -148,6 +149,7 @@ flutter:
    - assets/gallery2.jpg
    - assets/gallery3.jpg
    - assets/firefox.svg
+   - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_packages_implementation/Another%20FLushBar/another_flushbar_example.dart';
+import 'package:flutter_packages_implementation/FF%20mpeg%20Example/ffmpeg_example.dart';
 import 'package:flutter_packages_implementation/Flutter%20Blue%20Plus/flutter_blue_plus_example.dart';
 import 'package:flutter_packages_implementation/Flutter%20fl_chart/util/app_helper.dart';
 
@@ -124,7 +125,8 @@ class _HomeScreenState extends State<HomeScreen> {
     "Carousel Slider",
     "Google Fonts",
     "Reflective Visual Example",
-    "One CLock Example"
+    "One CLock Example",
+    "FFMPEG Example"
   ];
 
   List<Widget> pages = [
@@ -195,7 +197,8 @@ class _HomeScreenState extends State<HomeScreen> {
     const ReflectiveVisualExample(),
     const OneClockExample(
       title: "One Clock Example",
-    )
+    ),
+    FFMPEGExample(title: "FFMPEG")
   ];
 
   @override
@@ -220,6 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Divider()
               ],
             ),
+          SizedBox(height: 50,),
         ]),
       ),
     );
