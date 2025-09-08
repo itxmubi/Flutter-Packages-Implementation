@@ -90,7 +90,7 @@ This project is for practice purpose and i will test different packages from [pu
 
 - [App Setiings](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/App%20Settings)
 
-- [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%20Scanner)
+<!-- - [Mobile Scanner](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Mobile%20Scanner) -->
 
 - [Google Fonts](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Google%20Fonts)
  
