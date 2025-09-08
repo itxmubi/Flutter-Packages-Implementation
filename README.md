@@ -12,6 +12,10 @@ This project is for practice purpose and i will test different packages from [pu
 
 ![Alt Text](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
+- [Trimmer View](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/video%20Trimmer)
+
+- [FFmpeg Kit](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/FF%20mpeg%20Example)
+
 - [Connectivity Plus](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Connectivity%20Plus)
 
 - [Flutter EasyLoading](https://github.com/itxmubi/Flutter-Packages-Implementation/tree/main/lib/Youtube%20Player%20Flutter)
